@@ -40,3 +40,12 @@
         target: "#sideNav",
     });
 })(jQuery); // End of use strict
+
+function handleTickInit(tick) {
+
+    // create counter
+    Tick.count.up('2020-05-01T00:00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
+        tick.value = value;
+    };
+
+}
