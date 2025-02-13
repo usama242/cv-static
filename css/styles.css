@@ -10158,3 +10158,9 @@ body {
 .tick-flip {
    border-radius:0.12em !important; 
 }
+
+.custom-paragraph {
+  max-width: 85ch; /* Limits width to around 50 characters */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
