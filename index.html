@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Mohamad Usama KUNNATHUR</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <meta name="description" content="Mohamad Usama KUNNATHUR - DevOps and Cloud Engineer Portfolio" />
+    <meta name="author" content="Mohamad Usama KUNNATHUR" />
+    <title id="page-title">Mohamad Usama KUNNATHUR</title>
+    <link rel="icon" type="image/x-icon" id="page-favicon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://kit.fontawesome.com/d7565bf5a6.js"
@@ -26,7 +26,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link href="/css/flip.min.css" rel="stylesheet">
+    <link href="css/flip.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
   </head>
@@ -37,13 +37,15 @@
       id="sideNav"
     >
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Mohamad Usama KUNNATHUR</span>
-        <span class="d-none d-lg-block"
-          ><img
+        <span class="d-block d-lg-none" id="brand-name">Mohamad Usama KUNNATHUR</span>
+        <span class="d-none d-lg-block">
+          <img
             class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            id="profile-img"
             src="assets/img/profile.jpg"
-            alt=""
-        /></span>
+            alt="Mohamad Usama KUNNATHUR"
+          />
+        </span>
       </a>
       <button
         class="navbar-toggler"
@@ -62,14 +64,10 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience"
-              >Experience</a
-            >
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education"
-              >Education</a
-            >
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
@@ -78,15 +76,25 @@
             <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests"
-              >Interests</a
-            >
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!-- Page Content-->
     <div class="container-fluid p-0">
+      <!-- Local file:// security notice (only shown if opened via file:// where fetch is blocked) -->
+      <div id="local-file-notice" class="alert alert-warning alert-dismissible fade show m-3 d-none" role="alert">
+        <strong>Local File Mode:</strong> When opening directly via <code>file://</code>, browser security policies restrict reading external files dynamically.
+        To test live editing locally in real time, run <code>python3 -m http.server</code> in this folder and open <code>http://localhost:8000</code>.
+        <em>(Note: On your Digital Ocean live website, real-time data loading works automatically without any setup!)</em>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Download Resume Dropdown -->
       <div class="dropdown sticky-top float-right m-3">
         <button
           class="btn btn-secondary dropdown-toggle"
@@ -101,67 +109,40 @@
             Download Resume
           </span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a
-            class="dropdown-item"
-            href="assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
-            download
-            >English</a
-          >
-          <!-- <a class="dropdown-item" href="assets/CV_Web_Italian.pdf" download
-            >Italian</a> -->
+        <div class="dropdown-menu" id="resume-dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- Dynamically populated from data.json -->
+          <a class="dropdown-item" href="assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf" download>English</a>
         </div>
       </div>
-      <!-- About-->
+
+      <!-- About Section -->
       <section class="resume-section" id="about">
         <div class="resume-section-content">
-          <h1 class="mb-0">
+          <h1 class="mb-0" id="about-name">
             Mohamad Usama
             <span class="text-primary">KUNNATHUR</span>
           </h1>
-          <div class="subheading mb-5">
-            Bari 10124 · (+39) 393 102 4267 ·
-            <a href="mailto:mohamadusama242@gmail.com"
-              >mohamadusama242@gmail.com</a
-            >
+          <div class="subheading mb-5" id="about-subheading">
+            <!-- Dynamically populated from data.json -->
           </div>
-          <p class="lead mb-5 custom-paragraph">
-            I am a DevOps and Cloud Engineer, harnessing over six years of
-            expertise in crafting, automating, and nurturing Cloud
-            infrastructure and environments. As a quick learner and team player,
-            I bring a blend of skills and a keen interest in AI, backed by a
-            background in Management and Engineering, granting me a distinctive
-            outlook within the team.
+          <p class="lead mb-5 custom-paragraph" id="about-bio">
+            <!-- Dynamically populated from data.json -->
           </p>
-          <div class="social-icons">
-            <a
-              class="social-icon"
-              href="https://www.linkedin.com/in/usama242/"
-              target="_blank"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="social-icon"
-              href="https://github.com/usama242/"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="social-icon"
-              href="https://www.facebook.com/mohamadusama242/"
-              target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
+          <div class="social-icons" id="about-socials">
+            <!-- Dynamically populated from data.json -->
           </div>
         </div>
       </section>
+
       <hr class="m-0" />
-      <!-- Experience-->
+
+      <!-- Experience Section -->
       <section class="resume-section" id="experience">
         <div class="resume-section-content">
           <h2 class="mb-5">Experience</h2>
-          <div class="flex-grow-1 mb-5" style="text-align: center">
-            <h3 class="mb-3">Total Experience as a DevOps Engineer</h3>
+          <!-- Experience counter / Flip Clock -->
+          <div class="flex-grow-1 mb-5" id="experience-counter-container" style="text-align: center">
+            <h3 class="mb-3" id="experience-counter-title">Total Experience as a DevOps Engineer</h3>
             <div class="tick" data-did-init="handleTickInit">
               <div
                 data-repeat="true"
@@ -176,7 +157,6 @@
                   >
                     <span data-view="flip"></span>
                   </div>
-
                   <span
                     data-key="label"
                     data-view="text"
@@ -186,724 +166,71 @@
               </div>
             </div>
           </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">DevOps Engineer</h3>
-                <a href="https://www.reply.com/sense-reply/en/" target="_blank"
-                ><div class="subheading mb-3">Sense Reply</div></a
-              >
-              <p>
-                Administering and upgrading Site Controller virtual machines
-                through Ansible automation and Linux-based systems.
-              </p>
-              <p>
-                Designing and provisioning infrastructure using Terraform,
-                integrated with CI/CD pipelines via Jenkins.
-              </p>
-              <p>
-                Modernizing legacy applications by migrating from Ubuntu Xenial
-                to Ubuntu Focal.
-              </p>
-              <p>
-                Overseeing and monitoring Site Controllers utilizing Sensu and
-                Graphite.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">Nov 2024 - Present</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">DevOps Engineer</h3>
-              <a href="https://www.infocert.it/" target="_blank"
-                ><div class="subheading mb-3">Infocert</div></a
-              >
-              <p>Working on Identity products such as SPID, Gosign, etc.</p>
-              <p>
-                Orchestrating containerization for legacy application
-                modernization and deployment efficiency.
-              </p>
-              <p>Migrating on-premises applications to cloud platforms</p>
-              <p>
-                Administering databases and overseeing observability measures
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">Oct 2023 - Nov 2024</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">DevOps Engineer</h3>
-              <a href="https://www.idea75.it/" target="_blank"
-                ><div class="subheading mb-3">Idea 75</div></a
-              >
-              <p>
-                Co-ordinating with a group of developers spanning different
-                projects.
-              </p>
-              <p>
-                Facilitate deployment automation and CI/CD. Monitoring and
-                observability.
-              </p>
-              <p>
-                Reduce bottlenecks (Build times, latency) and optimize costs
-                (Rescaling resources)
-              </p>
-              <p>
-                Ensure zero downtime and high availability (Load balancing &
-                autoscaling resources)
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">Oct 2022 - Oct 2023</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Cloud Developer</h3>
-              <a href="https://www.reply.com/" target="_blank"
-                ><div class="subheading mb-3">Reply</div></a
-              >
-              <p>
-                Worked on lambda functions usually in Python. The deployment is
-                serverless in AWS.
-              </p>
-              <p>
-                Managed IoT devices of the project Enel-X and also involved in
-                troubleshooting
-              </p>
-              <p>
-                Oversaw the fix deployment and management of the pipeline. Which
-                involves automating deployment.
-              </p>
-              <p>
-                Recommended redimensioning of resources saving about $10k /
-                month
-              </p>
-              <p></p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">May 2020 - Oct 2022</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Project Manager Intern</h3>
-              <a
-                href="https://www.linkedin.com/company/associazionebullio/"
-                target="_blank"
-                ><div class="subheading mb-3">
-                  Associazione Erminio Bullio
-                </div></a
-              >
-              <p>
-                Primarily involved on Project Lifecycle Management of a
-                construction project.
-              </p>
-              <p>
-                Worked on developing custom modules in Odoo PLM software. The
-                modules were written in Python.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">July 2019 - Sep 2019</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Business Development Manager</h3>
-              <a href="https://www.cansatarim.com.tr/en/" target="_blank"
-                ><div class="subheading mb-3">Cansa Tarim Makinalari</div></a
-              >
-              <p>
-                The main responsibilities were identifying new business
-                opportunities.
-              </p>
-              <p>
-                Also marketing and communicating with international clients.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">Aug 2016 - Aug 2017</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">English Teacher</h3>
-              <div class="subheading mb-3">Oxford English Academy</div>
-              <p>
-                Worked as a part-time English teacher for students of different
-                levels.
-              </p>
-              <p>
-                Worked under pressure and have acquired efficient time
-                management capabilities.
-              </p>
-              <p>
-                I believe If you can manage a bunch of teenagers, you can manage
-                anyone.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">October 2013 - July 2016</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Public Relations Intern</h3>
-              <a href="https://www.thk.edu.tr" target="_blank"
-                ><div class="subheading mb-3">
-                  University of Turkish Aeronautical Association
-                </div></a
-              >
-              <p>Worked in promoting and marketing the university.</p>
-              <p>
-                Managed the calls and answered the questions of prospective
-                students.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">November 2013 - June 2014</span>
-            </div>
+          <!-- Experience Items -->
+          <div id="experience-list">
+            <!-- Dynamically populated from data.json -->
           </div>
         </div>
       </section>
+
       <hr class="m-0" />
-      <!-- Education-->
+
+      <!-- Education Section -->
       <section class="resume-section" id="education">
         <div class="resume-section-content">
           <h2 class="mb-5">Education</h2>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <a href="https://www.udacity.com" target="_blank"
-                ><h3 class="mb-0">Udacity</h3></a
-              >
-              <a
-                href="https://www.udacity.com/course/ethical-hacker-nanodegree--nd350"
-                target="_blank"
-                ><div class="subheading mb-3">
-                  Foundations of Ethical Hacking
-                </div></a
-              >
-              <p>
-                Won the scholarship offered by Bertelsmann amongst many
-                applicants. For Credentials
-                <a
-                  href="https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
-                  target="_blank"
-                  >click here</a
-                >
-              </p>
-              <p>
-                Performing vulnerability scans and managing prioritization and
-                response
-              </p>
-              <p>
-                Conducting system audits, researching vulnerabilities, and
-                writing reports
-              </p>
-              <p>
-                Exploring social engineering tactics, phishing simulations, and
-                malware deployment
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">Dec 2024 - Feb 2025</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <a href="https://www.udacity.com" target="_blank"
-                ><h3 class="mb-0">Udacity</h3></a
-              >
-              <a
-                href="https://www.udacity.com/course/cloud-devops-using-microsoft-azure-nanodegree--nd082"
-                target="_blank"
-                ><div class="subheading mb-3">DevOps Engineer</div></a
-              >
-              <p>
-                Won the scholarship offered by Bosch amongst many applicants.
-                For Credentials
-                <a
-                  href="https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
-                  target="_blank"
-                  >click here</a
-                >
-              </p>
-              <p>
-                Focus on Infrastructure deployment using Terraform and Packer
-              </p>
-              <p>Agile development, functional and performance testing</p>
-              <p>Cloud-native app development using Docker and Kubernetes</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">July 2022 - Nov 2022</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <a href="https://www.udacity.com" target="_blank"
-                ><h3 class="mb-0">Udacity</h3></a
-              >
-              <a
-                href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
-                target="_blank"
-                ><div class="subheading mb-3">Front-End Web development</div></a
-              >
-              <p>
-                Won the scholarship offered by Google amongst many applicants.
-                For Credentials
-                <a
-                  href="https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
-                  target="_blank"
-                  >click here</a
-                >
-              </p>
-              <p>
-                Focus on CSS, JavaScript, APIs, Build tools & Express. In
-                backend the focus on node.js.
-              </p>
-              <p>
-                Also front-end libraries such as React. Best practices of coding
-                and website optimization.
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">January 2020 - March 2020</span>
-            </div>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="flex-grow-1">
-              <a href="https://www.polito.it" target="_blank"
-                ><h3 class="mb-0">Politecnico di Torino</h3></a
-              >
-              <div class="subheading mb-3">
-                Masters in Engineering & Management
-              </div>
-              <a
-                href="https://sid.polito.it/TinyUrl-1.0/verifypdf/pdf.html?url=KKHjsyk5uLw"
-                target="_blank"
-                ><p>GPA: 100/110</p></a
-              >
-              <p>
-                Concentration in Project Management, Production & Quality
-                engineering
-              </p>
-              <p>
-                Also focus in Economics, Financial Engineering, Strategy &
-                Innovation Management
-              </p>
-              <p>
-                Thesis on Applying Artificial Intelligence techniques in Project
-                Management
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">September 2017 - March 2020</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <a href="https://www.thk.edu.tr" target="_blank"
-                ><h3 class="mb-0">
-                  University of Turkish Aeronautical Association
-                </h3></a
-              >
-              <a href="assets/Degree_Bachelor.pdf" download
-                ><div class="subheading mb-3">
-                  Bachelors in Aeronautical Engineering
-                </div></a
-              >
-              <a href="assets/Diploma_Supplement_Bachelor.pdf" download
-                ><p>GPA: 3.08/4.0</p></a
-              >
-              <p>Concentration in Aerodynamics, FEM & CAD</p>
-              <p>
-                Academic internship on solving Navier-stokes equation using
-                Python
-              </p>
-              <p>
-                Academic internship on analysis of Francis Turbine using Ansys
-                Fluent
-              </p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">September 2012 - June 2016</span>
-            </div>
+          <div id="education-list">
+            <!-- Dynamically populated from data.json -->
           </div>
         </div>
       </section>
+
       <hr class="m-0" />
-      <!-- Skills-->
+
+      <!-- Skills Section -->
       <section class="resume-section" id="skills">
         <div class="resume-section-content">
           <h2 class="mb-5">Skills</h2>
-          <div class="subheading mb-3 text-primary">Developer</div>
-          <ul class="fa-ul mb-3">
-            <li>
-              <span class="fa-li"><i class="fab fa-aws"></i></span>
-              API Gateway, Cloudwatch, Lambda, EC2, VPC, S3, SQS, SNS, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              Azure vm, active-directory, policy, AZ CLI, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-code-compare"></i></span>
-              Bamboo, Gitlab, Cloudformation, Terraform, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-docker"></i></span>
-              Git, Docker, Kubernetes, Packer, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-circle-nodes"></i></span>
-              Kuberentes tools like Helm, Kustomize, ArgoCD, Openshift, K9s, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-laptop-medical"></i></span>
-              Monitoring tools like Grafana, Prometheus, Loki, Kibana, Sensu, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-spell-check"></i></span>
-              API testing (Postman), Functional UI testing (Selenium),
-              Performance testing (Jmeter), etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-linux"></i></span>
-              Bash scripting, Powershell, Nginx, Remote SSH, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-server"></i></span>
-              Configuration management tools like Ansible, Chef, Puppet, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-python"></i></span>
-              Django, Flask, SQLAlchemy, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-html5"></i></span>
-              HTML, CSS, Bootstrap, Babel, SASS, LESS etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-js-square"></i></span>
-              React, Redux, Node.js, Express.js, Typescript, etc
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-database"></i></span>
-              MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch etc
-            </li>
-          </ul>
-          <div class="subheading mb-3 text-primary">Engineering</div>
-          <ul class="fa-ul mb-3">
-            <li>
-              <span class="fa-li"><i class="fas fa-compass-drafting"></i></span>
-              CAD (Solidworks, Catia, AutoCAD, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-water"></i></span>
-              CFD (Ansys Fluent, Autodesk CFD, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-hammer"></i></span>
-              FEA (Abaqus, Nastran, Patran, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-code"></i></span>
-              Matlab & Simulink
-            </li>
-          </ul>
-          <div class="subheading mb-3 text-primary">Management</div>
-          <ul class="fa-ul mb-3">
-            <li>
-              <span class="fa-li"><i class="fas fa-diagram-project"></i></span>
-              PM methodologies (Scrum, Agile, Kanban, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fab fa-jira"></i></span>
-              PM tools (MS Project, Jira, Odoo, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-briefcase"></i></span>
-              Business analytics tools (SAP, Oracle, SAS, Tableu, etc.)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-chart-line"></i></span>
-              Marketing tools (SEO, Google Analytics, Hubspot, etc.)
-            </li>
-          </ul>
-          <div class="subheading mb-3 text-primary">Miscellaneous</div>
-          <ul class="fa-ul mb-3">
-            <li>
-              <span class="fa-li"><i class="fas fa-bullhorn"></i></span>
-              Public Speaking (Toastmasters)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-people-group"></i></span>
-              Flexible, Easily Adaptable & Team Player
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-clock"></i></span>
-              Time management & Working under pressure
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-map-location"></i></span>
-              Available to relocate
-            </li>
-          </ul>
-          <div class="subheading mb-3 text-primary">Languages</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-battery-full"></i></span>
-              English
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-battery-full"></i></span>
-              Urdu
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-battery-full"></i></span>
-              Hindi
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-battery-three-quarters"></i
-              ></span>
-              Turkish
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-battery-three-quarters"></i
-              ></span>
-              Italian
-            </li>
-          </ul>
+          <div id="skills-container">
+            <!-- Dynamically populated from data.json -->
+          </div>
         </div>
       </section>
+
       <hr class="m-0" />
-      <!-- Projects-->
+
+      <!-- Projects Section -->
       <section class="resume-section" id="projects">
         <div class="resume-section-content">
           <h2 class="mb-5">Projects</h2>
-          <div class="subheading mb-3 text-primary">Developer Github</div>
-          <ul class="fa-ul mb-9">
-            <li class="mb-2">
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              <p>
-                Deploying a scalable IaaS web server in Azure using Terraform
-                <a
-                  href="https://github.com/usama242/Terraform-packer-project"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              <p>
-                Building a CI/CD pipeline using Azure pipelines & GitHub Actions
-                <a
-                  href="https://github.com/usama242/CICD-pipeline-azure"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              <p>
-                Ensuring quality releases with API, functional & perf testing
-                <a
-                  href="https://github.com/usama242/Ensuring_Quality_Releases"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              <p>
-                Automated Docker Image Creation, VM Provisioning, and Kubernetes
-                Deployment
-                <a href="https://github.com/usama242/techtrends" target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fab fa-microsoft"></i></span>
-              <p>
-                Best coding practices and unit test
-                <a
-                  href="https://github.com/usama242/Predict_Customer_Churn"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-plane"></i></span>
-              <p>
-                Online travel app using multiple APIs
-                <a href="https://github.com/usama242/Project-5" target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-cloud"></i></span>
-              <p>
-                An asynchronous Weather Journal app using OpenWeatherMap API
-                <a href="https://github.com/usama242/Project-3" target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-cart-shopping"></i></span>
-              <p>
-                Evaluate a news article with Natural Language Processing
-                <a href="https://github.com/usama242/Project-4" target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-blog"></i></span>
-              <p>
-                Multi-page Blog website with HTML and pure CSS
-                <a href="https://github.com/usama242/Project-1" target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-          </ul>
-          <div class="subheading mb-3 text-primary">
-            Engineering Publications
+          <div id="projects-container">
+            <!-- Dynamically populated from data.json -->
           </div>
-          <ul class="fa-ul mb-0">
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-microchip"></i></span>
-              <p>
-                Applying Artificial Intelligence techniques in Project
-                Management
-                <a
-                  href="https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-plane"></i></span>
-              <p>
-                Design of a UAV with Variable-Span Morphing Wing
-                <a
-                  href="https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing"
-                  target="_blank"
-                  ><span><i class="fas fa-up-right-from-square"></i></span
-                ></a>
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-square"></i></span>
-              <p>States of Stress and Strain in a Semi-Infinite Plate</p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-plane"></i></span>
-              <p>Analysis of a Catapult-Launched Delta-Wing Glider</p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-bullseye"></i></span>
-              <p>Conceptual Design of a Surface-to-Air Missile</p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-square"></i></span>
-              <p>
-                Plane Stress Analysis of a Rectangular Plate Subjected to a
-                Concentrated Load
-              </p>
-            </li>
-          </ul>
         </div>
       </section>
+
       <hr class="m-0" />
-      <!-- Interests-->
+
+      <!-- Interests Section -->
       <section class="resume-section" id="interests">
         <div class="resume-section-content">
           <h2 class="mb-5">Interests</h2>
-          <ul class="fa-ul mb-0">
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-camera-retro"></i></span>
-              <p>
-                <strong>Photo Enthusiast:</strong> Capturing souls with a click,
-                one portrait at a time.
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-route"></i></span>
-              <p>
-                <strong>Cultural Explorer:</strong> Jet-setting through flavors
-                and traditions, passport in hand.
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-pizza-slice"></i></span>
-              <p>
-                <strong>Culinary Adventurer:</strong> Stirring magic in the
-                kitchen, experimenting with global cuisines.
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-chess-knight"></i></span>
-              <p>
-                <strong>Galactic Chessmaster:</strong> Checkmate echoes across
-                the universe, victory in constellations.
-              </p>
-            </li>
-            <li class="mb-2">
-              <span class="fa-li"><i class="fas fa-film"></i></span>
-              <p>
-                <strong>Cinephile Starship:</strong> Discussing movies under
-                starry skies with fellow cosmic travelers.
-              </p>
-            </li>
+          <ul class="fa-ul mb-0" id="interests-list">
+            <!-- Dynamically populated from data.json -->
           </ul>
         </div>
       </section>
+
       <hr class="m-0" />
     </div>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="/js/flip.min.js"></script>
-    <!-- Core theme JS-->
+    <script src="js/flip.min.js"></script>
+    <!-- Core theme JS (includes dynamic data loader)-->
     <script src="js/scripts.js"></script>
   </body>
 </html>
