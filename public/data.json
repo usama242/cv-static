@@ -363,6 +363,10 @@
           "icon": "fas fa-battery-full",
           "text": "Hindi"
         },
+                {
+          "icon": "fas fa-battery-full",
+          "text": "Tamil"
+        },
         {
           "icon": "fas fa-battery-three-quarters",
           "text": "Turkish"
