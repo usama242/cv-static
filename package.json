@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
+    "translate": "python3 scripts/translate.py",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 8080"
