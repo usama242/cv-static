@@ -45,8 +45,8 @@ export default function Navbar({ personal, ui, lang, setLang, theme, toggleTheme
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            aria-label={theme === "dark" ? (ui.nav.themeLight || "Switch to light mode") : (ui.nav.themeDark || "Switch to dark mode")}
+            title={theme === "dark" ? (ui.nav.themeLight || "Switch to light mode") : (ui.nav.themeDark || "Switch to dark mode")}
             className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white hover:bg-slate-50 dark:bg-white/10 dark:hover:bg-white/20 border border-slate-200/90 dark:border-white/15 grid place-items-center text-slate-800 dark:text-amber-300 transition shadow-xs shrink-0 cursor-pointer"
           >
             {theme === "dark" ? (

@@ -7,7 +7,9 @@ export const UI_TEXT = {
       arsenal: "Arsenal",
       projects: "Projects",
       lifestyle: "Lifestyle",
-      resumeBtn: "Resume PDF"
+      resumeBtn: "Resume PDF",
+      themeLight: "Switch to light mode",
+      themeDark: "Switch to dark mode"
     },
     hero: {
       badge: "DevOps & Cloud Architect",
@@ -16,7 +18,10 @@ export const UI_TEXT = {
       exploreBtn: "Explore Experience",
       contactBtn: "Contact & Bio Sheet",
       currentMission: "Current Mission",
-      active: "ACTIVE"
+      active: "ACTIVE",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
+      locationLabel: "Location"
     },
     overview: {
       eyebrow: "Apple Bento Telemetry",
@@ -51,7 +56,10 @@ export const UI_TEXT = {
       title: "Engineering degrees & global tech honors.",
       verifyDegCta: "Click to verify GPA, thesis & official PDFs",
       scholarshipLabel: "SCHOLARSHIP",
-      inspectCert: "Inspect Curriculum & Certificate"
+      inspectCert: "Inspect Curriculum & Certificate",
+      degreePdf: "Degree PDF",
+      program: "Program",
+      certificate: "Certificate"
     },
     skills: {
       eyebrow: "Multidisciplinary Stack",
@@ -69,6 +77,16 @@ export const UI_TEXT = {
     interests: {
       eyebrow: "The Human Behind the Terminal",
       title: "Passions & Perspectives."
+    },
+    modal: {
+      swipeGuidance: "Swipe horizontally between cards",
+      prevBtn: "Prev",
+      previous: "Previous",
+      nextBtn: "Next",
+      next: "Next",
+      prevCardTitle: "Previous Card (Left Arrow)",
+      nextCardTitle: "Next Card (Right Arrow)",
+      closeModal: "Close modal"
     }
   },
 
@@ -80,7 +98,9 @@ export const UI_TEXT = {
       arsenal: "Competenze",
       projects: "Progetti",
       lifestyle: "Passioni",
-      resumeBtn: "CV in PDF"
+      resumeBtn: "CV in PDF",
+      themeLight: "Passa alla modalità chiara",
+      themeDark: "Passa alla modalità scura"
     },
     hero: {
       badge: "Architetto DevOps & Cloud",
@@ -89,7 +109,10 @@ export const UI_TEXT = {
       exploreBtn: "Esplora Carriera",
       contactBtn: "Contatti & Bio",
       currentMission: "Missione Attuale",
-      active: "ATTIVO"
+      active: "ATTIVO",
+      emailLabel: "Email",
+      phoneLabel: "Telefono",
+      locationLabel: "Posizione"
     },
     overview: {
       eyebrow: "Telemetria Apple Bento",
@@ -124,7 +147,10 @@ export const UI_TEXT = {
       title: "Lauree in Ingegneria e riconoscimenti internazionali.",
       verifyDegCta: "Clicca per verificare voto, tesi e PDF ufficiali",
       scholarshipLabel: "BORSA DI STUDIO",
-      inspectCert: "Esplora Programma e Certificato"
+      inspectCert: "Esplora Programma e Certificato",
+      degreePdf: "PDF Laurea",
+      program: "Corso di Laurea",
+      certificate: "Certificato"
     },
     skills: {
       eyebrow: "Stack Multidisciplinare",
@@ -142,6 +168,16 @@ export const UI_TEXT = {
     interests: {
       eyebrow: "Oltre il Terminale",
       title: "Passioni e Prospettive."
+    },
+    modal: {
+      swipeGuidance: "Scorri orizzontalmente tra le schede",
+      prevBtn: "Prec",
+      previous: "Precedente",
+      nextBtn: "Succ",
+      next: "Successivo",
+      prevCardTitle: "Scheda precedente (Freccia sinistra)",
+      nextCardTitle: "Scheda successiva (Freccia destra)",
+      closeModal: "Chiudi modale"
     }
   },
 
@@ -153,7 +189,9 @@ export const UI_TEXT = {
       arsenal: "Habilidades",
       projects: "Proyectos",
       lifestyle: "Intereses",
-      resumeBtn: "CV en PDF"
+      resumeBtn: "CV en PDF",
+      themeLight: "Cambiar a modo claro",
+      themeDark: "Cambiar a modo oscuro"
     },
     hero: {
       badge: "Arquitecto DevOps y Cloud",
@@ -162,7 +200,10 @@ export const UI_TEXT = {
       exploreBtn: "Explorar Experiencia",
       contactBtn: "Contacto y Biografía",
       currentMission: "Misión Actual",
-      active: "ACTIVO"
+      active: "ACTIVO",
+      emailLabel: "Correo",
+      phoneLabel: "Teléfono",
+      locationLabel: "Ubicación"
     },
     overview: {
       eyebrow: "Telemetría Apple Bento",
@@ -197,7 +238,10 @@ export const UI_TEXT = {
       title: "Títulos de Ingeniería y becas tecnológicas globales.",
       verifyDegCta: "Haz clic para verificar promedio, tesis y PDFs oficiales",
       scholarshipLabel: "BECA GANADA",
-      inspectCert: "Ver Programa y Certificado"
+      inspectCert: "Ver Programa y Certificado",
+      degreePdf: "PDF del Título",
+      program: "Programa de Estudios",
+      certificate: "Certificado"
     },
     skills: {
       eyebrow: "Stack Multidisciplinario",
@@ -215,6 +259,16 @@ export const UI_TEXT = {
     interests: {
       eyebrow: "El Humano Detrás de la Terminal",
       title: "Pasiones y Perspectivas."
+    },
+    modal: {
+      swipeGuidance: "Desliza horizontalmente entre tarjetas",
+      prevBtn: "Ant",
+      previous: "Anterior",
+      nextBtn: "Sig",
+      next: "Siguiente",
+      prevCardTitle: "Tarjeta anterior (Flecha izquierda)",
+      nextCardTitle: "Tarjeta siguiente (Flecha derecha)",
+      closeModal: "Cerrar modal"
     }
   }
 };

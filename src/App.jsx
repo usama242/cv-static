@@ -83,7 +83,17 @@ export default function App() {
     const fileUrl = lang === "en" ? "./data.json" : `./data.${lang}.json`;
     fetch(fileUrl)
       .then((r) => (r.ok ? r.json() : fetch("./data.json").then((res) => res.json())))
-      .then((json) => setData(json))
+      .then((json) => {
+        setData(json);
+        if (json.personal?.firstName && json.personal?.lastName) {
+          const roleSubtitle = lang === "it"
+            ? "Architettura Cloud & DevOps"
+            : lang === "es"
+            ? "Arquitectura Cloud y DevOps"
+            : "Cloud & DevOps Architecture";
+          document.title = `${json.personal.firstName} ${json.personal.lastName} — ${roleSubtitle}`;
+        }
+      })
       .catch(() => setData(DEFAULT_DATA));
   }, [lang]);
 
@@ -126,10 +136,40 @@ export default function App() {
   const experienceDeck = buildExperienceDeck(experiences, ui);
   const educationDeck = buildEducationDeck(degrees, scholarships, ui);
 
-  const openModalDeck = useCallback((items, index = 0) => {
+  const openModalDeck = useCallback((items, index = 0, type = null) => {
     setDeckDirection(0);
-    setModalDeck({ items, index });
+    setModalDeck({ items, index, type });
   }, []);
+
+  // Re-synchronize active modal deck content when language/data updates
+  useEffect(() => {
+    if (!modalDeck || !modalDeck.type) return;
+    if (modalDeck.type === "experience") {
+      setModalDeck((prev) => (prev ? { ...prev, items: experienceDeck } : null));
+    } else if (modalDeck.type === "education") {
+      setModalDeck((prev) => (prev ? { ...prev, items: educationDeck } : null));
+    } else if (modalDeck.type === "bio") {
+      const bioItem = {
+        id: "bio-sheet",
+        badge: ui.hero.badge,
+        period: personal.location,
+        title: `${personal.firstName} ${personal.lastName}`,
+        subtitle: personal.email,
+        img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
+        highlights: [
+          personal.bio,
+          `${ui.hero.emailLabel || "Email"}: ${personal.email}`,
+          `${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`,
+          `${ui.hero.locationLabel || "Location"}: ${personal.location}`
+        ],
+        links: [
+          { label: ui.nav.resumeBtn, url: personal.resumeDownloads?.[0]?.url || "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf" },
+          ...(personal.socialLinks || []).map((s) => ({ label: s.platform, url: s.url }))
+        ]
+      };
+      setModalDeck((prev) => (prev ? { ...prev, items: [bioItem, ...experienceDeck] } : null));
+    }
+  }, [experienceDeck, educationDeck, ui, personal]);
 
   const stepModal = useCallback((dir) => {
     setDeckDirection(dir);
@@ -230,6 +270,7 @@ export default function App() {
         deckDirection={deckDirection}
         stepModal={stepModal}
         goToModalIndex={goToModalIndex}
+        ui={ui}
       />
     </div>
   );

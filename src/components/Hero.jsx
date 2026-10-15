@@ -8,7 +8,7 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
         <div className="relative rounded-[36px] overflow-hidden border border-slate-200/90 dark:border-white/15 bg-white/90 dark:bg-[#0c0d14] backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] dark:shadow-2xl transition duration-300">
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=85"
-            alt="Cloud Network"
+            alt={ui.hero.badge}
             className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-30 mix-blend-luminosity scale-105 pointer-events-none"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-sky-50/80 via-white/80 to-purple-50/70 dark:from-sky-950/80 dark:via-[#07080d]/90 dark:to-purple-950/80 pointer-events-none" />
@@ -57,9 +57,9 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                           img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
                           highlights: [
                             personal.bio,
-                            `Email: ${personal.email}`,
-                            `Phone: ${personal.phone}`,
-                            `Location: ${personal.location}`
+                            `${ui.hero.emailLabel || "Email"}: ${personal.email}`,
+                            `${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`,
+                            `${ui.hero.locationLabel || "Location"}: ${personal.location}`
                           ],
                           links: [
                             { label: ui.nav.resumeBtn, url: personal.resumeDownloads?.[0]?.url || "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf" },
@@ -68,7 +68,8 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                         },
                         ...experienceDeck
                       ],
-                      0
+                      0,
+                      "bio"
                     )
                   }
                   className="px-7 py-3.5 rounded-full font-semibold text-sm bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-800 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20 dark:text-white backdrop-blur-md transition cursor-pointer shadow-xs"

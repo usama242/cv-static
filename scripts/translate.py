@@ -85,6 +85,10 @@ def build_translated_json(source_data: dict, lang: str):
             edu["program"] = translate_text(edu["program"], lang)
         if edu.get("scholarship") and edu["scholarship"].get("text"):
             edu["scholarship"]["text"] = translate_text(edu["scholarship"]["text"], lang)
+        if edu.get("scholarship") and edu["scholarship"].get("credentialText"):
+            edu["scholarship"]["credentialText"] = translate_text(edu["scholarship"]["credentialText"], lang)
+        if edu.get("gpa") and edu["gpa"].get("text"):
+            edu["gpa"]["text"] = translate_text(edu["gpa"]["text"], lang)
         if edu.get("highlights"):
             edu["highlights"] = translate_list(edu["highlights"], lang)
         time.sleep(0.1)

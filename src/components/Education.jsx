@@ -19,7 +19,7 @@ export default function Education({ degrees, scholarships, ui, educationDeck, op
                             <motion.article
                                 key={idx}
                                 whileHover={{ y: -6 }}
-                                onClick={() => openModalDeck(educationDeck, idx)}
+                                onClick={() => openModalDeck(educationDeck, idx, "education")}
                                 className="cursor-pointer rounded-[30px] overflow-hidden border border-slate-200/90 dark:border-white/15 hover:border-amber-400/80 dark:hover:border-amber-400/60 bg-white dark:bg-[#0e1017] flex flex-col justify-between group shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] transition duration-300"
                             >
                                 <div>
@@ -74,7 +74,7 @@ export default function Education({ degrees, scholarships, ui, educationDeck, op
                             <motion.article
                                 key={idx}
                                 whileHover={{ y: -6 }}
-                                onClick={() => openModalDeck(educationDeck, degrees.length + idx)}
+                                onClick={() => openModalDeck(educationDeck, degrees.length + idx, "education")}
                                 className={`cursor-pointer rounded-[26px] p-7 border bg-gradient-to-br ${styles.card} ${styles.wash} flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] group transition duration-300`}
                             >
                                 <div>

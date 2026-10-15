@@ -35,7 +35,7 @@ export default function Experience({
         {latestExp.role && (
           <motion.div
             whileHover={{ scale: 1.008 }}
-            onClick={() => openModalDeck(experienceDeck, 0)}
+            onClick={() => openModalDeck(experienceDeck, 0, "experience")}
             className="cursor-pointer relative rounded-[32px] overflow-hidden border border-sky-300/90 dark:border-sky-400/40 bg-white dark:bg-[#0d101b] shadow-[0_12px_36px_rgba(14,165,233,0.12)] hover:shadow-[0_18px_48px_rgba(14,165,233,0.18)] dark:shadow-2xl group transition-shadow"
           >
             <div className="grid lg:grid-cols-12 items-stretch">
@@ -89,7 +89,7 @@ export default function Experience({
               <motion.article
                 key={idx}
                 whileHover={{ y: -8 }}
-                onClick={() => openModalDeck(experienceDeck, idx + 1)}
+                onClick={() => openModalDeck(experienceDeck, idx + 1, "experience")}
                 className={`cursor-pointer rounded-[28px] overflow-hidden border border-slate-200/90 dark:border-white/10 ${vis.border} bg-white dark:bg-[#0e1017] flex flex-col justify-between transition duration-300 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] dark:shadow-xl group`}
               >
                 <div>
@@ -134,7 +134,7 @@ export default function Experience({
                     <motion.article
                       key={idx}
                       whileHover={{ y: -6 }}
-                      onClick={() => openModalDeck(experienceDeck, idx + 4)}
+                      onClick={() => openModalDeck(experienceDeck, idx + 4, "experience")}
                       className={`cursor-pointer rounded-[26px] overflow-hidden border border-slate-200/90 dark:border-white/10 ${vis.border} bg-white dark:bg-[#0e1017] flex flex-col justify-between transition group shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] dark:shadow-none`}
                     >
                       <div>

@@ -39,7 +39,7 @@ export default function Skills({ skills, ui, lang, activeSkillIdx, setActiveSkil
                 >
                     {currentSkillGroup.items.map((item, idx) => {
                         const spanClass = getBentoSpan(idx, currentSkillGroup.items.length);
-                        const isLang = activeSkillIdx === 4;
+                        const isLang = activeSkillIdx === 4 || currentSkillGroup.items.some(it => it.icon?.includes("battery"));
                         const pct = item.icon.includes("full") ? 100 : 78;
                         return (
                             <div

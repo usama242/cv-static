@@ -89,6 +89,10 @@ export function buildExperienceDeck(experiences, ui) {
 
 export function buildEducationDeck(degrees, scholarships, ui) {
   const orderedEducation = [...degrees, ...scholarships];
+  const degreeLabel = ui?.education?.degreePdf || "Degree PDF";
+  const programLabel = ui?.education?.program || "Program";
+  const certificateLabel = ui?.education?.certificate || "Certificate";
+
   return orderedEducation.map((edu, i) => {
     const isDeg = Boolean(edu.gpa);
     const img = isDeg
@@ -106,9 +110,9 @@ export function buildEducationDeck(degrees, scholarships, ui) {
       img,
       highlights: edu.scholarship ? [edu.scholarship.text, ...(edu.highlights || [])] : edu.highlights || [],
       links: [
-        ...(edu.programUrl ? [{ label: edu.programDownload ? "Degree PDF" : "Program", url: edu.programUrl }] : []),
+        ...(edu.programUrl ? [{ label: edu.programDownload ? degreeLabel : programLabel, url: edu.programUrl }] : []),
         ...(edu.gpa?.url ? [{ label: edu.gpa.text, url: edu.gpa.url }] : []),
-        ...(edu.scholarship?.credentialUrl ? [{ label: "Certificate", url: edu.scholarship.credentialUrl }] : []),
+        ...(edu.scholarship?.credentialUrl ? [{ label: edu.scholarship.credentialText || certificateLabel, url: edu.scholarship.credentialUrl }] : []),
         ...(edu.institutionUrl ? [{ label: edu.institution, url: edu.institutionUrl }] : [])
       ]
     };

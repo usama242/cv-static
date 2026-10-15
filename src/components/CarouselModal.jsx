@@ -38,8 +38,20 @@ export default function CarouselModal({
     setModalDeck,
     deckDirection,
     stepModal,
-    goToModalIndex
+    goToModalIndex,
+    ui
 }) {
+    const modalUi = ui?.modal || {
+        swipeGuidance: "Swipe horizontally between cards",
+        prevBtn: "Prev",
+        previous: "Previous",
+        nextBtn: "Next",
+        next: "Next",
+        prevCardTitle: "Previous Card (Left Arrow)",
+        nextCardTitle: "Next Card (Right Arrow)",
+        closeModal: "Close modal"
+    };
+
     const lastSwipeTimeRef = useRef(0);
     const touchStartRef = useRef({ x: 0, y: 0, time: 0 });
 
@@ -146,13 +158,13 @@ export default function CarouselModal({
                                     triggerSwipe(-1);
                                 }}
                                 className="hidden lg:flex flex-col w-[520px] h-[520px] rounded-[30px] overflow-hidden border border-slate-200/90 dark:border-white/15 bg-white/95 dark:bg-[#0e1018] shadow-2xl cursor-pointer absolute z-10 blur-[2px] hover:blur-none transition-colors"
-                                title={`Previous: ${prevCard.subtitle} — ${prevCard.title}`}
+                                title={`${modalUi.previous}: ${prevCard.subtitle} — ${prevCard.title}`}
                             >
                                 <div className="relative h-44 w-full shrink-0 overflow-hidden">
                                     <img src={prevCard.img} alt={prevCard.title} className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent dark:from-[#0e1018] dark:via-[#0e1018]/50 pointer-events-none" />
                                     <span className="absolute top-4 left-5 px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/70 text-white dark:bg-white/15 dark:text-white backdrop-blur-md">
-                                        &larr; Previous
+                                        &larr; {modalUi.previous}
                                     </span>
                                     <span className="absolute bottom-3 left-5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/25 text-sky-800 dark:bg-sky-500/30 dark:text-sky-200 border border-sky-400/40">
                                         {prevCard.badge} • {prevCard.period}
@@ -203,7 +215,8 @@ export default function CarouselModal({
                                                 <button
                                                     onClick={() => setModalDeck(null)}
                                                     className="w-10 h-10 rounded-full bg-slate-900/70 hover:bg-rose-500 text-white dark:bg-black/60 dark:hover:bg-rose-500 grid place-items-center text-xl border border-slate-700/60 dark:border-white/20 transition cursor-pointer"
-                                                    aria-label="Close modal"
+                                                    aria-label={modalUi.closeModal}
+                                                    title={modalUi.closeModal}
                                                 >
                                                     &times;
                                                 </button>
@@ -257,16 +270,16 @@ export default function CarouselModal({
                                                     <button
                                                         onClick={() => triggerSwipe(-1)}
                                                         className="px-3.5 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-950 border border-slate-200/90 dark:bg-white/5 dark:hover:bg-white/15 active:scale-95 dark:border-white/15 dark:text-slate-200 transition flex items-center gap-1.5 cursor-pointer shadow-xs"
-                                                        title="Previous Card (Left Arrow)"
+                                                        title={modalUi.prevCardTitle}
                                                     >
-                                                        <i className="fas fa-chevron-left text-sky-500 dark:text-sky-400" /> Prev
+                                                        <i className="fas fa-chevron-left text-sky-500 dark:text-sky-400" /> {modalUi.prevBtn}
                                                     </button>
                                                     <button
                                                         onClick={() => triggerSwipe(1)}
                                                         className="px-3.5 py-2 rounded-full text-xs font-bold bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-950 border border-slate-200/90 dark:bg-white/5 dark:hover:bg-white/15 active:scale-95 dark:border-white/15 dark:text-slate-200 transition flex items-center gap-1.5 cursor-pointer shadow-xs"
-                                                        title="Next Card (Right Arrow)"
+                                                        title={modalUi.nextCardTitle}
                                                     >
-                                                        Next <i className="fas fa-chevron-right text-sky-500 dark:text-sky-400" />
+                                                        {modalUi.nextBtn} <i className="fas fa-chevron-right text-sky-500 dark:text-sky-400" />
                                                     </button>
                                                 </div>
                                             )}
@@ -289,13 +302,13 @@ export default function CarouselModal({
                                     triggerSwipe(1);
                                 }}
                                 className="hidden lg:flex flex-col w-[520px] h-[520px] rounded-[30px] overflow-hidden border border-slate-200/90 dark:border-white/15 bg-white/95 dark:bg-[#0e1018] shadow-2xl cursor-pointer absolute z-10 blur-[2px] hover:blur-none transition-colors"
-                                title={`Next: ${nextCard.subtitle} — ${nextCard.title}`}
+                                title={`${modalUi.next}: ${nextCard.subtitle} — ${nextCard.title}`}
                             >
                                 <div className="relative h-44 w-full shrink-0 overflow-hidden">
                                     <img src={nextCard.img} alt={nextCard.title} className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent dark:from-[#0e1018] dark:via-[#0e1018]/50 pointer-events-none" />
                                     <span className="absolute top-4 right-5 px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/70 text-white dark:bg-white/15 dark:text-white backdrop-blur-md">
-                                        Next &rarr;
+                                        {modalUi.next} &rarr;
                                     </span>
                                     <span className="absolute bottom-3 left-5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/25 text-sky-800 dark:bg-sky-500/30 dark:text-sky-200 border border-sky-400/40">
                                         {nextCard.badge} • {nextCard.period}
@@ -342,7 +355,7 @@ export default function CarouselModal({
                             {/* Mobile Touch Swipe Guidance Badge */}
                             <div className="sm:hidden flex items-center gap-2 text-[11px] font-medium text-slate-200 dark:text-slate-400/90 px-3 py-1 rounded-full bg-slate-900/60 dark:bg-white/5 border border-slate-700/50 dark:border-white/10 backdrop-blur-md">
                                 <i className="fas fa-arrows-left-right text-sky-400 text-xs animate-pulse" />
-                                <span>Swipe horizontally between cards</span>
+                                <span>{modalUi.swipeGuidance}</span>
                             </div>
                         </div>
                     )}

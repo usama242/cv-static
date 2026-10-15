@@ -17,7 +17,7 @@ export default function Overview({ data, ui, clock, experienceDeck, openModalDec
           >
             <img
               src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-              alt="Telemetry"
+              alt={ui.overview.uptimeTitle}
               className="absolute inset-0 w-full h-full object-cover opacity-10 dark:opacity-15 mix-blend-multiply dark:mix-blend-screen pointer-events-none"
             />
             <div className="relative z-10">
@@ -47,12 +47,12 @@ export default function Overview({ data, ui, clock, experienceDeck, openModalDec
 
           <motion.div
             whileHover={{ y: -5 }}
-            onClick={() => openModalDeck(experienceDeck, 0)}
+            onClick={() => openModalDeck(experienceDeck, 0, "experience")}
             className="md:col-span-5 cursor-pointer relative rounded-[30px] overflow-hidden border border-slate-200/90 dark:border-white/15 bg-gradient-to-br from-purple-50/70 via-white to-rose-50/50 dark:from-purple-950/60 dark:via-[#0d0f18] dark:to-rose-950/50 p-8 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.1)] dark:shadow-xl transition-shadow group"
           >
             <img
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
-              alt="Analytics"
+              alt={ui.overview.finopsBadge}
               className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-20 group-hover:scale-105 transition duration-700 pointer-events-none"
             />
             <div className="relative z-10">
