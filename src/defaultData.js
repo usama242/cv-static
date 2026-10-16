@@ -11,8 +11,19 @@ export const DEFAULT_DATA = {
     "favicon": "assets/img/favicon.ico",
     "resumeDownloads": [
       {
+        "lang": "en",
         "label": "English",
         "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+      },
+      {
+        "lang": "it",
+        "label": "Italiano",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
+      },
+      {
+        "lang": "es",
+        "label": "Español",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
       }
     ],
     "socialLinks": [

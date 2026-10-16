@@ -63,11 +63,48 @@ def build_translated_json(source_data: dict, lang: str):
     print(f"🌍 Translating `public/data.json` -> `{lang.upper()}` (Zero-Dependency Stdlib)...")
     data = copy.deepcopy(source_data)
 
-    # 1. Personal Bio & Experience Counter Title
+    # 1. Personal Bio, Experience Counter Title & Localized CV Downloads
     if data.get("personal", {}).get("bio"):
         data["personal"]["bio"] = translate_text(data["personal"]["bio"], lang)
     if data.get("experienceCounter", {}).get("title"):
         data["experienceCounter"]["title"] = translate_text(data["experienceCounter"]["title"], lang)
+
+    if lang == "it":
+        data["personal"]["resumeDownloads"] = [
+            {
+                "lang": "it",
+                "label": "Italiano",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
+            },
+            {
+                "lang": "en",
+                "label": "Inglese",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+            },
+            {
+                "lang": "es",
+                "label": "Spagnolo",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
+            }
+        ]
+    elif lang == "es":
+        data["personal"]["resumeDownloads"] = [
+            {
+                "lang": "es",
+                "label": "Español",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
+            },
+            {
+                "lang": "en",
+                "label": "Inglés",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+            },
+            {
+                "lang": "it",
+                "label": "Italiano",
+                "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
+            }
+        ]
 
     # 2. Experiences
     for exp in data.get("experiences", []):

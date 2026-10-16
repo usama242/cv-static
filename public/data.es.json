@@ -6,13 +6,24 @@
     "location": "Bari 10124",
     "phone": "(+39) 393 102 4267",
     "email": "mohamadusama242@gmail.com",
-    "bio": "Soy Ingeniero DevOps y Cloud con más de seis años de experiencia diseñando, automatizando y escalando infraestructuras y entornos en la nube. Aprendo con rapidez y disfruto del trabajo en equipo; combino sólidas competencias técnicas y un gran interés por la Inteligencia Artificial con una formación en Ingeniería y Gestión, aportando una visión estratégica y multidisciplinaria a cada proyecto.",
+    "bio": "Soy ingeniero de DevOps y de nube y aprovecho más de seis años de experiencia en la creación, automatización y desarrollo de infraestructuras y entornos de nube. Como aprendo rápido y trabajo en equipo, aporto una combinación de habilidades y un gran interés en la IA, respaldado por una experiencia en Gestión e Ingeniería, lo que me otorga una perspectiva distintiva dentro del equipo.",
     "profileImage": "assets/img/profile.jpg",
     "favicon": "assets/img/favicon.ico",
     "resumeDownloads": [
       {
-        "label": "English",
+        "lang": "es",
+        "label": "Español",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
+      },
+      {
+        "lang": "en",
+        "label": "Inglés",
         "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+      },
+      {
+        "lang": "it",
+        "label": "Italiano",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
       }
     ],
     "socialLinks": [
@@ -35,7 +46,7 @@
   },
   "experienceCounter": {
     "enabled": true,
-    "title": "Experiencia total como Ingeniero DevOps",
+    "title": "Experiencia total como ingeniero de DevOps",
     "startDate": "2020-05-01T00:00:00"
   },
   "experiences": [
@@ -45,10 +56,10 @@
       "companyUrl": "https://www.ltimindtree.com/",
       "period": "Oct 2025 - Presente",
       "highlights": [
-        "Operación e ingeniería de infraestructura para una plataforma basada en blockchain para NEXI.",
-        "Automatización de despliegues en máquinas virtuales Linux y configuración de sistemas de monitoreo.",
-        "Automatización de pruebas funcionales y de API mediante suites como Postman, Selenium y Playwright.",
-        "Planificación de infraestructura y modernización de aplicaciones legacy con contenedores y Kubernetes."
+        "Trabajando en una aplicación basada en blockchain para NEXI",
+        "Implica la automatización de la implementación en máquinas virtuales Linux, así como el monitoreo.",
+        "También pruebe la automatización utilizando suites como cartero, selenio y dramaturgo.",
+        "Planificación de infraestructura y modernización de aplicaciones heredadas (contenedores, kubernetes)."
       ]
     },
     {
@@ -57,10 +68,10 @@
       "companyUrl": "https://www.reply.com/sense-reply/en/",
       "period": "Nov 2024 - Oct 2025",
       "highlights": [
-        "Administración y actualización de máquinas virtuales Site Controller en entornos Linux mediante automatización con Ansible.",
-        "Diseño y aprovisionamiento de infraestructura como código (IaC) con Terraform, integrada en pipelines CI/CD con Jenkins.",
-        "Modernización de aplicaciones legacy mediante la migración de Ubuntu Xenial a Ubuntu Focal.",
-        "Supervisión y monitoreo proactivo de Site Controllers utilizando Sensu y Graphite."
+        "Administrar y actualizar máquinas virtuales Site Controller a través de la automatización Ansible y sistemas basados ​​en Linux.",
+        "Diseño y aprovisionamiento de infraestructura utilizando Terraform, integrada con canalizaciones de CI/CD a través de Jenkins.",
+        "Modernizando aplicaciones heredadas migrando de Ubuntu Xenial a Ubuntu Focal.",
+        "Supervisar y monitorear los controladores de sitio que utilizan Sensu y Graphite."
       ]
     },
     {
@@ -69,10 +80,10 @@
       "companyUrl": "https://www.infocert.it/",
       "period": "Oct 2023 - Nov 2024",
       "highlights": [
-        "Gestión de infraestructura para plataformas críticas de Identidad Digital como SPID y GoSign.",
-        "Orquestación de contenedores para modernizar aplicaciones legacy y agilizar los despliegues.",
-        "Migración de aplicaciones desde entornos on-premise hacia plataformas Cloud.",
-        "Administración de bases de datos y supervisión de la arquitectura de observabilidad."
+        "Trabajando en productos de Identidad como SPID, Gosign, etc.",
+        "Orquestar la contenedorización para la modernización de aplicaciones heredadas y la eficiencia de la implementación.",
+        "Migración de aplicaciones locales a plataformas en la nube",
+        "Administrar bases de datos y supervisar las medidas de observabilidad."
       ]
     },
     {
@@ -81,63 +92,63 @@
       "companyUrl": "https://www.idea75.it/",
       "period": "Oct 2022 - Oct 2023",
       "highlights": [
-        "Coordinación técnica con múltiples equipos de desarrollo en diversos proyectos simultáneos.",
-        "Implementación de pipelines CI/CD, automatización de despliegues, monitoreo y observabilidad.",
-        "Reducción de cuellos de botella (tiempos de build y latencia) y optimización de costos mediante el redimensionamiento de recursos.",
-        "Garantía de cero tiempo de inactividad (zero-downtime) y alta disponibilidad mediante balanceo de carga y autoescalado."
+        "Coordinación con un grupo de desarrolladores que abarcan diferentes proyectos.",
+        "Facilite la automatización de la implementación y CI/CD. Seguimiento y observabilidad.",
+        "Reduzca los cuellos de botella (tiempos de construcción, latencia) y optimice los costos (reescalamiento de recursos)",
+        "Garantice cero tiempo de inactividad y alta disponibilidad (equilibrio de carga y recursos de escalado automático)"
       ]
     },
     {
-      "role": "Cloud Developer",
+      "role": "Desarrollador de la nube",
       "company": "Reply",
       "companyUrl": "https://www.reply.com/",
       "period": "May 2020 - Oct 2022",
       "highlights": [
-        "Desarrollo de funciones AWS Lambda en Python bajo arquitecturas 100% serverless en AWS.",
-        "Gestión y resolución de incidencias en dispositivos IoT para el proyecto Enel-X.",
-        "Supervisión del despliegue de parches (hotfixes) y automatización de las pipelines de entrega continua.",
-        "Propuesta y ejecución de un plan de redimensionamiento de recursos en la nube que generó ahorros de ~$10,000 USD al mes."
+        "Trabajé en funciones lambda generalmente en Python. La implementación es sin servidor en AWS.",
+        "Gestioné dispositivos IoT del proyecto Enel-X y también participé en la resolución de problemas.",
+        "Supervisó la implementación de arreglos y la gestión del oleoducto. Lo que implica automatizar la implementación.",
+        "Redimensionamiento recomendado de recursos ahorrando alrededor de $10k/mes"
       ]
     },
     {
-      "role": "Pasante de Gestión de Proyectos (PM)",
+      "role": "Practicante de Gerente de Proyectos",
       "company": "Associazione Erminio Bullio",
       "companyUrl": "https://www.linkedin.com/company/associazionebullio/",
-      "period": "Jul 2019 - Sep 2019",
+      "period": "July 2019 - Sep 2019",
       "highlights": [
-        "Participación en la Gestión del Ciclo de Vida del Proyecto (PLM) para una obra del sector de la construcción.",
-        "Desarrollo de módulos personalizados en Python para el sistema de gestión Odoo PLM."
+        "Principalmente involucrado en la gestión del ciclo de vida del proyecto de construcción.",
+        "Trabajé en el desarrollo de módulos personalizados en el software Odoo PLM. Los módulos fueron escritos en Python."
       ]
     },
     {
       "role": "Gerente de Desarrollo de Negocios",
       "company": "Cansa Tarim Makinalari",
       "companyUrl": "https://www.cansatarim.com.tr/en/",
-      "period": "Ago 2016 - Ago 2017",
+      "period": "Aug 2016 - Aug 2017",
       "highlights": [
-        "Identificación y apertura de nuevas oportunidades de negocio en mercados internacionales.",
-        "Gestión de estrategias de marketing y comunicación directa con clientes globales."
+        "Las principales responsabilidades fueron identificar nuevas oportunidades de negocio.",
+        "También marketing y comunicación con clientes internacionales."
       ]
     },
     {
-      "role": "Profesor de Inglés",
+      "role": "profesora de ingles",
       "company": "Oxford English Academy",
       "companyUrl": null,
-      "period": "Oct 2013 - Jul 2016",
+      "period": "October 2013 - July 2016",
       "highlights": [
-        "Profesor de inglés a tiempo parcial para grupos de estudiantes de distintos niveles.",
-        "Desarrollo de sólidas habilidades de gestión del tiempo y resolución de problemas bajo presión.",
-        "Estoy convencido de que si puedes liderar un aula de adolescentes, puedes gestionar cualquier equipo con éxito."
+        "Trabajó como profesora de inglés a tiempo parcial para estudiantes de diferentes niveles.",
+        "Trabajé bajo presión y adquirí capacidades eficientes de gestión del tiempo.",
+        "Creo que si puedes manejar a un grupo de adolescentes, puedes manejar a cualquiera."
       ]
     },
     {
       "role": "Pasante de Relaciones Públicas",
       "company": "University of Turkish Aeronautical Association",
       "companyUrl": "https://www.thk.edu.tr",
-      "period": "Nov 2013 - Jun 2014",
+      "period": "November 2013 - June 2014",
       "highlights": [
-        "Participación en campañas de promoción institucional y marketing universitario.",
-        "Atención y asesoramiento a futuros estudiantes durante el proceso de admisión."
+        "Trabajó en la promoción y marketing de la universidad.",
+        "Gestioné las llamadas y respondí las consultas de los futuros estudiantes."
       ]
     }
   ],
@@ -145,143 +156,143 @@
     {
       "institution": "Udacity",
       "institutionUrl": "https://www.udacity.com",
-      "program": "Fundamentos de Hacking Ético",
+      "program": "Fundamentos del hacking ético",
       "programUrl": "https://www.udacity.com/course/ethical-hacker-nanodegree--nd350",
-      "period": "Dic 2024 - Feb 2025",
+      "period": "Dec 2024 - Feb 2025",
       "scholarship": {
-        "text": "Ganador de la beca internacional otorgada por Bertelsmann entre miles de postulantes.",
-        "credentialText": "Verificar Certificado",
+        "text": "Gané la beca ofrecida por Bertelsmann entre muchos solicitantes.",
+        "credentialText": "haga clic aquí",
         "credentialUrl": "https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
       },
       "highlights": [
-        "Ejecución de escaneos de vulnerabilidades, priorización de riesgos y gestión de respuesta ante incidentes.",
-        "Realización de auditorías de sistemas, investigación de vulnerabilidades y elaboración de informes técnicos.",
-        "Análisis de tácticas de ingeniería social, simulaciones de phishing y evaluación de malware."
+        "Realizar análisis de vulnerabilidades y gestionar la priorización y la respuesta.",
+        "Realizar auditorías de sistemas, investigar vulnerabilidades y redactar informes.",
+        "Explorando tácticas de ingeniería social, simulaciones de phishing e implementación de malware"
       ]
     },
     {
       "institution": "Udacity",
       "institutionUrl": "https://www.udacity.com",
-      "program": "Cloud DevOps Engineer",
+      "program": "Ingeniero DevOps",
       "programUrl": "https://www.udacity.com/course/cloud-devops-using-microsoft-azure-nanodegree--nd082",
-      "period": "Jul 2022 - Nov 2022",
+      "period": "July 2022 - Nov 2022",
       "scholarship": {
-        "text": "Ganador de la beca internacional otorgada por Bosch entre miles de postulantes.",
-        "credentialText": "Verificar Certificado",
+        "text": "Gané la beca ofrecida por Bosch entre muchos solicitantes.",
+        "credentialText": "haga clic aquí",
         "credentialUrl": "https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
       },
       "highlights": [
-        "Despliegue automatizado de infraestructura como código (IaC) utilizando Terraform y Packer.",
-        "Desarrollo ágil (Agile), pruebas funcionales y pruebas de rendimiento.",
-        "Desarrollo y despliegue de aplicaciones Cloud-Native con Docker y Kubernetes."
+        "Centrarse en la implementación de infraestructura utilizando Terraform y Packer",
+        "Desarrollo ágil, pruebas funcionales y de rendimiento.",
+        "Desarrollo de aplicaciones nativas de la nube utilizando Docker y Kubernetes"
       ]
     },
     {
       "institution": "Udacity",
       "institutionUrl": "https://www.udacity.com",
-      "program": "Desarrollo Web Front-End",
+      "program": "Desarrollo web front-end",
       "programUrl": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011",
-      "period": "Ene 2020 - Mar 2020",
+      "period": "January 2020 - March 2020",
       "scholarship": {
-        "text": "Ganador de la beca internacional otorgada por Google entre miles de postulantes.",
-        "credentialText": "Verificar Certificado",
+        "text": "Gané la beca ofrecida por Google entre muchos solicitantes.",
+        "credentialText": "haga clic aquí",
         "credentialUrl": "https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
       },
       "highlights": [
-        "Especialización en CSS, JavaScript moderno, consumo de APIs, herramientas de build y backend con Node.js y Express.",
-        "Desarrollo de interfaces con React, buenas prácticas de código limpio y optimización de rendimiento web."
+        "Centrarse en CSS, JavaScript, API, herramientas de compilación y Express. En el backend, el foco está en node.js.",
+        "También bibliotecas front-end como React. Mejores prácticas de codificación y optimización de sitios web."
       ]
     },
     {
       "institution": "Politecnico di Torino",
       "institutionUrl": "https://www.polito.it",
-      "program": "Maestría en Ingeniería y Gestión (Engineering & Management)",
+      "program": "Maestría en Ingeniería y Gestión",
       "programUrl": null,
-      "period": "Sep 2017 - Mar 2020",
+      "period": "September 2017 - March 2020",
       "gpa": {
-        "text": "Calificación: 100/110",
+        "text": "Promedio académico: 100/110",
         "url": "https://sid.polito.it/TinyUrl-1.0/verifypdf/pdf.html?url=KKHjsyk5uLw"
       },
       "highlights": [
-        "Especialización en Gestión de Proyectos, Ingeniería de Producción y Calidad.",
-        "Enfoque complementario en Economía, Ingeniería Financiera, Estrategia y Gestión de la Innovación.",
-        "Tesis de maestría sobre la aplicación de técnicas de Inteligencia Artificial en la Gestión de Proyectos."
+        "Concentración en Gestión de Proyectos, Ingeniería de Producción y Calidad.",
+        "También se centra en economía, ingeniería financiera, estrategia y gestión de la innovación.",
+        "Tesis sobre Aplicación de técnicas de Inteligencia Artificial en la Gestión de Proyectos"
       ]
     },
     {
       "institution": "University of Turkish Aeronautical Association",
       "institutionUrl": "https://www.thk.edu.tr",
-      "program": "Grado en Ingeniería Aeronáutica",
+      "program": "Licenciatura en Ingeniería Aeronáutica",
       "programUrl": "assets/Degree_Bachelor.pdf",
       "programDownload": true,
-      "period": "Sep 2012 - Jun 2016",
+      "period": "September 2012 - June 2016",
       "gpa": {
-        "text": "Promedio (GPA): 3.08/4.0",
+        "text": "Promedio académico: 3.08/4.0",
         "url": "assets/Diploma_Supplement_Bachelor.pdf",
         "download": true
       },
       "highlights": [
-        "Especialización en Aerodinámica, Método de los Elementos Finitos (FEM) y diseño CAD.",
-        "Prácticas académicas en la resolución numérica de las ecuaciones de Navier-Stokes utilizando Python.",
-        "Prácticas académicas en la simulación fluidodinámica de una turbina Francis con Ansys Fluent."
+        "Concentración en Aerodinámica, FEM y CAD",
+        "Prácticas académicas en la resolución de la ecuación de Navier-Stokes usando Python",
+        "Pasantía académica sobre análisis de Turbina Francis usando Ansys Fluent"
       ]
     }
   ],
   "skills": [
     {
-      "category": "Cloud y Desarrollo",
+      "category": "Revelador",
       "items": [
         {
           "icon": "fab fa-aws",
-          "text": "AWS: API Gateway, CloudWatch, Lambda, EC2, VPC, S3, SQS, SNS, etc."
+          "text": "Puerta de enlace API, Cloudwatch, Lambda, EC2, VPC, S3, SQS, SNS, etc."
         },
         {
           "icon": "fab fa-microsoft",
-          "text": "Azure: Virtual Machines, Active Directory, Policy, Azure CLI, etc."
+          "text": "Azure vm, directorio activo, política, AZ CLI, etc."
         },
         {
           "icon": "fas fa-code-compare",
-          "text": "CI/CD e IaC: Bamboo, GitLab CI, CloudFormation, Terraform, etc."
+          "text": "Bambú, Gitlab, Cloudformation, Terraform, etc."
         },
         {
           "icon": "fab fa-docker",
-          "text": "Contenedores y DevOps: Git, Docker, Kubernetes, Packer, etc."
+          "text": "Git, Docker, Kubernetes, Packer, etc."
         },
         {
           "icon": "fas fa-circle-nodes",
-          "text": "Ecosistema Kubernetes: Helm, Kustomize, ArgoCD, OpenShift, K9s, etc."
+          "text": "Herramientas de Kuberentes como Helm, Kustomize, ArgoCD, Openshift, K9s, etc."
         },
         {
           "icon": "fas fa-laptop-medical",
-          "text": "Monitoreo y Observabilidad: Grafana, Prometheus, Loki, Kibana, Sensu, etc."
+          "text": "Herramientas de monitoreo como Grafana, Prometheus, Loki, Kibana, Sensu, etc."
         },
         {
           "icon": "fas fa-spell-check",
-          "text": "Automatización de Pruebas: API (Postman), UI Funcional (Selenium, Playwright), Rendimiento (JMeter)"
+          "text": "Pruebas de API (Postman), pruebas de UI funcionales (Selenium), pruebas de rendimiento (Jmeter), etc."
         },
         {
           "icon": "fab fa-linux",
-          "text": "Sistemas y Scripting: Bash, PowerShell, Nginx, administración remota por SSH"
+          "text": "Secuencias de comandos Bash, Powershell, Nginx, SSH remoto, etc."
         },
         {
           "icon": "fas fa-server",
-          "text": "Gestión de Configuración: Ansible, Chef, Puppet, etc."
+          "text": "Herramientas de gestión de configuración como Ansible, Chef, Puppet, etc."
         },
         {
           "icon": "fab fa-python",
-          "text": "Python: Django, Flask, SQLAlchemy, automatización de sistemas"
+          "text": "Django, matraz, SQLAlchemy, etc."
         },
         {
           "icon": "fab fa-html5",
-          "text": "Maquetación Web: HTML5, CSS3, Bootstrap, Babel, SASS, LESS, Tailwind"
+          "text": "HTML, CSS, Bootstrap, Babel, SASS, MENOS, etc."
         },
         {
           "icon": "fab fa-js-square",
-          "text": "JavaScript y TypeScript: React, Redux, Node.js, Express.js"
+          "text": "Reaccionar, Redux, Node.js, Express.js, Typecript, etc."
         },
         {
           "icon": "fas fa-database",
-          "text": "Bases de Datos: MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch"
+          "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch, etc."
         }
       ]
     },
@@ -290,19 +301,19 @@
       "items": [
         {
           "icon": "fas fa-compass-drafting",
-          "text": "Diseño asistido por computadora CAD (SolidWorks, CATIA, AutoCAD)"
+          "text": "CAD (Solidworks, Catia, AutoCAD, etc.)"
         },
         {
           "icon": "fas fa-water",
-          "text": "Dinámica de Fluidos Computacional CFD (Ansys Fluent, Autodesk CFD)"
+          "text": "CFD (Ansys Fluent, Autodesk CFD, etc.)"
         },
         {
           "icon": "fas fa-hammer",
-          "text": "Análisis de Elementos Finitos FEA/FEM (Abaqus, Nastran, Patran)"
+          "text": "FEA (Abaqus, Nastran, Patran, etc.)"
         },
         {
           "icon": "fas fa-code",
-          "text": "Cálculo Numérico y Simulación (MATLAB y Simulink)"
+          "text": "Matlab y Simulink"
         }
       ]
     },
@@ -311,40 +322,40 @@
       "items": [
         {
           "icon": "fas fa-diagram-project",
-          "text": "Metodologías Ágiles y de Proyectos (Scrum, Agile, Kanban)"
+          "text": "Metodologías de PM (Scrum, Agile, Kanban, etc.)"
         },
         {
           "icon": "fab fa-jira",
-          "text": "Herramientas de Gestión de Proyectos (MS Project, Jira, Odoo)"
+          "text": "Herramientas de gestión de proyectos (MS Project, Jira, Odoo, etc.)"
         },
         {
           "icon": "fas fa-briefcase",
-          "text": "Analítica de Negocios y ERP (SAP, Oracle, SAS, Tableau)"
+          "text": "Herramientas de analítica de negocio (SAP, Oracle, SAS, Tableu, etc.)"
         },
         {
           "icon": "fas fa-chart-line",
-          "text": "Marketing Digital y Analítica (SEO, Google Analytics, HubSpot)"
+          "text": "Herramientas de marketing (SEO, Google Analytics, Hubspot, etc.)"
         }
       ]
     },
     {
-      "category": "Habilidades Blandas",
+      "category": "Misceláneas",
       "items": [
         {
           "icon": "fas fa-bullhorn",
-          "text": "Oratoria y Comunicación Efectiva (Toastmasters)"
+          "text": "Hablar en público (Toastmasters)"
         },
         {
           "icon": "fas fa-people-group",
-          "text": "Flexibilidad, rápida adaptación y espíritu colaborativo"
+          "text": "Flexible, fácilmente adaptable y jugador de equipo"
         },
         {
           "icon": "fas fa-clock",
-          "text": "Gestión eficiente del tiempo y resolución bajo presión"
+          "text": "Gestión del tiempo y trabajo bajo presión."
         },
         {
           "icon": "fas fa-map-location",
-          "text": "Disponibilidad para reubicación internacional"
+          "text": "Disponible para reubicarse"
         }
       ]
     },
@@ -353,15 +364,15 @@
       "items": [
         {
           "icon": "fas fa-battery-full",
-          "text": "Inglés"
+          "text": "ingles"
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "Urdu"
+          "text": "urdu"
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "Hindi"
+          "text": "hindi"
         },
         {
           "icon": "fas fa-battery-full",
@@ -369,97 +380,97 @@
         },
         {
           "icon": "fas fa-battery-three-quarters",
-          "text": "Turco"
+          "text": "turco"
         },
         {
           "icon": "fas fa-battery-three-quarters",
-          "text": "Italiano"
+          "text": "italiano"
         }
       ]
     }
   ],
   "projects": [
     {
-      "category": "Proyectos en GitHub",
+      "category": "Desarrollador Github",
       "items": [
         {
           "icon": "fab fa-microsoft",
-          "text": "Despliegue de un servidor web IaaS escalable en Azure con Terraform y Packer",
+          "text": "Implementación de un servidor web IaaS escalable en Azure usando Terraform",
           "url": "https://github.com/usama242/Terraform-packer-project"
         },
         {
           "icon": "fab fa-microsoft",
-          "text": "Construcción de una pipeline CI/CD utilizando Azure Pipelines y GitHub Actions",
+          "text": "Creación de una canalización de CI/CD mediante canalizaciones de Azure y acciones de GitHub",
           "url": "https://github.com/usama242/CICD-pipeline-azure"
         },
         {
           "icon": "fab fa-microsoft",
-          "text": "Aseguramiento de calidad en despliegues mediante pruebas de API, funcionales y de rendimiento",
+          "text": "Garantizar lanzamientos de calidad con API, pruebas funcionales y de rendimiento",
           "url": "https://github.com/usama242/Ensuring_Quality_Releases"
         },
         {
           "icon": "fab fa-microsoft",
-          "text": "Creación automatizada de imágenes Docker, aprovisionamiento de VM y despliegue en Kubernetes",
+          "text": "Creación automatizada de imágenes de Docker, aprovisionamiento de VM e implementación de Kubernetes",
           "url": "https://github.com/usama242/techtrends"
         },
         {
           "icon": "fab fa-microsoft",
-          "text": "Predicción de abandono de clientes (Churn) aplicando buenas prácticas de código limpio y pruebas unitarias",
+          "text": "Mejores prácticas de codificación y pruebas unitarias",
           "url": "https://github.com/usama242/Predict_Customer_Churn"
         },
         {
           "icon": "fas fa-plane",
-          "text": "Aplicación web de planificación de viajes integrada con múltiples APIs REST",
+          "text": "Aplicación de viajes en línea que utiliza múltiples API",
           "url": "https://github.com/usama242/Project-5"
         },
         {
           "icon": "fas fa-cloud",
-          "text": "Aplicación asíncrona de diario meteorológico conectada a la API de OpenWeatherMap",
+          "text": "Una aplicación asíncrona Weather Journal que utiliza la API OpenWeatherMap",
           "url": "https://github.com/usama242/Project-3"
         },
         {
           "icon": "fas fa-cart-shopping",
-          "text": "Evaluación semántica de artículos periodísticos mediante Procesamiento del Lenguaje Natural (NLP)",
+          "text": "Evaluar un artículo de noticias con procesamiento del lenguaje natural.",
           "url": "https://github.com/usama242/Project-4"
         },
         {
           "icon": "fas fa-blog",
-          "text": "Sitio web de blog multipágina responsive desarrollado con HTML5 y CSS3 puro",
+          "text": "Sitio web de blog multipágina con HTML y CSS puro",
           "url": "https://github.com/usama242/Project-1"
         }
       ]
     },
     {
-      "category": "Publicaciones de Ingeniería",
+      "category": "Publicaciones de ingeniería",
       "items": [
         {
           "icon": "fas fa-microchip",
-          "text": "Aplicación de técnicas de Inteligencia Artificial en la Gestión de Proyectos",
+          "text": "Aplicar técnicas de Inteligencia Artificial en la Gestión de Proyectos",
           "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management"
         },
         {
           "icon": "fas fa-plane",
-          "text": "Diseño de un vehículo aéreo no tripulado (UAV) con ala adaptable de envergadura variable",
+          "text": "Diseño de un UAV con ala Morphing de envergadura variable",
           "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing"
         },
         {
           "icon": "fas fa-square",
-          "text": "Análisis de estados de tensión y deformación en una placa semi-infinita",
+          "text": "Estados de tensión y deformación en una placa semiinfinita",
           "url": null
         },
         {
           "icon": "fas fa-plane",
-          "text": "Análisis aerodinámico de un planeador de ala delta lanzado por catapulta",
+          "text": "Análisis de un planeador de ala delta lanzado con catapulta",
           "url": null
         },
         {
           "icon": "fas fa-bullseye",
-          "text": "Diseño conceptual de un misil superficie-aire (SAM)",
+          "text": "Diseño conceptual de un misil tierra-aire",
           "url": null
         },
         {
           "icon": "fas fa-square",
-          "text": "Análisis de tensión plana en una placa rectangular sometida a una carga concentrada",
+          "text": "Análisis de tensiones planas de una placa rectangular sometida a una carga concentrada",
           "url": null
         }
       ]
@@ -468,28 +479,28 @@
   "interests": [
     {
       "icon": "fas fa-camera-retro",
-      "title": "Apasionado de la Fotografía",
-      "description": "Capturando la esencia de las personas en cada disparo, un retrato a la vez."
+      "title": "Entusiasta de la fotografía",
+      "description": "Capturando almas con un clic, un retrato a la vez."
     },
     {
       "icon": "fas fa-route",
-      "title": "Explorador Cultural",
-      "description": "Viajando a través de sabores, historias y tradiciones con el pasaporte en mano."
+      "title": "Explorador cultural",
+      "description": "Jet-set a través de sabores y tradiciones, pasaporte en mano."
     },
     {
       "icon": "fas fa-pizza-slice",
-      "title": "Aventurero Culinario",
-      "description": "Creando magia en la cocina y experimentando con la gastronomía internacional."
+      "title": "Aventurero culinario",
+      "description": "Revolviendo magia en la cocina, experimentando con cocinas globales."
     },
     {
       "icon": "fas fa-chess-knight",
-      "title": "Estratega del Ajedrez",
-      "description": "Cada partida es un desafío de táctica, anticipación y precisión."
+      "title": "Maestro de ajedrez galáctico",
+      "description": "El jaque mate resuena en todo el universo, la victoria en las constelaciones."
     },
     {
       "icon": "fas fa-film",
-      "title": "Espíritu Cinéfilo",
-      "description": "Debatiendo sobre grandes películas bajo el cielo estrellado con otros viajeros."
+      "title": "Nave estelar cinéfila",
+      "description": "Discutir películas bajo un cielo estrellado con otros viajeros cósmicos."
     }
   ]
 }

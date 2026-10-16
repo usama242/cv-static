@@ -8,6 +8,10 @@ export const UI_TEXT = {
       projects: "Projects",
       lifestyle: "Lifestyle",
       resumeBtn: "Resume PDF",
+      downloadCurrentTitle: "Download CV in English",
+      resumeOptions: "Choose CV language",
+      chooseCvLanguage: "Select CV Language",
+      activeLang: "Active",
       themeLight: "Switch to light mode",
       themeDark: "Switch to dark mode"
     },
@@ -49,7 +53,8 @@ export const UI_TEXT = {
       dossierBadge: "Complete Dossier",
       dossierTitle: "Download Printable PDF Curriculum Vitae",
       dossierDesc: "Prefer a traditional offline document? Grab the official DevOps PDF resume directly from the vault.",
-      dossierCta: "Download PDF Now"
+      dossierCta: "Download PDF Now",
+      otherFormats: "Or choose language:"
     },
     education: {
       eyebrow: "Academic Pedigree & Scholarships",
@@ -99,6 +104,10 @@ export const UI_TEXT = {
       projects: "Progetti",
       lifestyle: "Passioni",
       resumeBtn: "CV in PDF",
+      downloadCurrentTitle: "Scarica CV in Italiano",
+      resumeOptions: "Scegli lingua del CV",
+      chooseCvLanguage: "Seleziona Lingua CV",
+      activeLang: "Attivo",
       themeLight: "Passa alla modalità chiara",
       themeDark: "Passa alla modalità scura"
     },
@@ -140,7 +149,8 @@ export const UI_TEXT = {
       dossierBadge: "Dossier Completo",
       dossierTitle: "Scarica il Curriculum Vitae Stampabile in PDF",
       dossierDesc: "Preferisci il documento tradizionale? Scarica il CV ufficiale DevOps in formato PDF.",
-      dossierCta: "Scarica PDF Ora"
+      dossierCta: "Scarica PDF Ora",
+      otherFormats: "Oppure scegli la lingua:"
     },
     education: {
       eyebrow: "Percorso Accademico & Borse di Studio",
@@ -190,6 +200,10 @@ export const UI_TEXT = {
       projects: "Proyectos",
       lifestyle: "Intereses",
       resumeBtn: "CV en PDF",
+      downloadCurrentTitle: "Descargar CV en Español",
+      resumeOptions: "Elegir idioma del CV",
+      chooseCvLanguage: "Seleccionar Idioma del CV",
+      activeLang: "Activo",
       themeLight: "Cambiar a modo claro",
       themeDark: "Cambiar a modo oscuro"
     },
@@ -231,7 +245,8 @@ export const UI_TEXT = {
       dossierBadge: "Dossier Completo",
       dossierTitle: "Descargar Curriculum Vitae Imprimible en PDF",
       dossierDesc: "¿Prefieres un documento tradicional? Descarga el CV oficial de DevOps en PDF.",
-      dossierCta: "Descargar PDF Ahora"
+      dossierCta: "Descargar PDF Ahora",
+      otherFormats: "O elige el idioma:"
     },
     education: {
       eyebrow: "Formación Académica y Becas",
@@ -272,3 +287,72 @@ export const UI_TEXT = {
     }
   }
 };
+
+export const RESUME_FILES = {
+  en: {
+    lang: "en",
+    label: "English",
+    nativeLabel: "English",
+    flag: "🇬🇧",
+    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps.pdf",
+    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+  },
+  it: {
+    lang: "it",
+    label: "Italian",
+    nativeLabel: "Italiano",
+    flag: "🇮🇹",
+    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf",
+    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
+  },
+  es: {
+    lang: "es",
+    label: "Spanish",
+    nativeLabel: "Español",
+    flag: "🇪🇸",
+    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf",
+    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
+  }
+};
+
+export function getActiveResume(personal, lang = "en") {
+  const list = personal?.resumeDownloads;
+  if (Array.isArray(list) && list.length > 0) {
+    const match = list.find((item) =>
+      item.lang === lang ||
+      (lang === "it" && item.url?.includes("Italian")) ||
+      (lang === "es" && item.url?.includes("Spanish")) ||
+      (lang === "en" && !item.url?.includes("Italian") && !item.url?.includes("Spanish"))
+    );
+    if (match) return match;
+    return list[0];
+  }
+  return RESUME_FILES[lang] || RESUME_FILES.en;
+}
+
+export function getAllResumes(personal, currentLang = "en") {
+  const supported = ["en", "it", "es"];
+  const list = personal?.resumeDownloads;
+
+  return supported.map((code) => {
+    const fallback = RESUME_FILES[code];
+    const match = Array.isArray(list)
+      ? list.find((item) =>
+          item.lang === code ||
+          (code === "it" && item.url?.includes("Italian")) ||
+          (code === "es" && item.url?.includes("Spanish")) ||
+          (code === "en" && !item.url?.includes("Italian") && !item.url?.includes("Spanish"))
+        )
+      : null;
+
+    return {
+      lang: code,
+      label: match?.label || fallback.nativeLabel,
+      nativeLabel: fallback.nativeLabel,
+      flag: fallback.flag,
+      filename: fallback.filename,
+      url: match?.url || fallback.url,
+      isActive: code === currentLang
+    };
+  });
+}

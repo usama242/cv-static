@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { DEFAULT_DATA } from './defaultData';
-import { UI_TEXT } from './i18n';
+import { UI_TEXT, getActiveResume, getAllResumes } from './i18n';
 import { buildExperienceDeck, buildEducationDeck } from './constants/visuals';
 
 import Navbar from './components/Navbar';
@@ -149,6 +149,8 @@ export default function App() {
     } else if (modalDeck.type === "education") {
       setModalDeck((prev) => (prev ? { ...prev, items: educationDeck } : null));
     } else if (modalDeck.type === "bio") {
+      const currentResume = getActiveResume(personal, lang);
+      const allResumes = getAllResumes(personal, lang);
       const bioItem = {
         id: "bio-sheet",
         badge: ui.hero.badge,
@@ -163,13 +165,14 @@ export default function App() {
           `${ui.hero.locationLabel || "Location"}: ${personal.location}`
         ],
         links: [
-          { label: ui.nav.resumeBtn, url: personal.resumeDownloads?.[0]?.url || "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf" },
+          { label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url },
+          ...allResumes.filter((r) => !r.isActive).map((r) => ({ label: `${ui.nav.resumeBtn} (${r.nativeLabel || r.label})`, url: r.url })),
           ...(personal.socialLinks || []).map((s) => ({ label: s.platform, url: s.url }))
         ]
       };
       setModalDeck((prev) => (prev ? { ...prev, items: [bioItem, ...experienceDeck] } : null));
     }
-  }, [experienceDeck, educationDeck, ui, personal]);
+  }, [experienceDeck, educationDeck, ui, personal, lang]);
 
   const stepModal = useCallback((dir) => {
     setDeckDirection(dir);
@@ -227,6 +230,7 @@ export default function App() {
         experiences={experiences}
         personal={personal}
         ui={ui}
+        lang={lang}
         showAllExp={showAllExp}
         setShowAllExp={setShowAllExp}
         experienceDeck={experienceDeck}

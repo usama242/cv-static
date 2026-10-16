@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getActiveResume, getAllResumes } from '../i18n';
 
 export default function Hero({ personal, latestExp, ui, lang, experienceDeck, openModalDeck }) {
+  const currentResume = getActiveResume(personal, lang);
+  const allResumes = getAllResumes(personal, lang);
   return (
     <section id="hero" className="relative pt-32 pb-24 px-6 z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -62,7 +65,8 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                             `${ui.hero.locationLabel || "Location"}: ${personal.location}`
                           ],
                           links: [
-                            { label: ui.nav.resumeBtn, url: personal.resumeDownloads?.[0]?.url || "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf" },
+                            { label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url },
+                            ...allResumes.filter((r) => !r.isActive).map((r) => ({ label: `${ui.nav.resumeBtn} (${r.nativeLabel || r.label})`, url: r.url })),
                             ...(personal.socialLinks || []).map((s) => ({ label: s.platform, url: s.url }))
                           ]
                         },

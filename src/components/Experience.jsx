@@ -1,16 +1,21 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ROLE_VISUALS } from '../constants/visuals';
+import { getActiveResume, getAllResumes } from '../i18n';
 
 export default function Experience({
   experiences,
   personal,
   ui,
+  lang,
   showAllExp,
   setShowAllExp,
   experienceDeck,
   openModalDeck
 }) {
+  const currentResume = getActiveResume(personal, lang);
+  const allResumes = getAllResumes(personal, lang);
+
   const latestExp = experiences[0] || {};
   const coreRecentExp = experiences.slice(1, 4);
   const earlierExp = experiences.slice(4);
@@ -159,24 +164,62 @@ export default function Experience({
                   );
                 })}
 
-                <motion.a
+                <motion.div
                   whileHover={{ y: -6 }}
-                  href={personal.resumeDownloads?.[0]?.url || "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"}
-                  target="_blank"
-                  rel="noreferrer"
                   className="rounded-[26px] p-7 border-2 border-dashed border-sky-300 dark:border-sky-400/50 bg-gradient-to-br from-sky-50/60 via-white to-purple-50/50 dark:from-sky-500/15 dark:via-indigo-500/10 dark:to-purple-500/15 flex flex-col justify-between group shadow-[0_4px_20px_rgba(14,165,233,0.08)]"
                 >
                   <div>
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-800 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-400/30">
-                      {ui.experience.dossierBadge}
-                    </span>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-800 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-400/30">
+                        {ui.experience.dossierBadge}
+                      </span>
+                      <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-700 dark:text-sky-300">
+                        {lang}
+                      </span>
+                    </div>
                     <h4 className="text-2xl font-extrabold text-slate-900 dark:text-white mt-4">{ui.experience.dossierTitle}</h4>
                     <p className="text-slate-700 dark:text-slate-300 text-sm mt-2 leading-relaxed">{ui.experience.dossierDesc}</p>
                   </div>
-                  <div className="pt-6 text-xs font-bold text-sky-600 dark:text-sky-300 group-hover:translate-x-1 transition">
-                    {ui.experience.dossierCta} <i className="fas fa-file-pdf ml-1.5" />
+
+                  <div className="pt-6 space-y-4">
+                    {/* Primary Action: Downloads CV in currently active language */}
+                    <a
+                      href={currentResume.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center w-full px-5 py-3 rounded-2xl text-xs font-bold bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 text-white shadow-md shadow-sky-500/20 hover:brightness-110 transition gap-2"
+                    >
+                      <span>{ui.experience.dossierCta} ({currentResume.label})</span>
+                      <i className="fas fa-file-arrow-down" />
+                    </a>
+
+                    {/* Language Selection Pills for either CV */}
+                    <div>
+                      <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-2">
+                        {ui.experience.otherFormats || "Available languages:"}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {allResumes.map((r) => (
+                          <a
+                            key={r.lang}
+                            href={r.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition ${
+                              r.isActive
+                                ? "bg-sky-500/20 text-sky-700 dark:text-sky-300 border border-sky-400/40 font-bold"
+                                : "bg-white/70 dark:bg-white/10 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-white/20 border border-slate-200/80 dark:border-white/10"
+                            }`}
+                          >
+                            <span className="text-xs">{r.flag}</span>
+                            <span>{r.nativeLabel || r.label}</span>
+                            <i className="fas fa-arrow-up-right-from-square text-[9px] opacity-60" />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </motion.a>
+                </motion.div>
               </div>
             </motion.div>
           )}
