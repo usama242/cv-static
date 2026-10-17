@@ -325,30 +325,29 @@ Add any categories and items. The tabs and bento grid layout adjust automaticall
 
 ## 🌍 Step 6: Multi-Language Setup
 
-The website is completely modular when it comes to languages:
+The website is 100% modular and **automatically detects which language files exist** in the `public/` folder.
 
-### If you only want 1 Language (e.g. English):
-In `public/data.json`, configure:
-```json
-"languages": [
-  { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" }
-]
-```
-- The website will automatically hide the language switcher in the navigation bar.
-- It will **never** throw an error or attempt to load missing language files.
+### How Language Buttons Work Automatically:
+- **Only 1 language available** (e.g., only `public/data.json` exists):
+  - **0 buttons are shown** — the language switcher in the navbar is completely hidden.
+- **2 languages available** (e.g., `data.json` and `data.es.json` exist):
+  - **2 buttons are shown** (`EN` and `ES`).
+- **3 languages available** (e.g., `data.json`, `data.it.json`, and `data.es.json` exist):
+  - **3 buttons are shown** (`EN`, `IT`, and `ES`).
+- **Adding new languages**:
+  - Simply place a `data.<lang>.json` file in `public/` (e.g., `data.fr.json` for French, `data.de.json` for German). The website dynamically checks whether the file exists and automatically adds the button!
+- **Removing a language**:
+  - Simply delete or rename the file (e.g. delete `data.it.json`). The website will automatically update and remove the button — **no error, no crash, no broken pages**!
 
-### If you want Multiple Languages (e.g. English, Italian, Spanish, French, German):
-In `public/data.json`, list all languages you want:
+### Optional: Defining Languages in `data.json`
+You can also explicitly define custom labels, names, or flags in `public/data.json`:
 ```json
 "languages": [
   { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" },
-  { "code": "it", "label": "IT", "name": "Italiano", "flag": "🇮🇹" },
   { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
 ]
 ```
-- Create a corresponding `data.<code >.json` file in `public/` (e.g. `public/data.it.json`, `public/data.es.json`).
-- The navbar will automatically display buttons for all listed languages!
-- If a visitor clicks a language whose file does not exist, the website will **gracefully fall back** to `data.json` without crashing.
+Even if you leave old entries in this array, the website will **only display buttons for language files that actually exist on disk**. If a file is missing or deleted, its button will never appear!
 
 ### Automatic Translation Script (Optional):
 If you have Python installed on your computer, you can auto-translate your `data.json` into all languages configured in your `"languages"` array by running:

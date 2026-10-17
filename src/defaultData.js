@@ -41,7 +41,7 @@ export const DEFAULT_DATA = {
     { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
   ],
   "overview": {
-    "eyebrow": "Apple Bento Telemetry",
+    "eyebrow": "Career Highlights",
     "title": "Six+ years of cloud craftsmanship."
   },
   "highlightCard": {
