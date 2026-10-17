@@ -3,6 +3,9 @@
     "firstName": "Mohamad Usama",
     "lastName": "KUNNATHUR",
     "pageTitle": "Mohamad Usama KUNNATHUR",
+    "title": "Architetto DevOps & Cloud",
+    "heroTitleLine1": "Infrastruttura Cloud.",
+    "heroTitleLine2": "Progettata come arte.",
     "location": "Bari 10124",
     "phone": "(+39) 393 102 4267",
     "email": "mohamadusama242@gmail.com",
@@ -44,10 +47,28 @@
       }
     ]
   },
+  "languages": [
+    { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" },
+    { "code": "it", "label": "IT", "name": "Italiano", "flag": "🇮🇹" },
+    { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
+  ],
+  "overview": {
+    "eyebrow": "Telemetria Apple Bento",
+    "title": "Oltre sei anni di eccellenza nel Cloud."
+  },
+  "highlightCard": {
+    "enabled": true,
+    "badge": "FinOps & Alta Affidabilità",
+    "value": "$10k",
+    "unit": "/mese risparmiati",
+    "description": "Esperienza comprovata nell'ottimizzazione dei costi cloud, migrazioni Kubernetes zero-downtime e osservabilità enterprise per i leader italiani dei pagamenti e dell'identità digitale.",
+    "cta": "Clicca per esplorare i traguardi enterprise"
+  },
   "experienceCounter": {
     "enabled": true,
     "title": "Esperienza totale come ingegnere DevOps",
-    "startDate": "2020-05-01T00:00:00"
+    "startDate": "2020-05-01T00:00:00",
+    "description": "Orchestrazione continua di pipeline AWS, Azure, Kubernetes e Terraform da maggio 2020."
   },
   "experiences": [
     {
@@ -55,6 +76,14 @@
       "company": "LTIMindtree",
       "companyUrl": "https://www.ltimindtree.com/",
       "period": "Oct 2025 - Presente",
+      "tags": [
+        "NEXI Blockchain",
+        "Linux VMs",
+        "Kubernetes",
+        "Playwright",
+        "Selenium",
+        "Postman"
+      ],
       "highlights": [
         "Lavorando su un'applicazione basata su blockchain per NEXI",
         "Coinvolge l'automazione della distribuzione su macchine virtuali Linux nonché il monitoraggio",

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { INTEREST_IMAGES, getBentoSpan } from '../constants/visuals';
 
-export default function Interests({ interests, ui }) {
+export default function Interests({ interests = [], ui }) {
     return (
         <section id="interests" className="py-20 px-6 relative z-10">
             <div className="max-w-7xl mx-auto space-y-10">
@@ -14,7 +14,7 @@ export default function Interests({ interests, ui }) {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     {interests.map((int, idx) => {
                         const span = getBentoSpan(idx, interests.length);
-                        const bgImg = INTEREST_IMAGES[idx % INTEREST_IMAGES.length];
+                        const bgImg = int.image || INTEREST_IMAGES[idx % INTEREST_IMAGES.length];
                         return (
                             <motion.div
                                 key={idx}

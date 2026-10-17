@@ -76,11 +76,11 @@ export function buildExperienceDeck(experiences, ui) {
     const vis = ROLE_VISUALS[i % ROLE_VISUALS.length];
     return {
       id: `exp-${i}`,
-      badge: i === 0 ? ui.experience.latestBadge : exp.company,
+      badge: exp.badge || (i === 0 ? ui?.experience?.latestBadge : exp.company),
       period: exp.period,
       title: exp.role,
       subtitle: exp.company,
-      img: vis.img,
+      img: exp.image || vis.img,
       highlights: exp.highlights || [],
       links: exp.companyUrl ? [{ label: exp.company, url: exp.companyUrl }] : []
     };
@@ -94,20 +94,24 @@ export function buildEducationDeck(degrees, scholarships, ui) {
   const certificateLabel = ui?.education?.certificate || "Certificate";
 
   return orderedEducation.map((edu, i) => {
-    const isDeg = Boolean(edu.gpa);
-    const img = isDeg
+    const isDeg = Boolean(edu.gpa) || (!edu.scholarship && edu.type !== "certificate" && edu.type !== "scholarship");
+    const defaultImg = isDeg
       ? i === 0
         ? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
         : "https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1200&q=80"
       : "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1100&q=80";
 
+    const badge = isDeg
+      ? (edu.gpa?.text || edu.period || "")
+      : (edu.scholarship?.badge || ui?.education?.scholarshipLabel || "HONOR");
+
     return {
       id: `edu-${i}`,
-      badge: isDeg ? edu.gpa?.text : ui.education.scholarshipLabel,
+      badge,
       period: edu.period,
       title: edu.program,
       subtitle: edu.institution,
-      img,
+      img: edu.image || defaultImg,
       highlights: edu.scholarship ? [edu.scholarship.text, ...(edu.highlights || [])] : edu.highlights || [],
       links: [
         ...(edu.programUrl ? [{ label: edu.programDownload ? degreeLabel : programLabel, url: edu.programUrl }] : []),

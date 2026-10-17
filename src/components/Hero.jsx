@@ -5,13 +5,18 @@ import { getActiveResume, getAllResumes } from '../i18n';
 export default function Hero({ personal, latestExp, ui, lang, experienceDeck, openModalDeck }) {
   const currentResume = getActiveResume(personal, lang);
   const allResumes = getAllResumes(personal, lang);
+
+  const heroBadge = personal.title || personal.role || ui.hero.badge || "Portfolio";
+  const titleLine1 = personal.heroTitleLine1 || ui.hero.titleLine1 || "Creative Solutions.";
+  const titleLine2 = personal.heroTitleLine2 || ui.hero.titleLine2 || "Engineered with precision.";
+
   return (
     <section id="hero" className="relative pt-32 pb-24 px-6 z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative rounded-[36px] overflow-hidden border border-slate-200/90 dark:border-white/15 bg-white/90 dark:bg-[#0c0d14] backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] dark:shadow-2xl transition duration-300">
           <img
             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=85"
-            alt={ui.hero.badge}
+            alt={heroBadge}
             className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-30 mix-blend-luminosity scale-105 pointer-events-none"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-sky-50/80 via-white/80 to-purple-50/70 dark:from-sky-950/80 dark:via-[#07080d]/90 dark:to-purple-950/80 pointer-events-none" />
@@ -26,13 +31,13 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
             >
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-sky-500/10 dark:bg-white/10 backdrop-blur-md border border-sky-500/25 dark:border-white/15 text-xs font-semibold tracking-wider uppercase text-sky-800 dark:text-sky-300">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping" />
-                {ui.hero.badge} • {personal.location}
+                {heroBadge}{personal.location ? ` • ${personal.location}` : ""}
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.04] text-slate-900 dark:text-white">
-                {ui.hero.titleLine1}<br />
+                {titleLine1}<br />
                 <span className="bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 dark:from-sky-400 dark:via-violet-400 dark:to-rose-400 bg-clip-text text-transparent">
-                  {ui.hero.titleLine2}
+                  {titleLine2}
                 </span>
               </h1>
 
@@ -53,19 +58,19 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                       [
                         {
                           id: "bio-sheet",
-                          badge: ui.hero.badge,
+                          badge: heroBadge,
                           period: personal.location,
                           title: `${personal.firstName} ${personal.lastName}`,
                           subtitle: personal.email,
                           img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
                           highlights: [
                             personal.bio,
-                            `${ui.hero.emailLabel || "Email"}: ${personal.email}`,
-                            `${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`,
-                            `${ui.hero.locationLabel || "Location"}: ${personal.location}`
+                            ...(personal.email ? [`${ui.hero.emailLabel || "Email"}: ${personal.email}`] : []),
+                            ...(personal.phone ? [`${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`] : []),
+                            ...(personal.location ? [`${ui.hero.locationLabel || "Location"}: ${personal.location}`] : [])
                           ],
                           links: [
-                            { label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url },
+                            ...(currentResume ? [{ label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url }] : []),
                             ...allResumes.filter((r) => !r.isActive).map((r) => ({ label: `${ui.nav.resumeBtn} (${r.nativeLabel || r.label})`, url: r.url })),
                             ...(personal.socialLinks || []).map((s) => ({ label: s.platform, url: s.url }))
                           ]
@@ -103,13 +108,15 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                 <div className="relative rounded-[28px] overflow-hidden border-2 border-slate-200/90 dark:border-white/25 bg-white dark:bg-slate-900 w-72 sm:w-80 shadow-2xl">
                   <img
                     src={personal.profileImage || "assets/img/profile.jpg"}
-                    alt={personal.pageTitle}
+                    alt={personal.pageTitle || `${personal.firstName} ${personal.lastName}`}
                     className="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700"
                   />
                   <div className="p-4 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-t border-white/10 flex items-center justify-between">
                     <div>
                       <p className="text-xs text-sky-400 font-semibold uppercase tracking-wider">{ui.hero.currentMission}</p>
-                      <p className="text-sm font-bold text-white">{latestExp.company} • {latestExp.role}</p>
+                      <p className="text-sm font-bold text-white">
+                        {latestExp?.company ? `${latestExp.company} • ${latestExp.role}` : heroBadge}
+                      </p>
                     </div>
                     <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
                       {ui.hero.active}

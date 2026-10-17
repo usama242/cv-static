@@ -3,8 +3,73 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ROLE_VISUALS } from '../constants/visuals';
 import { getActiveResume, getAllResumes } from '../i18n';
 
+function DossierCard({ ui, lang, currentResume, allResumes }) {
+  if (!currentResume && (!allResumes || allResumes.length === 0)) return null;
+
+  return (
+    <motion.div
+      whileHover={{ y: -6 }}
+      className="rounded-[26px] p-7 border-2 border-dashed border-sky-300 dark:border-sky-400/50 bg-gradient-to-br from-sky-50/60 via-white to-purple-50/50 dark:from-sky-500/15 dark:via-indigo-500/10 dark:to-purple-500/15 flex flex-col justify-between group shadow-[0_4px_20px_rgba(14,165,233,0.08)]"
+    >
+      <div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-800 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-400/30">
+            {ui.experience.dossierBadge}
+          </span>
+          <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-700 dark:text-sky-300">
+            {lang}
+          </span>
+        </div>
+        <h4 className="text-2xl font-extrabold text-slate-900 dark:text-white mt-4">{ui.experience.dossierTitle}</h4>
+        <p className="text-slate-700 dark:text-slate-300 text-sm mt-2 leading-relaxed">{ui.experience.dossierDesc}</p>
+      </div>
+
+      <div className="pt-6 space-y-4">
+        {currentResume && (
+          <a
+            href={currentResume.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center w-full px-5 py-3 rounded-2xl text-xs font-bold bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 text-white shadow-md shadow-sky-500/20 hover:brightness-110 transition gap-2"
+          >
+            <span>{ui.experience.dossierCta} ({currentResume.label})</span>
+            <i className="fas fa-file-arrow-down" />
+          </a>
+        )}
+
+        {allResumes.length > 1 && (
+          <div>
+            <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-2">
+              {ui.experience.otherFormats || "Available languages:"}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {allResumes.map((r) => (
+                <a
+                  key={r.lang}
+                  href={r.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition ${
+                    r.isActive
+                      ? "bg-sky-500/20 text-sky-700 dark:text-sky-300 border border-sky-400/40 font-bold"
+                      : "bg-white/70 dark:bg-white/10 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-white/20 border border-slate-200/80 dark:border-white/10"
+                  }`}
+                >
+                  <span className="text-xs">{r.flag}</span>
+                  <span>{r.nativeLabel || r.label}</span>
+                  <i className="fas fa-arrow-up-right-from-square text-[9px] opacity-60" />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Experience({
-  experiences,
+  experiences = [],
   personal,
   ui,
   lang,
@@ -16,9 +81,13 @@ export default function Experience({
   const currentResume = getActiveResume(personal, lang);
   const allResumes = getAllResumes(personal, lang);
 
+  const totalExp = experiences.length;
   const latestExp = experiences[0] || {};
-  const coreRecentExp = experiences.slice(1, 4);
-  const earlierExp = experiences.slice(4);
+  const hasMore = totalExp > 4;
+  const coreRecentExp = hasMore ? experiences.slice(1, 4) : experiences.slice(1);
+  const earlierExp = hasMore ? experiences.slice(4) : [];
+
+  const latestTags = latestExp.tags || latestExp.skills || latestExp.technologies || [];
 
   return (
     <section id="experience" className="py-20 px-6 relative z-10">
@@ -28,13 +97,15 @@ export default function Experience({
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">{ui.experience.eyebrow}</p>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 text-slate-900 dark:text-white">{ui.experience.title}</h2>
           </div>
-          <button
-            onClick={() => setShowAllExp(!showAllExp)}
-            className="self-start md:self-auto px-5 py-2.5 rounded-full text-xs font-bold bg-white hover:bg-slate-50 dark:bg-white/10 dark:hover:bg-white/20 border border-slate-200/90 dark:border-white/20 text-slate-800 dark:text-white transition flex items-center gap-2 cursor-pointer shadow-xs"
-          >
-            <i className={`fas ${showAllExp ? 'fa-compress-alt' : 'fa-layer-group'} text-sky-500 dark:text-sky-400`} />
-            {showAllExp ? ui.experience.showCompact : `${ui.experience.expandAll} ${experiences.length} ${ui.experience.careerRoles}`}
-          </button>
+          {hasMore && (
+            <button
+              onClick={() => setShowAllExp(!showAllExp)}
+              className="self-start md:self-auto px-5 py-2.5 rounded-full text-xs font-bold bg-white hover:bg-slate-50 dark:bg-white/10 dark:hover:bg-white/20 border border-slate-200/90 dark:border-white/20 text-slate-800 dark:text-white transition flex items-center gap-2 cursor-pointer shadow-xs"
+            >
+              <i className={`fas ${showAllExp ? 'fa-compress-alt' : 'fa-layer-group'} text-sky-500 dark:text-sky-400`} />
+              {showAllExp ? ui.experience.showCompact : `${ui.experience.expandAll} ${experiences.length} ${ui.experience.careerRoles}`}
+            </button>
+          )}
         </div>
 
         {latestExp.role && (
@@ -53,7 +124,7 @@ export default function Experience({
                     <span className="text-xs font-mono font-bold text-slate-600 dark:text-slate-400">{latestExp.period}</span>
                   </div>
                   <h3 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">
-                    {latestExp.role} <span className="text-sky-600 dark:text-sky-400">@ {latestExp.company}</span>
+                    {latestExp.role} {latestExp.company && <span className="text-sky-600 dark:text-sky-400">@ {latestExp.company}</span>}
                   </h3>
                   <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
                     {latestExp.highlights?.[0]} {latestExp.highlights?.[1]}
@@ -61,23 +132,25 @@ export default function Experience({
                 </div>
 
                 <div className="pt-8 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200/90 dark:border-white/10 mt-8">
-                  <div className="flex flex-wrap gap-2">
-                    {["NEXI Blockchain", "Linux VMs", "Kubernetes", "Playwright", "Selenium", "Postman"].map((tag, i) => (
-                      <span key={i} className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100/90 dark:bg-white/10 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-transparent">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {latestTags.length > 0 ? (
+                    <div className="flex flex-wrap gap-2">
+                      {latestTags.map((tag, i) => (
+                        <span key={i} className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100/90 dark:bg-white/10 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-transparent">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : <div />}
                   <span className="text-xs font-bold text-sky-600 dark:text-sky-400 group-hover:translate-x-1 transition">
-                    {ui.experience.openSpec} ({latestExp.highlights?.length} {ui.experience.deliverables}) &rarr;
+                    {ui.experience.openSpec} ({latestExp.highlights?.length || 0} {ui.experience.deliverables}) &rarr;
                   </span>
                 </div>
               </div>
 
               <div className="lg:col-span-5 relative min-h-[260px] overflow-hidden">
                 <img
-                  src={ROLE_VISUALS[0].img}
-                  alt={latestExp.company}
+                  src={latestExp.image || ROLE_VISUALS[0].img}
+                  alt={latestExp.company || latestExp.role}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700 pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-white via-white/50 to-transparent dark:from-[#0d101b] dark:via-[#0d101b]/40 to-transparent pointer-events-none" />
@@ -86,44 +159,56 @@ export default function Experience({
           </motion.div>
         )}
 
-        {/* Symmetric 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {coreRecentExp.map((exp, idx) => {
-            const vis = ROLE_VISUALS[idx + 1] || ROLE_VISUALS[0];
-            return (
-              <motion.article
-                key={idx}
-                whileHover={{ y: -8 }}
-                onClick={() => openModalDeck(experienceDeck, idx + 1, "experience")}
-                className={`cursor-pointer rounded-[28px] overflow-hidden border border-slate-200/90 dark:border-white/10 ${vis.border} bg-white dark:bg-[#0e1017] flex flex-col justify-between transition duration-300 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] dark:shadow-xl group`}
-              >
-                <div>
-                  <div className="relative h-44 overflow-hidden">
-                    <img src={vis.img} alt={exp.company} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 pointer-events-none" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-[#0e1017] dark:via-transparent to-transparent pointer-events-none" />
-                    <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md ${vis.badge}`}>
-                      {exp.period}
-                    </span>
+        {/* Core Experiences Grid */}
+        {(coreRecentExp.length > 0 || (!hasMore && allResumes.length > 0)) && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {coreRecentExp.map((exp, idx) => {
+              const vis = ROLE_VISUALS[(idx + 1) % ROLE_VISUALS.length];
+              return (
+                <motion.article
+                  key={idx}
+                  whileHover={{ y: -8 }}
+                  onClick={() => openModalDeck(experienceDeck, idx + 1, "experience")}
+                  className={`cursor-pointer rounded-[28px] overflow-hidden border border-slate-200/90 dark:border-white/10 ${vis.border} bg-white dark:bg-[#0e1017] flex flex-col justify-between transition duration-300 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.12)] dark:shadow-xl group`}
+                >
+                  <div>
+                    <div className="relative h-44 overflow-hidden">
+                      <img src={exp.image || vis.img} alt={exp.company} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-[#0e1017] dark:via-transparent to-transparent pointer-events-none" />
+                      <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md ${vis.badge}`}>
+                        {exp.period}
+                      </span>
+                    </div>
+
+                    <div className="p-6">
+                      <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{exp.company}</h4>
+                      <p className={`text-sm font-semibold mt-0.5 ${vis.accent}`}>{exp.role}</p>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm mt-3 line-clamp-3 leading-relaxed">{exp.highlights?.[0]}</p>
+                    </div>
                   </div>
 
-                  <div className="p-6">
-                    <h4 className="text-2xl font-bold text-slate-900 dark:text-white">{exp.company}</h4>
-                    <p className={`text-sm font-semibold mt-0.5 ${vis.accent}`}>{exp.role}</p>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm mt-3 line-clamp-3 leading-relaxed">{exp.highlights?.[0]}</p>
+                  <div className="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-xs font-bold text-slate-600 group-hover:text-slate-950 dark:text-slate-300 dark:group-hover:text-white">
+                    <span>{ui.experience.inspectHighlights} ({exp.highlights?.length || 0})</span>
+                    <i className={`fas fa-plus-circle text-base ${vis.accent}`} />
                   </div>
-                </div>
+                </motion.article>
+              );
+            })}
 
-                <div className="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-xs font-bold text-slate-600 group-hover:text-slate-950 dark:text-slate-300 dark:group-hover:text-white">
-                  <span>{ui.experience.inspectHighlights} ({exp.highlights?.length || 0})</span>
-                  <i className={`fas fa-plus-circle text-base ${vis.accent}`} />
-                </div>
-              </motion.article>
-            );
-          })}
-        </div>
+            {/* When not expandable, render Dossier directly in core grid */}
+            {!hasMore && (
+              <DossierCard
+                ui={ui}
+                lang={lang}
+                currentResume={currentResume}
+                allResumes={allResumes}
+              />
+            )}
+          </div>
+        )}
 
         <AnimatePresence>
-          {showAllExp && (
+          {hasMore && showAllExp && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -144,7 +229,7 @@ export default function Experience({
                     >
                       <div>
                         <div className="relative h-36 overflow-hidden">
-                          <img src={vis.img} alt={exp.company} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 pointer-events-none" />
+                          <img src={exp.image || vis.img} alt={exp.company} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 pointer-events-none" />
                           <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent dark:from-[#0e1017] to-transparent pointer-events-none" />
                           <span className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold border backdrop-blur-md ${vis.badge}`}>
                             {exp.period}
@@ -164,62 +249,12 @@ export default function Experience({
                   );
                 })}
 
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  className="rounded-[26px] p-7 border-2 border-dashed border-sky-300 dark:border-sky-400/50 bg-gradient-to-br from-sky-50/60 via-white to-purple-50/50 dark:from-sky-500/15 dark:via-indigo-500/10 dark:to-purple-500/15 flex flex-col justify-between group shadow-[0_4px_20px_rgba(14,165,233,0.08)]"
-                >
-                  <div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-800 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-400/30">
-                        {ui.experience.dossierBadge}
-                      </span>
-                      <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-700 dark:text-sky-300">
-                        {lang}
-                      </span>
-                    </div>
-                    <h4 className="text-2xl font-extrabold text-slate-900 dark:text-white mt-4">{ui.experience.dossierTitle}</h4>
-                    <p className="text-slate-700 dark:text-slate-300 text-sm mt-2 leading-relaxed">{ui.experience.dossierDesc}</p>
-                  </div>
-
-                  <div className="pt-6 space-y-4">
-                    {/* Primary Action: Downloads CV in currently active language */}
-                    <a
-                      href={currentResume.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center justify-center w-full px-5 py-3 rounded-2xl text-xs font-bold bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-600 text-white shadow-md shadow-sky-500/20 hover:brightness-110 transition gap-2"
-                    >
-                      <span>{ui.experience.dossierCta} ({currentResume.label})</span>
-                      <i className="fas fa-file-arrow-down" />
-                    </a>
-
-                    {/* Language Selection Pills for either CV */}
-                    <div>
-                      <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-2">
-                        {ui.experience.otherFormats || "Available languages:"}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {allResumes.map((r) => (
-                          <a
-                            key={r.lang}
-                            href={r.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition ${
-                              r.isActive
-                                ? "bg-sky-500/20 text-sky-700 dark:text-sky-300 border border-sky-400/40 font-bold"
-                                : "bg-white/70 dark:bg-white/10 text-slate-700 dark:text-slate-300 hover:bg-white dark:hover:bg-white/20 border border-slate-200/80 dark:border-white/10"
-                            }`}
-                          >
-                            <span className="text-xs">{r.flag}</span>
-                            <span>{r.nativeLabel || r.label}</span>
-                            <i className="fas fa-arrow-up-right-from-square text-[9px] opacity-60" />
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+                <DossierCard
+                  ui={ui}
+                  lang={lang}
+                  currentResume={currentResume}
+                  allResumes={allResumes}
+                />
               </div>
             </motion.div>
           )}

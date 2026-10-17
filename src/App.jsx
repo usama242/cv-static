@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { DEFAULT_DATA } from './defaultData';
-import { UI_TEXT, getActiveResume, getAllResumes } from './i18n';
+import { getUiText, getActiveResume, getAllResumes, LANGUAGE_NAMES, LANGUAGE_FLAGS } from './i18n';
 import { buildExperienceDeck, buildEducationDeck } from './constants/visuals';
 
 import Navbar from './components/Navbar';
@@ -15,16 +15,20 @@ import Footer from './components/Footer';
 import CarouselModal from './components/CarouselModal';
 
 export default function App() {
+  const [availableLanguages, setAvailableLanguages] = useState([
+    { code: "en", label: "EN", name: "English", flag: "🇬🇧", file: "./data.json" }
+  ]);
+
   const [lang, setLang] = useState(() => {
-    const saved = localStorage.getItem("usama_lang");
-    if (saved && ["en", "it", "es"].includes(saved)) return saved;
+    const saved = localStorage.getItem("portfolio_lang") || localStorage.getItem("usama_lang");
+    if (saved) return saved;
     const browser = navigator.language?.slice(0, 2).toLowerCase();
-    return ["it", "es"].includes(browser) ? browser : "en";
+    return browser || "en";
   });
 
   // Light / Dark Theme State with System Detection
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("usama_theme");
+    const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("usama_theme");
     if (saved === "light" || saved === "dark") return saved;
     if (typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
       return "light";
@@ -36,7 +40,7 @@ export default function App() {
     if (typeof window === "undefined" || !window.matchMedia) return;
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e) => {
-      const saved = localStorage.getItem("usama_theme");
+      const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("usama_theme");
       if (!saved) {
         setTheme(e.matches ? "dark" : "light");
       }
@@ -58,6 +62,7 @@ export default function App() {
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
+      localStorage.setItem("portfolio_theme", next);
       localStorage.setItem("usama_theme", next);
       return next;
     });
@@ -74,28 +79,113 @@ export default function App() {
 
   const [clock, setClock] = useState({ years: 6, months: 5, days: 14, hours: "00", mins: "00", secs: "00" });
 
-  const ui = UI_TEXT[lang] || UI_TEXT.en;
-
+  // 1. Initial Language Discovery: Inspect base data.json to dynamically discover supported languages
   useEffect(() => {
+    let isMounted = true;
+
+    fetch("./data.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Could not fetch ./data.json");
+        return res.json();
+      })
+      .then((baseJson) => {
+        if (!isMounted) return;
+
+        let langs = [];
+        if (Array.isArray(baseJson.languages) && baseJson.languages.length > 0) {
+          langs = baseJson.languages.map((l) => {
+            const code = typeof l === "string" ? l : l.code;
+            return {
+              code,
+              label: (typeof l === "object" && l.label) || code.toUpperCase(),
+              name: (typeof l === "object" && l.name) || LANGUAGE_NAMES[code] || code.toUpperCase(),
+              flag: (typeof l === "object" && l.flag) || LANGUAGE_FLAGS[code] || "🌐",
+              file: (typeof l === "object" && l.file) || (code === "en" ? "./data.json" : `./data.${code}.json`)
+            };
+          });
+        } else if (Array.isArray(baseJson.personal?.resumeDownloads) && baseJson.personal.resumeDownloads.length > 0) {
+          langs = baseJson.personal.resumeDownloads.map((r) => ({
+            code: r.lang,
+            label: r.lang.toUpperCase(),
+            name: r.label || LANGUAGE_NAMES[r.lang] || r.lang.toUpperCase(),
+            flag: r.flag || LANGUAGE_FLAGS[r.lang] || "🌐",
+            file: r.lang === "en" ? "./data.json" : `./data.${r.lang}.json`
+          }));
+        } else {
+          langs = [{ code: "en", label: "EN", name: "English", flag: "🇬🇧", file: "./data.json" }];
+        }
+
+        setAvailableLanguages(langs);
+
+        // Ensure current language is valid among discovered languages
+        const validCodes = langs.map((l) => l.code);
+        setLang((currLang) => {
+          if (validCodes.includes(currLang)) return currLang;
+          const browser = navigator.language?.slice(0, 2).toLowerCase();
+          if (validCodes.includes(browser)) return browser;
+          return validCodes[0] || "en";
+        });
+      })
+      .catch((err) => {
+        console.warn("Failed to discover languages from ./data.json:", err);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  // 2. Load localized data based on active language
+  useEffect(() => {
+    let isMounted = true;
+    localStorage.setItem("portfolio_lang", lang);
     localStorage.setItem("usama_lang", lang);
     document.documentElement.lang = lang;
 
-    const fileUrl = lang === "en" ? "./data.json" : `./data.${lang}.json`;
+    const langConfig = availableLanguages.find((l) => l.code === lang);
+    const fileUrl = langConfig?.file || (lang === "en" ? "./data.json" : `./data.${lang}.json`);
+
     fetch(fileUrl)
-      .then((r) => (r.ok ? r.json() : fetch("./data.json").then((res) => res.json())))
+      .then((res) => {
+        if (!res.ok) {
+          // If the localized file is missing, fall back to base ./data.json instead of throwing error
+          if (fileUrl !== "./data.json") {
+            console.warn(`Language file "${fileUrl}" not found. Gracefully falling back to "./data.json".`);
+            return fetch("./data.json").then((r) => {
+              if (!r.ok) throw new Error("Fallback to ./data.json failed");
+              return r.json();
+            });
+          }
+          throw new Error("Failed to load ./data.json");
+        }
+        return res.json();
+      })
       .then((json) => {
+        if (!isMounted) return;
         setData(json);
-        if (json.personal?.firstName && json.personal?.lastName) {
-          const roleSubtitle = lang === "it"
-            ? "Architettura Cloud & DevOps"
-            : lang === "es"
-            ? "Arquitectura Cloud y DevOps"
-            : "Cloud & DevOps Architecture";
-          document.title = `${json.personal.firstName} ${json.personal.lastName} — ${roleSubtitle}`;
+
+        // Dynamically update document title from personal information
+        const firstName = json.personal?.firstName || "";
+        const lastName = json.personal?.lastName || "";
+        const name = `${firstName} ${lastName}`.trim();
+        const role = json.personal?.title || json.personal?.role || "";
+        document.title = [name, role].filter(Boolean).join(" — ") || "Portfolio";
+
+        // Dynamically update favicon if provided
+        if (json.personal?.favicon) {
+          const link = document.querySelector("link[rel*='icon']");
+          if (link) link.href = json.personal.favicon;
         }
       })
-      .catch(() => setData(DEFAULT_DATA));
-  }, [lang]);
+      .catch((err) => {
+        console.warn("Error loading data file:", err);
+        if (isMounted) setData(DEFAULT_DATA);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [lang, availableLanguages]);
 
   // Live Experience Counter
   useEffect(() => {
@@ -115,9 +205,9 @@ export default function App() {
         months += 12;
       }
       setClock({
-        years,
-        months,
-        days,
+        years: Math.max(0, years),
+        months: Math.max(0, months),
+        days: Math.max(0, days),
         hours: String(now.getHours()).padStart(2, "0"),
         mins: String(now.getMinutes()).padStart(2, "0"),
         secs: String(now.getSeconds()).padStart(2, "0")
@@ -128,10 +218,12 @@ export default function App() {
     return () => clearInterval(id);
   }, [data]);
 
-  const { personal, experiences = [], education = [], skills = [], projects = [], interests = [] } = data;
+  const ui = getUiText(lang, data.ui);
+
+  const { personal = {}, experiences = [], education = [], skills = [], projects = [], interests = [] } = data;
   const latestExp = experiences[0] || {};
-  const degrees = education.filter((e) => e.gpa);
-  const scholarships = education.filter((e) => e.scholarship);
+  const degrees = education.filter((e) => !e.scholarship && e.type !== "certificate" && e.type !== "scholarship");
+  const scholarships = education.filter((e) => e.scholarship || e.type === "certificate" || e.type === "scholarship");
 
   const experienceDeck = buildExperienceDeck(experiences, ui);
   const educationDeck = buildEducationDeck(degrees, scholarships, ui);
@@ -151,21 +243,22 @@ export default function App() {
     } else if (modalDeck.type === "bio") {
       const currentResume = getActiveResume(personal, lang);
       const allResumes = getAllResumes(personal, lang);
+      const heroBadge = personal.title || personal.role || ui.hero.badge || "Portfolio";
       const bioItem = {
         id: "bio-sheet",
-        badge: ui.hero.badge,
+        badge: heroBadge,
         period: personal.location,
-        title: `${personal.firstName} ${personal.lastName}`,
+        title: `${personal.firstName || ""} ${personal.lastName || ""}`.trim(),
         subtitle: personal.email,
         img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
         highlights: [
           personal.bio,
-          `${ui.hero.emailLabel || "Email"}: ${personal.email}`,
-          `${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`,
-          `${ui.hero.locationLabel || "Location"}: ${personal.location}`
+          ...(personal.email ? [`${ui.hero.emailLabel || "Email"}: ${personal.email}`] : []),
+          ...(personal.phone ? [`${ui.hero.phoneLabel || "Phone"}: ${personal.phone}`] : []),
+          ...(personal.location ? [`${ui.hero.locationLabel || "Location"}: ${personal.location}`] : [])
         ],
         links: [
-          { label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url },
+          ...(currentResume ? [{ label: `${ui.nav.resumeBtn} (${currentResume.label})`, url: currentResume.url }] : []),
           ...allResumes.filter((r) => !r.isActive).map((r) => ({ label: `${ui.nav.resumeBtn} (${r.nativeLabel || r.label})`, url: r.url })),
           ...(personal.socialLinks || []).map((s) => ({ label: s.platform, url: s.url }))
         ]
@@ -193,7 +286,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] text-slate-900 dark:bg-[#050508] dark:text-slate-100 relative selection:bg-sky-500 selection:text-white transition-colors duration-300">
-      {/* Ambient Apple Mesh Backdrops */}
+      {/* Ambient Mesh Backdrops */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-48 -left-40 w-[650px] h-[650px] rounded-full bg-sky-400/10 dark:bg-sky-500/15 blur-[150px] animate-float-slow" />
         <div className="absolute top-1/3 -right-48 w-[600px] h-[600px] rounded-full bg-purple-400/10 dark:bg-purple-600/15 blur-[160px] animate-float-slow" />
@@ -207,6 +300,7 @@ export default function App() {
         setLang={setLang}
         theme={theme}
         toggleTheme={toggleTheme}
+        availableLanguages={availableLanguages}
       />
 
       <Hero

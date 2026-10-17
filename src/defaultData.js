@@ -3,6 +3,9 @@ export const DEFAULT_DATA = {
     "firstName": "Mohamad Usama",
     "lastName": "KUNNATHUR",
     "pageTitle": "Mohamad Usama KUNNATHUR",
+    "title": "DevOps & Cloud Architect",
+    "heroTitleLine1": "Cloud Infrastructure.",
+    "heroTitleLine2": "Engineered like art.",
     "location": "Bari 10124",
     "phone": "(+39) 393 102 4267",
     "email": "mohamadusama242@gmail.com",
@@ -32,10 +35,28 @@ export const DEFAULT_DATA = {
       { "platform": "Facebook", "url": "https://www.facebook.com/mohamadusama242/", "icon": "fab fa-facebook-f" }
     ]
   },
+  "languages": [
+    { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" },
+    { "code": "it", "label": "IT", "name": "Italiano", "flag": "🇮🇹" },
+    { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
+  ],
+  "overview": {
+    "eyebrow": "Apple Bento Telemetry",
+    "title": "Six+ years of cloud craftsmanship."
+  },
+  "highlightCard": {
+    "enabled": true,
+    "badge": "FinOps & High Availability",
+    "value": "$10k",
+    "unit": "/mo saved",
+    "description": "Proven record of cloud cost optimization, zero-downtime Kubernetes migrations, and enterprise observability across Italy’s top payment & identity providers.",
+    "cta": "Click to inspect enterprise milestones"
+  },
   "experienceCounter": {
     "enabled": true,
     "title": "Total Experience as a DevOps Engineer",
-    "startDate": "2020-05-01T00:00:00"
+    "startDate": "2020-05-01T00:00:00",
+    "description": "Continuously orchestrating AWS, Azure, Kubernetes, and Terraform pipelines since May 2020."
   },
   "experiences": [
     {
@@ -43,6 +64,14 @@ export const DEFAULT_DATA = {
       "company": "LTIMindtree",
       "companyUrl": "https://www.ltimindtree.com/",
       "period": "Oct 2025 - Present",
+      "tags": [
+        "NEXI Blockchain",
+        "Linux VMs",
+        "Kubernetes",
+        "Playwright",
+        "Selenium",
+        "Postman"
+      ],
       "highlights": [
         "Working on a blockchain-based application for NEXI",
         "Involves automation of deployment to linux VMs as well as monitoring",

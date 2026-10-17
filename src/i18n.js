@@ -1,3 +1,39 @@
+export const LANGUAGE_FLAGS = {
+  en: "🇬🇧",
+  it: "🇮🇹",
+  es: "🇪🇸",
+  fr: "🇫🇷",
+  de: "🇩🇪",
+  pt: "🇵🇹",
+  nl: "🇳🇱",
+  ru: "🇷🇺",
+  zh: "🇨🇳",
+  ja: "🇯🇵",
+  ko: "🇰🇷",
+  ar: "🇸🇦",
+  tr: "🇹🇷",
+  hi: "🇮🇳",
+  ur: "🇵🇰"
+};
+
+export const LANGUAGE_NAMES = {
+  en: "English",
+  it: "Italiano",
+  es: "Español",
+  fr: "Français",
+  de: "Deutsch",
+  pt: "Português",
+  nl: "Nederlands",
+  ru: "Русский",
+  zh: "中文",
+  ja: "日本語",
+  ko: "한국어",
+  ar: "العربية",
+  tr: "Türkçe",
+  hi: "हिन्दी",
+  ur: "اردو"
+};
+
 export const UI_TEXT = {
   en: {
     nav: {
@@ -8,7 +44,7 @@ export const UI_TEXT = {
       projects: "Projects",
       lifestyle: "Lifestyle",
       resumeBtn: "Resume PDF",
-      downloadCurrentTitle: "Download CV in English",
+      downloadCurrentTitle: "Download CV",
       resumeOptions: "Choose CV language",
       chooseCvLanguage: "Select CV Language",
       activeLang: "Active",
@@ -16,9 +52,9 @@ export const UI_TEXT = {
       themeDark: "Switch to dark mode"
     },
     hero: {
-      badge: "DevOps & Cloud Architect",
-      titleLine1: "Cloud Infrastructure.",
-      titleLine2: "Engineered like art.",
+      badge: "Portfolio",
+      titleLine1: "Creative Solutions.",
+      titleLine2: "Engineered with precision.",
       exploreBtn: "Explore Experience",
       contactBtn: "Contact & Bio Sheet",
       currentMission: "Current Mission",
@@ -28,39 +64,39 @@ export const UI_TEXT = {
       locationLabel: "Location"
     },
     overview: {
-      eyebrow: "Apple Bento Telemetry",
-      title: "Six+ years of cloud craftsmanship.",
-      uptimeTitle: "Live Production Uptime",
-      uptimeDesc: "Continuously orchestrating AWS, Azure, Kubernetes, and Terraform pipelines since May 2020.",
+      eyebrow: "Telemetry & Impact",
+      title: "Years of Craftsmanship & Impact.",
+      uptimeTitle: "Live Career Uptime",
+      uptimeDesc: "Continuously architecting, executing, and delivering high-value production systems.",
       units: ["Years", "Months", "Days", "Hours", "Minutes", "Seconds"],
-      finopsBadge: "FinOps & High Availability",
-      savedUnit: "/mo saved",
-      finopsDesc: "Proven record of cloud cost optimization, zero-downtime Kubernetes migrations, and enterprise observability across Italy’s top payment & identity providers.",
-      finopsCta: "Click to inspect enterprise milestones"
+      finopsBadge: "Featured Milestone",
+      savedUnit: "",
+      finopsDesc: "",
+      finopsCta: "Click to inspect milestones"
     },
     experience: {
       eyebrow: "Progressive Career Disclosure",
       title: "Latest mission first. Click any tile to dive deep.",
-      showCompact: "Show Compact View (Top 4)",
+      showCompact: "Show Compact View",
       expandAll: "Expand All",
-      careerRoles: "Career Roles",
+      careerRoles: "Roles",
       latestBadge: "● LATEST EXPERIENCE",
       openSpec: "Open Full Spec",
       deliverables: "deliverables",
-      inspectHighlights: "Inspect architectural highlights",
-      earlierHeading: "Earlier Cloud, Project Management & International Roles (Symmetric 3×2 Grid)",
+      inspectHighlights: "Inspect highlights",
+      earlierHeading: "Earlier Professional Experience & Career Roles",
       inspectRole: "Inspect Role",
       dossierBadge: "Complete Dossier",
-      dossierTitle: "Download Printable PDF Curriculum Vitae",
-      dossierDesc: "Prefer a traditional offline document? Grab the official DevOps PDF resume directly from the vault.",
+      dossierTitle: "Download Printable Curriculum Vitae",
+      dossierDesc: "Prefer a traditional offline document? Grab the official PDF resume directly from the vault.",
       dossierCta: "Download PDF Now",
       otherFormats: "Or choose language:"
     },
     education: {
-      eyebrow: "Academic Pedigree & Scholarships",
-      title: "Engineering degrees & global tech honors.",
+      eyebrow: "Academic Background & Honors",
+      title: "Degrees & Credentials.",
       verifyDegCta: "Click to verify GPA, thesis & official PDFs",
-      scholarshipLabel: "SCHOLARSHIP",
+      scholarshipLabel: "HONOR / SCHOLARSHIP",
       inspectCert: "Inspect Curriculum & Certificate",
       degreePdf: "Degree PDF",
       program: "Program",
@@ -74,13 +110,14 @@ export const UI_TEXT = {
       ecosystem: "Ecosystem"
     },
     projects: {
-      eyebrow: "Open Source & Peer-Reviewed Research",
-      title: "GitHub Labs & Publications.",
+      eyebrow: "Portfolio & Research",
+      title: "Labs, Projects & Publications.",
       inspectOn: "Inspect on",
-      researchPaper: "Aerospace & Mechanics Research"
+      viewProject: "View Project",
+      details: "Project Details"
     },
     interests: {
-      eyebrow: "The Human Behind the Terminal",
+      eyebrow: "Beyond the Terminal",
       title: "Passions & Perspectives."
     },
     modal: {
@@ -104,7 +141,7 @@ export const UI_TEXT = {
       projects: "Progetti",
       lifestyle: "Passioni",
       resumeBtn: "CV in PDF",
-      downloadCurrentTitle: "Scarica CV in Italiano",
+      downloadCurrentTitle: "Scarica CV",
       resumeOptions: "Scegli lingua del CV",
       chooseCvLanguage: "Seleziona Lingua CV",
       activeLang: "Attivo",
@@ -112,9 +149,9 @@ export const UI_TEXT = {
       themeDark: "Passa alla modalità scura"
     },
     hero: {
-      badge: "Architetto DevOps & Cloud",
-      titleLine1: "Infrastruttura Cloud.",
-      titleLine2: "Progettata come arte.",
+      badge: "Portfolio",
+      titleLine1: "Soluzioni Creative.",
+      titleLine2: "Progettate con precisione.",
       exploreBtn: "Esplora Carriera",
       contactBtn: "Contatti & Bio",
       currentMission: "Missione Attuale",
@@ -124,39 +161,39 @@ export const UI_TEXT = {
       locationLabel: "Posizione"
     },
     overview: {
-      eyebrow: "Telemetria Apple Bento",
-      title: "Oltre sei anni di eccellenza nel Cloud.",
-      uptimeTitle: "Uptime di Produzione in Tempo Reale",
-      uptimeDesc: "Orchestrazione continua di pipeline AWS, Azure, Kubernetes e Terraform da maggio 2020.",
+      eyebrow: "Telemetria & Risultati",
+      title: "Anni di eccellenza e dedizione professionale.",
+      uptimeTitle: "Tempo Attivo di Carriera",
+      uptimeDesc: "Progettazione e realizzazione continua di sistemi di produzione ad alto valore.",
       units: ["Anni", "Mesi", "Giorni", "Ore", "Minuti", "Secondi"],
-      finopsBadge: "FinOps & Alta Affidabilità",
-      savedUnit: "/mese risparmiati",
-      finopsDesc: "Esperienza comprovata nell'ottimizzazione dei costi cloud, migrazioni Kubernetes zero-downtime e osservabilità enterprise per i leader italiani dei pagamenti e dell'identità digitale.",
-      finopsCta: "Clicca per esplorare i traguardi enterprise"
+      finopsBadge: "Traguardo in Evidenza",
+      savedUnit: "",
+      finopsDesc: "",
+      finopsCta: "Clicca per esplorare i traguardi"
     },
     experience: {
       eyebrow: "Percorso Professionale Progressivo",
       title: "L'ultima missione in primo piano. Clicca per approfondire.",
-      showCompact: "Mostra Vista Compatta (Top 4)",
+      showCompact: "Mostra Vista Compatta",
       expandAll: "Espandi Tutti i",
       careerRoles: "Ruoli",
       latestBadge: "● ESPERIENZA ATTUALE",
       openSpec: "Apri Specifiche",
       deliverables: "risultati chiave",
-      inspectHighlights: "Esplora dettagli architetturali",
-      earlierHeading: "Esperienze Precedenti nel Cloud, Project Management & Ruoli Internazionali",
+      inspectHighlights: "Esplora dettagli",
+      earlierHeading: "Esperienze Precedenti & Ruoli Professionali",
       inspectRole: "Dettagli Ruolo",
       dossierBadge: "Dossier Completo",
       dossierTitle: "Scarica il Curriculum Vitae Stampabile in PDF",
-      dossierDesc: "Preferisci il documento tradizionale? Scarica il CV ufficiale DevOps in formato PDF.",
+      dossierDesc: "Preferisci il documento tradizionale? Scarica il CV ufficiale in formato PDF.",
       dossierCta: "Scarica PDF Ora",
       otherFormats: "Oppure scegli la lingua:"
     },
     education: {
       eyebrow: "Percorso Accademico & Borse di Studio",
-      title: "Lauree in Ingegneria e riconoscimenti internazionali.",
+      title: "Titoli Accademici e Certificazioni.",
       verifyDegCta: "Clicca per verificare voto, tesi e PDF ufficiali",
-      scholarshipLabel: "BORSA DI STUDIO",
+      scholarshipLabel: "BORSA DI STUDIO / RICONOSCIMENTO",
       inspectCert: "Esplora Programma e Certificato",
       degreePdf: "PDF Laurea",
       program: "Corso di Laurea",
@@ -170,10 +207,11 @@ export const UI_TEXT = {
       ecosystem: "Ecosistema"
     },
     projects: {
-      eyebrow: "Open Source & Ricerca Scientifica",
-      title: "Repository GitHub & Pubblicazioni.",
+      eyebrow: "Portfolio & Ricerca",
+      title: "Progetti, Repository & Pubblicazioni.",
       inspectOn: "Apri su",
-      researchPaper: "Ricerca Aerospaziale e Meccanica"
+      viewProject: "Apri Progetto",
+      details: "Dettagli Progetto"
     },
     interests: {
       eyebrow: "Oltre il Terminale",
@@ -200,7 +238,7 @@ export const UI_TEXT = {
       projects: "Proyectos",
       lifestyle: "Intereses",
       resumeBtn: "CV en PDF",
-      downloadCurrentTitle: "Descargar CV en Español",
+      downloadCurrentTitle: "Descargar CV",
       resumeOptions: "Elegir idioma del CV",
       chooseCvLanguage: "Seleccionar Idioma del CV",
       activeLang: "Activo",
@@ -208,9 +246,9 @@ export const UI_TEXT = {
       themeDark: "Cambiar a modo oscuro"
     },
     hero: {
-      badge: "Arquitecto DevOps y Cloud",
-      titleLine1: "Infraestructura Cloud.",
-      titleLine2: "Diseñada como arte.",
+      badge: "Portafolio",
+      titleLine1: "Soluciones Creativas.",
+      titleLine2: "Diseñadas con precisión.",
       exploreBtn: "Explorar Experiencia",
       contactBtn: "Contacto y Biografía",
       currentMission: "Misión Actual",
@@ -220,39 +258,39 @@ export const UI_TEXT = {
       locationLabel: "Ubicación"
     },
     overview: {
-      eyebrow: "Telemetría Apple Bento",
-      title: "Más de seis años de maestría en la nube.",
-      uptimeTitle: "Tiempo Activo en Producción",
-      uptimeDesc: "Orquestando continuamente pipelines de AWS, Azure, Kubernetes y Terraform desde mayo de 2020.",
+      eyebrow: "Telemetría e Impacto",
+      title: "Años de excelencia y dedicación profesional.",
+      uptimeTitle: "Tiempo Activo en Carrera",
+      uptimeDesc: "Diseñando y ejecutando continuamente sistemas de producción de alto impacto.",
       units: ["Años", "Meses", "Días", "Horas", "Minutos", "Segundos"],
-      finopsBadge: "FinOps y Alta Disponibilidad",
-      savedUnit: "/mes ahorrados",
-      finopsDesc: "Historial probado en optimización de costos en la nube, migraciones a Kubernetes sin tiempo de inactividad y observabilidad empresarial.",
+      finopsBadge: "Logro Destacado",
+      savedUnit: "",
+      finopsDesc: "",
       finopsCta: "Haz clic para inspeccionar los hitos"
     },
     experience: {
       eyebrow: "Trayectoria Profesional Progresiva",
       title: "La misión más reciente primero. Haz clic para profundizar.",
-      showCompact: "Vista Compacta (Top 4)",
-      expandAll: "Ver los",
-      careerRoles: "Roles Profesionales",
+      showCompact: "Vista Compacta",
+      expandAll: "Ver todos los",
+      careerRoles: "Roles",
       latestBadge: "● EXPERIENCIA ACTUAL",
       openSpec: "Abrir Especificaciones",
       deliverables: "logros clave",
-      inspectHighlights: "Inspeccionar detalles de arquitectura",
-      earlierHeading: "Experiencia Previa en Cloud, Gestión de Proyectos y Roles Internacionales",
+      inspectHighlights: "Inspeccionar detalles",
+      earlierHeading: "Experiencia Previa y Roles Profesionales",
       inspectRole: "Ver Detalles",
       dossierBadge: "Dossier Completo",
       dossierTitle: "Descargar Curriculum Vitae Imprimible en PDF",
-      dossierDesc: "¿Prefieres un documento tradicional? Descarga el CV oficial de DevOps en PDF.",
+      dossierDesc: "¿Prefieres un documento tradicional? Descarga el CV oficial en PDF.",
       dossierCta: "Descargar PDF Ahora",
       otherFormats: "O elige el idioma:"
     },
     education: {
       eyebrow: "Formación Académica y Becas",
-      title: "Títulos de Ingeniería y becas tecnológicas globales.",
+      title: "Títulos y Certificaciones.",
       verifyDegCta: "Haz clic para verificar promedio, tesis y PDFs oficiales",
-      scholarshipLabel: "BECA GANADA",
+      scholarshipLabel: "RECONOCIMIENTO / BECA",
       inspectCert: "Ver Programa y Certificado",
       degreePdf: "PDF del Título",
       program: "Programa de Estudios",
@@ -260,19 +298,20 @@ export const UI_TEXT = {
     },
     skills: {
       eyebrow: "Stack Multidisciplinario",
-      title: "Matriz Interactiva de Habilidades.",
+      title: "Matrice Interactiva de Habilidades.",
       nativeFluency: "Fluidez Nativa / Bilingüe",
       workingFluency: "Fluidez Profesional",
       ecosystem: "Ecosistema"
     },
     projects: {
-      eyebrow: "Código Abierto e Investigación",
-      title: "Laboratorios GitHub y Publicaciones.",
+      eyebrow: "Portafolio e Investigación",
+      title: "Proyectos y Publicaciones.",
       inspectOn: "Ver en",
-      researchPaper: "Investigación Aeroespacial y Mecánica"
+      viewProject: "Ver Proyecto",
+      details: "Detalles del Proyecto"
     },
     interests: {
-      eyebrow: "El Humano Detrás de la Terminal",
+      eyebrow: "Más allá del Terminal",
       title: "Pasiones y Perspectivas."
     },
     modal: {
@@ -288,71 +327,72 @@ export const UI_TEXT = {
   }
 };
 
-export const RESUME_FILES = {
-  en: {
-    lang: "en",
-    label: "English",
-    nativeLabel: "English",
-    flag: "🇬🇧",
-    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps.pdf",
-    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
-  },
-  it: {
-    lang: "it",
-    label: "Italian",
-    nativeLabel: "Italiano",
-    flag: "🇮🇹",
-    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf",
-    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
-  },
-  es: {
-    lang: "es",
-    label: "Spanish",
-    nativeLabel: "Español",
-    flag: "🇪🇸",
-    filename: "Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf",
-    url: "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
-  }
-};
+export function getUiText(lang = "en", customUi = {}) {
+  const base = UI_TEXT.en;
+  const langSpecific = UI_TEXT[lang] || {};
+  return {
+    ...base,
+    ...langSpecific,
+    ...customUi,
+    nav: { ...base.nav, ...(langSpecific.nav || {}), ...(customUi.nav || {}) },
+    hero: { ...base.hero, ...(langSpecific.hero || {}), ...(customUi.hero || {}) },
+    overview: { ...base.overview, ...(langSpecific.overview || {}), ...(customUi.overview || {}) },
+    experience: { ...base.experience, ...(langSpecific.experience || {}), ...(customUi.experience || {}) },
+    education: { ...base.education, ...(langSpecific.education || {}), ...(customUi.education || {}) },
+    skills: { ...base.skills, ...(langSpecific.skills || {}), ...(customUi.skills || {}) },
+    projects: { ...base.projects, ...(langSpecific.projects || {}), ...(customUi.projects || {}) },
+    interests: { ...base.interests, ...(langSpecific.interests || {}), ...(customUi.interests || {}) },
+    modal: { ...base.modal, ...(langSpecific.modal || {}), ...(customUi.modal || {}) }
+  };
+}
 
 export function getActiveResume(personal, lang = "en") {
   const list = personal?.resumeDownloads;
   if (Array.isArray(list) && list.length > 0) {
-    const match = list.find((item) =>
-      item.lang === lang ||
-      (lang === "it" && item.url?.includes("Italian")) ||
-      (lang === "es" && item.url?.includes("Spanish")) ||
-      (lang === "en" && !item.url?.includes("Italian") && !item.url?.includes("Spanish"))
-    );
+    const match = list.find((item) => item.lang === lang);
     if (match) return match;
     return list[0];
   }
-  return RESUME_FILES[lang] || RESUME_FILES.en;
+  if (personal?.resumeUrl) {
+    return {
+      lang: "en",
+      label: personal.resumeLabel || "Resume",
+      nativeLabel: personal.resumeLabel || "Resume",
+      flag: "📄",
+      url: personal.resumeUrl
+    };
+  }
+  return null;
 }
 
 export function getAllResumes(personal, currentLang = "en") {
-  const supported = ["en", "it", "es"];
   const list = personal?.resumeDownloads;
-
-  return supported.map((code) => {
-    const fallback = RESUME_FILES[code];
-    const match = Array.isArray(list)
-      ? list.find((item) =>
-          item.lang === code ||
-          (code === "it" && item.url?.includes("Italian")) ||
-          (code === "es" && item.url?.includes("Spanish")) ||
-          (code === "en" && !item.url?.includes("Italian") && !item.url?.includes("Spanish"))
-        )
-      : null;
-
-    return {
-      lang: code,
-      label: match?.label || fallback.nativeLabel,
-      nativeLabel: fallback.nativeLabel,
-      flag: fallback.flag,
-      filename: fallback.filename,
-      url: match?.url || fallback.url,
-      isActive: code === currentLang
-    };
-  });
+  if (Array.isArray(list) && list.length > 0) {
+    return list.map((item) => {
+      const langCode = item.lang || "en";
+      const fallbackName = LANGUAGE_NAMES[langCode] || langCode.toUpperCase();
+      const flag = item.flag || LANGUAGE_FLAGS[langCode] || "📄";
+      return {
+        lang: langCode,
+        label: item.label || fallbackName,
+        nativeLabel: item.nativeLabel || item.label || fallbackName,
+        flag,
+        url: item.url,
+        isActive: langCode === currentLang
+      };
+    });
+  }
+  if (personal?.resumeUrl) {
+    return [
+      {
+        lang: "en",
+        label: personal.resumeLabel || "Resume",
+        nativeLabel: personal.resumeLabel || "Resume",
+        flag: "📄",
+        url: personal.resumeUrl,
+        isActive: true
+      }
+    ];
+  }
+  return [];
 }
