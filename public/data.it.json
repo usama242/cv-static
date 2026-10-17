@@ -14,14 +14,14 @@
     "favicon": "assets/img/favicon.ico",
     "resumeDownloads": [
       {
-        "lang": "it",
-        "label": "Italiano",
-        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
-      },
-      {
         "lang": "en",
         "label": "Inglese",
         "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+      },
+      {
+        "lang": "it",
+        "label": "Italiano",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
       },
       {
         "lang": "es",
@@ -87,7 +87,7 @@
       "highlights": [
         "Lavorando su un'applicazione basata su blockchain per NEXI",
         "Coinvolge l'automazione della distribuzione su macchine virtuali Linux nonché il monitoraggio",
-        "Inoltre, testa l'automazione utilizzando suite come postino, selenio e drammaturgo.",
+        "Inoltre automazione dei test utilizzando suite come Postman, Selenium e Playwright.",
         "Pianificazione dell'infrastruttura e modernizzazione delle applicazioni legacy (container, kubernetes)."
       ]
     },
@@ -190,7 +190,7 @@
       "period": "Dec 2024 - Feb 2025",
       "scholarship": {
         "text": "Ha vinto la borsa di studio offerta da Bertelsmann tra molti candidati.",
-        "credentialText": "clicca qui",
+        "credentialText": "Certificato",
         "credentialUrl": "https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
       },
       "highlights": [
@@ -207,7 +207,7 @@
       "period": "July 2022 - Nov 2022",
       "scholarship": {
         "text": "Ha vinto la borsa di studio offerta da Bosch tra molti candidati.",
-        "credentialText": "clicca qui",
+        "credentialText": "Certificato",
         "credentialUrl": "https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
       },
       "highlights": [
@@ -221,10 +221,10 @@
       "institutionUrl": "https://www.udacity.com",
       "program": "Sviluppo Web front-end",
       "programUrl": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011",
-      "period": "January 2020 - March 2020",
+      "period": "Jan 2020 - March 2020",
       "scholarship": {
         "text": "Ha vinto la borsa di studio offerta da Google tra molti candidati.",
-        "credentialText": "clicca qui",
+        "credentialText": "Certificato",
         "credentialUrl": "https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
       },
       "highlights": [
@@ -485,22 +485,26 @@
         {
           "icon": "fas fa-square",
           "text": "Stati di sforzo e deformazione in una piastra semi-infinita",
-          "url": null
+          "url": null,
+          "type": "Ricerca Aerospaziale e Meccanica"
         },
         {
           "icon": "fas fa-plane",
           "text": "Analisi di un aliante con ala delta lanciato da catapulta",
-          "url": null
+          "url": null,
+          "type": "Ricerca Aerospaziale e Meccanica"
         },
         {
           "icon": "fas fa-bullseye",
           "text": "Progettazione concettuale di un missile terra-aria",
-          "url": null
+          "url": null,
+          "type": "Ricerca Aerospaziale e Meccanica"
         },
         {
           "icon": "fas fa-square",
           "text": "Analisi delle sollecitazioni piane di una piastra rettangolare sottoposta ad un carico concentrato",
-          "url": null
+          "url": null,
+          "type": "Ricerca Aerospaziale e Meccanica"
         }
       ]
     }

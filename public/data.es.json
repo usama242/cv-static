@@ -14,11 +14,6 @@
     "favicon": "assets/img/favicon.ico",
     "resumeDownloads": [
       {
-        "lang": "es",
-        "label": "Español",
-        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
-      },
-      {
         "lang": "en",
         "label": "Inglés",
         "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
@@ -27,6 +22,11 @@
         "lang": "it",
         "label": "Italiano",
         "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
+      },
+      {
+        "lang": "es",
+        "label": "Español",
+        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
       }
     ],
     "socialLinks": [
@@ -61,8 +61,8 @@
     "badge": "FinOps y Alta Disponibilidad",
     "value": "$10k",
     "unit": "/mes ahorrados",
-    "description": "Historial probado en optimización de costos en la nube, migraciones a Kubernetes sin tiempo de inactividad y observabilidad empresarial.",
-    "cta": "Haz clic para inspeccionar los hitos"
+    "description": "Historial probado en optimización de costos en la nube, migraciones a Kubernetes sin tiempo de inactividad y observabilidad empresarial en los principales proveedores de pagos e identidad de Italia.",
+    "cta": "Haz clic para inspeccionar los hitos empresariales"
   },
   "experienceCounter": {
     "enabled": true,
@@ -87,7 +87,7 @@
       "highlights": [
         "Trabajando en una aplicación basada en blockchain para NEXI",
         "Implica la automatización de la implementación en máquinas virtuales Linux, así como el monitoreo.",
-        "También pruebe la automatización utilizando suites como cartero, selenio y dramaturgo.",
+        "También automatización de pruebas utilizando herramientas como Postman, Selenium y Playwright.",
         "Planificación de infraestructura y modernización de aplicaciones heredadas (contenedores, kubernetes)."
       ]
     },
@@ -135,7 +135,7 @@
       "highlights": [
         "Trabajé en funciones lambda generalmente en Python. La implementación es sin servidor en AWS.",
         "Gestioné dispositivos IoT del proyecto Enel-X y también participé en la resolución de problemas.",
-        "Supervisó la implementación de arreglos y la gestión del oleoducto. Lo que implica automatizar la implementación.",
+        "Supervisé el despliegue de correcciones y la gestión de la pipeline, lo que implica automatizar el despliegue.",
         "Redimensionamiento recomendado de recursos ahorrando alrededor de $10k/mes"
       ]
     },
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "role": "profesora de ingles",
+      "role": "Profesor de inglés",
       "company": "Oxford English Academy",
       "companyUrl": null,
       "period": "October 2013 - July 2016",
@@ -190,7 +190,7 @@
       "period": "Dec 2024 - Feb 2025",
       "scholarship": {
         "text": "Gané la beca ofrecida por Bertelsmann entre muchos solicitantes.",
-        "credentialText": "haga clic aquí",
+        "credentialText": "Certificado",
         "credentialUrl": "https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
       },
       "highlights": [
@@ -207,7 +207,7 @@
       "period": "July 2022 - Nov 2022",
       "scholarship": {
         "text": "Gané la beca ofrecida por Bosch entre muchos solicitantes.",
-        "credentialText": "haga clic aquí",
+        "credentialText": "Certificado",
         "credentialUrl": "https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
       },
       "highlights": [
@@ -221,10 +221,10 @@
       "institutionUrl": "https://www.udacity.com",
       "program": "Desarrollo web front-end",
       "programUrl": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011",
-      "period": "January 2020 - March 2020",
+      "period": "Jan 2020 - March 2020",
       "scholarship": {
         "text": "Gané la beca ofrecida por Google entre muchos solicitantes.",
-        "credentialText": "haga clic aquí",
+        "credentialText": "Certificado",
         "credentialUrl": "https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
       },
       "highlights": [
@@ -269,7 +269,7 @@
   ],
   "skills": [
     {
-      "category": "Revelador",
+      "category": "Desarrollador",
       "items": [
         {
           "icon": "fab fa-aws",
@@ -281,7 +281,7 @@
         },
         {
           "icon": "fas fa-code-compare",
-          "text": "Bambú, Gitlab, Cloudformation, Terraform, etc."
+          "text": "Bamboo, Gitlab, Cloudformation, Terraform, etc."
         },
         {
           "icon": "fab fa-docker",
@@ -301,7 +301,7 @@
         },
         {
           "icon": "fab fa-linux",
-          "text": "Secuencias de comandos Bash, Powershell, Nginx, SSH remoto, etc."
+          "text": "Bash scripting, Powershell, Nginx, SSH remoto, etc."
         },
         {
           "icon": "fas fa-server",
@@ -309,15 +309,15 @@
         },
         {
           "icon": "fab fa-python",
-          "text": "Django, matraz, SQLAlchemy, etc."
+          "text": "Django, Flask, SQLAlchemy, etc."
         },
         {
           "icon": "fab fa-html5",
-          "text": "HTML, CSS, Bootstrap, Babel, SASS, MENOS, etc."
+          "text": "HTML, CSS, Bootstrap, Babel, SASS, LESS, etc."
         },
         {
           "icon": "fab fa-js-square",
-          "text": "Reaccionar, Redux, Node.js, Express.js, Typecript, etc."
+          "text": "React, Redux, Node.js, Express.js, Typescript, etc."
         },
         {
           "icon": "fas fa-database",
@@ -393,15 +393,15 @@
       "items": [
         {
           "icon": "fas fa-battery-full",
-          "text": "ingles"
+          "text": "Inglés"
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "urdu"
+          "text": "Urdu"
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "hindi"
+          "text": "Hindi"
         },
         {
           "icon": "fas fa-battery-full",
@@ -409,11 +409,11 @@
         },
         {
           "icon": "fas fa-battery-three-quarters",
-          "text": "turco"
+          "text": "Turco"
         },
         {
           "icon": "fas fa-battery-three-quarters",
-          "text": "italiano"
+          "text": "Italiano"
         }
       ]
     }
@@ -485,22 +485,26 @@
         {
           "icon": "fas fa-square",
           "text": "Estados de tensión y deformación en una placa semiinfinita",
-          "url": null
+          "url": null,
+          "type": "Investigación Aeroespacial y Mecánica"
         },
         {
           "icon": "fas fa-plane",
           "text": "Análisis de un planeador de ala delta lanzado con catapulta",
-          "url": null
+          "url": null,
+          "type": "Investigación Aeroespacial y Mecánica"
         },
         {
           "icon": "fas fa-bullseye",
           "text": "Diseño conceptual de un misil tierra-aire",
-          "url": null
+          "url": null,
+          "type": "Investigación Aeroespacial y Mecánica"
         },
         {
           "icon": "fas fa-square",
           "text": "Análisis de tensiones planas de una placa rectangular sometida a una carga concentrada",
-          "url": null
+          "url": null,
+          "type": "Investigación Aeroespacial y Mecánica"
         }
       ]
     }

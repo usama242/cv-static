@@ -178,7 +178,7 @@ export const DEFAULT_DATA = {
       "period": "Dec 2024 - Feb 2025",
       "scholarship": {
         "text": "Won the scholarship offered by Bertelsmann amongst many applicants.",
-        "credentialText": "Verify Credential",
+        "credentialText": "Certificate",
         "credentialUrl": "https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
       },
       "highlights": [
@@ -195,7 +195,7 @@ export const DEFAULT_DATA = {
       "period": "July 2022 - Nov 2022",
       "scholarship": {
         "text": "Won the scholarship offered by Bosch amongst many applicants.",
-        "credentialText": "Verify Credential",
+        "credentialText": "Certificate",
         "credentialUrl": "https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
       },
       "highlights": [
@@ -209,10 +209,10 @@ export const DEFAULT_DATA = {
       "institutionUrl": "https://www.udacity.com",
       "program": "Front-End Web development",
       "programUrl": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011",
-      "period": "January 2020 - March 2020",
+      "period": "Jan 2020 - March 2020",
       "scholarship": {
         "text": "Won the scholarship offered by Google amongst many applicants.",
-        "credentialText": "Verify Credential",
+        "credentialText": "Certificate",
         "credentialUrl": "https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
       },
       "highlights": [
@@ -332,10 +332,10 @@ export const DEFAULT_DATA = {
       "items": [
         { "icon": "fas fa-microchip", "text": "Applying Artificial Intelligence techniques in Project Management", "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management" },
         { "icon": "fas fa-plane", "text": "Design of a UAV with Variable-Span Morphing Wing", "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing" },
-        { "icon": "fas fa-square", "text": "States of Stress and Strain in a Semi-Infinite Plate", "url": null },
-        { "icon": "fas fa-plane", "text": "Analysis of a Catapult-Launched Delta-Wing Glider", "url": null },
-        { "icon": "fas fa-bullseye", "text": "Conceptual Design of a Surface-to-Air Missile", "url": null },
-        { "icon": "fas fa-square", "text": "Plane Stress Analysis of a Rectangular Plate Subjected to a Concentrated Load", "url": null }
+        { "icon": "fas fa-square", "text": "States of Stress and Strain in a Semi-Infinite Plate", "url": null, "type": "Aerospace & Mechanics Research" },
+        { "icon": "fas fa-plane", "text": "Analysis of a Catapult-Launched Delta-Wing Glider", "url": null, "type": "Aerospace & Mechanics Research" },
+        { "icon": "fas fa-bullseye", "text": "Conceptual Design of a Surface-to-Air Missile", "url": null, "type": "Aerospace & Mechanics Research" },
+        { "icon": "fas fa-square", "text": "Plane Stress Analysis of a Rectangular Plate Subjected to a Concentrated Load", "url": null, "type": "Aerospace & Mechanics Research" }
       ]
     }
   ],
