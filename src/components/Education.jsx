@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function Education({ degrees = [], scholarships = [], ui, educationDeck, openModalDeck }) {
-  const degreeGridCols = degrees.length === 1 ? "max-w-2xl mx-auto" : degrees.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+  const degreeGridCols = degrees.length === 1 ? "max-w-2xl mx-auto" : (degrees.length === 2 || degrees.length === 4) ? "md:grid-cols-2" : "md:grid-cols-3";
   const schGridCols = scholarships.length === 1 ? "max-w-xl mx-auto" : scholarships.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
 
   return (
@@ -20,6 +20,8 @@ export default function Education({ degrees = [], scholarships = [], ui, educati
                 ? "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
                 : "https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1200&q=80";
               const img = deg.image || defaultImg;
+              const pdfUrl = deg.programUrl || (deg.gpa?.url && deg.gpa.url.endsWith(".pdf") ? deg.gpa.url : null);
+              const badgeText = deg.badge || deg.gpa?.text || deg.program;
 
               return (
                 <motion.article
@@ -34,7 +36,7 @@ export default function Education({ degrees = [], scholarships = [], ui, educati
                       <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent dark:from-[#0e1017] dark:via-[#0e1017]/40" />
                       <div className="absolute top-4 left-4">
                         <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-900 dark:text-amber-300 border border-amber-400/40 backdrop-blur-md">
-                          <i className="fas fa-graduation-cap mr-1" /> {deg.gpa?.text || deg.program || deg.period}
+                          <i className="fas fa-award mr-1.5" /> {badgeText}
                         </span>
                       </div>
                       <span className="absolute bottom-3 left-6 text-xs font-mono text-slate-700 dark:text-slate-300 font-bold">{deg.period}</span>
@@ -47,7 +49,22 @@ export default function Education({ degrees = [], scholarships = [], ui, educati
                   </div>
                   <div className="px-7 pb-6 pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-300">
                     <span>{ui.education.verifyDegCta}</span>
-                    <i className="fas fa-arrow-right group-hover:translate-x-1 transition" />
+                    <div className="flex items-center gap-2">
+                      {pdfUrl && (
+                        <a
+                          href={pdfUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="px-3 py-1.5 rounded-full bg-amber-500/15 hover:bg-amber-500 text-amber-900 hover:text-white dark:bg-amber-500/20 dark:hover:bg-amber-400 dark:text-amber-300 dark:hover:text-slate-950 transition border border-amber-400/40 flex items-center gap-1.5"
+                          title="View PDF Document"
+                        >
+                          <i className="fas fa-file-pdf text-xs" />
+                          <span>View PDF</span>
+                        </a>
+                      )}
+                      <i className="fas fa-arrow-right group-hover:translate-x-1 transition" />
+                    </div>
                   </div>
                 </motion.article>
               );

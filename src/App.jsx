@@ -20,7 +20,7 @@ export default function App() {
   ]);
 
   const [lang, setLang] = useState(() => {
-    const saved = localStorage.getItem("portfolio_lang") || localStorage.getItem("usama_lang");
+    const saved = localStorage.getItem("portfolio_lang") || localStorage.getItem("awais_lang") || localStorage.getItem("usama_lang");
     if (saved) return saved;
     const browser = navigator.language?.slice(0, 2).toLowerCase();
     return browser || "en";
@@ -28,7 +28,7 @@ export default function App() {
 
   // Light / Dark Theme State with System Detection
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("usama_theme");
+    const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("awais_theme") || localStorage.getItem("usama_theme");
     if (saved === "light" || saved === "dark") return saved;
     if (typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
       return "light";
@@ -40,7 +40,7 @@ export default function App() {
     if (typeof window === "undefined" || !window.matchMedia) return;
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e) => {
-      const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("usama_theme");
+      const saved = localStorage.getItem("portfolio_theme") || localStorage.getItem("awais_theme") || localStorage.getItem("usama_theme");
       if (!saved) {
         setTheme(e.matches ? "dark" : "light");
       }
@@ -63,7 +63,7 @@ export default function App() {
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
       localStorage.setItem("portfolio_theme", next);
-      localStorage.setItem("usama_theme", next);
+      localStorage.setItem("awais_theme", next);
       return next;
     });
   }, []);
@@ -79,112 +79,56 @@ export default function App() {
 
   const [clock, setClock] = useState({ years: 6, months: 5, days: 14, hours: "00", mins: "00", secs: "00" });
 
-  // 1. Initial Language Discovery: Verify available language files by probing whether each file actually exists
+  // 1. Initial Language Discovery: Inspect base data.json to dynamically discover supported languages
   useEffect(() => {
     let isMounted = true;
 
-    async function probeLanguageFile(fileUrl) {
-      try {
-        const res = await fetch(fileUrl);
-        const contentType = res.headers.get("content-type") || "";
-        if (res.ok && !contentType.includes("text/html")) {
-          const json = await res.json();
-          return Boolean(json && typeof json === "object");
-        }
-        return false;
-      } catch {
-        return false;
-      }
-    }
-
-    async function discoverAndVerifyLanguages() {
-      try {
-        const baseRes = await fetch("./data.json");
-        if (!baseRes.ok) throw new Error("Could not fetch ./data.json");
-        const baseJson = await baseRes.json();
+    fetch("./data.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Could not fetch ./data.json");
+        return res.json();
+      })
+      .then((baseJson) => {
         if (!isMounted) return;
 
-        // Base English is always verified since ./data.json succeeded
-        const verified = [
-          { code: "en", label: "EN", name: "English", flag: "🇬🇧", file: "./data.json" }
-        ];
-
-        // Gather candidates from baseJson.languages, resumeDownloads, and common language codes
-        const candidateMap = new Map();
-
-        // 1. Languages explicitly defined in data.json
-        if (Array.isArray(baseJson.languages)) {
-          for (const l of baseJson.languages) {
+        let langs = [];
+        if (Array.isArray(baseJson.languages) && baseJson.languages.length > 0) {
+          langs = baseJson.languages.map((l) => {
             const code = typeof l === "string" ? l : l.code;
-            if (code && code !== "en") {
-              candidateMap.set(code, typeof l === "object" ? l : { code });
-            }
-          }
-        }
-
-        // 2. Languages declared in resume downloads
-        if (Array.isArray(baseJson.personal?.resumeDownloads)) {
-          for (const r of baseJson.personal.resumeDownloads) {
-            if (r.lang && r.lang !== "en" && !candidateMap.has(r.lang)) {
-              candidateMap.set(r.lang, { code: r.lang });
-            }
-          }
-        }
-
-        // 3. Common language codes to auto-probe in case files are added without editing data.json
-        const commonCodes = ["it", "es", "fr", "de", "pt", "nl", "ru", "zh", "ja", "ko", "ar", "hi", "tr"];
-        for (const code of commonCodes) {
-          if (!candidateMap.has(code)) {
-            candidateMap.set(code, { code });
-          }
-        }
-
-        // Build candidates to check
-        const candidatesToCheck = [];
-        for (const item of candidateMap.values()) {
-          const code = item.code;
-          if (code && code !== "en") {
-            candidatesToCheck.push({
+            return {
               code,
-              label: item.label || code.toUpperCase(),
-              name: item.name || LANGUAGE_NAMES[code] || code.toUpperCase(),
-              flag: item.flag || LANGUAGE_FLAGS[code] || "🌐",
-              file: item.file || `./data.${code}.json`
-            });
-          }
+              label: (typeof l === "object" && l.label) || code.toUpperCase(),
+              name: (typeof l === "object" && l.name) || LANGUAGE_NAMES[code] || code.toUpperCase(),
+              flag: (typeof l === "object" && l.flag) || LANGUAGE_FLAGS[code] || "🌐",
+              file: (typeof l === "object" && l.file) || (code === "en" ? "./data.json" : `./data.${code}.json`)
+            };
+          });
+        } else if (Array.isArray(baseJson.personal?.resumeDownloads) && baseJson.personal.resumeDownloads.length > 0) {
+          langs = baseJson.personal.resumeDownloads.map((r) => ({
+            code: r.lang,
+            label: r.lang.toUpperCase(),
+            name: r.label || LANGUAGE_NAMES[r.lang] || r.lang.toUpperCase(),
+            flag: r.flag || LANGUAGE_FLAGS[r.lang] || "🌐",
+            file: r.lang === "en" ? "./data.json" : `./data.${r.lang}.json`
+          }));
+        } else {
+          langs = [{ code: "en", label: "EN", name: "English", flag: "🇬🇧", file: "./data.json" }];
         }
 
-        // Probe each candidate file in parallel
-        await Promise.all(
-          candidatesToCheck.map(async (cand) => {
-            const exists = await probeLanguageFile(cand.file);
-            if (exists) {
-              verified.push(cand);
-            }
-          })
-        );
+        setAvailableLanguages(langs);
 
-        if (!isMounted) return;
-
-        // Sort so "en" is first, followed by other verified languages
-        verified.sort((a, b) => (a.code === "en" ? -1 : b.code === "en" ? 1 : 0));
-
-        setAvailableLanguages(verified);
-
-        // Ensure current active lang is valid among verified languages
-        const validCodes = verified.map((l) => l.code);
+        // Ensure current language is valid among discovered languages
+        const validCodes = langs.map((l) => l.code);
         setLang((currLang) => {
           if (validCodes.includes(currLang)) return currLang;
           const browser = navigator.language?.slice(0, 2).toLowerCase();
           if (validCodes.includes(browser)) return browser;
-          return "en";
+          return validCodes[0] || "en";
         });
-      } catch (err) {
-        console.warn("Language discovery error:", err);
-      }
-    }
-
-    discoverAndVerifyLanguages();
+      })
+      .catch((err) => {
+        console.warn("Failed to discover languages from ./data.json:", err);
+      });
 
     return () => {
       isMounted = false;
@@ -195,7 +139,7 @@ export default function App() {
   useEffect(() => {
     let isMounted = true;
     localStorage.setItem("portfolio_lang", lang);
-    localStorage.setItem("usama_lang", lang);
+    localStorage.setItem("awais_lang", lang);
     document.documentElement.lang = lang;
 
     const langConfig = availableLanguages.find((l) => l.code === lang);
@@ -203,14 +147,14 @@ export default function App() {
 
     fetch(fileUrl)
       .then((res) => {
-        const contentType = res.headers.get("content-type") || "";
-        if (!res.ok || contentType.includes("text/html")) {
-          // If the localized file is missing or returns HTML 404, fall back to base ./data.json
+        if (!res.ok) {
+          // If the localized file is missing, fall back to base ./data.json instead of throwing error
           if (fileUrl !== "./data.json") {
-            console.warn(`Language file "${fileUrl}" not found. Falling back to "./data.json".`);
-            setAvailableLanguages((prev) => prev.filter((l) => l.code !== lang));
-            setLang("en");
-            return fetch("./data.json").then((r) => r.json());
+            console.warn(`Language file "${fileUrl}" not found. Gracefully falling back to "./data.json".`);
+            return fetch("./data.json").then((r) => {
+              if (!r.ok) throw new Error("Fallback to ./data.json failed");
+              return r.json();
+            });
           }
           throw new Error("Failed to load ./data.json");
         }

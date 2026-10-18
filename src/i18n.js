@@ -11,9 +11,9 @@ export const LANGUAGE_FLAGS = {
   ja: "🇯🇵",
   ko: "🇰🇷",
   ar: "🇸🇦",
-  tr: "Türkçe",
-  hi: "हिन्दी",
-  ur: "اردو"
+  tr: "🇹🇷",
+  hi: "🇮🇳",
+  ur: "🇵🇰"
 };
 
 export const LANGUAGE_NAMES = {
@@ -40,9 +40,9 @@ export const UI_TEXT = {
       overview: "Overview",
       experience: "Experience",
       credentials: "Credentials",
-      arsenal: "Skills",
+      arsenal: "Arsenal",
       projects: "Projects",
-      lifestyle: "Interests",
+      lifestyle: "Lifestyle",
       resumeBtn: "Resume PDF",
       downloadCurrentTitle: "Download CV",
       resumeOptions: "Choose CV language",
@@ -56,18 +56,18 @@ export const UI_TEXT = {
       titleLine1: "Creative Solutions.",
       titleLine2: "Engineered with precision.",
       exploreBtn: "Explore Experience",
-      contactBtn: "Contact & Bio",
-      currentMission: "Current Role",
+      contactBtn: "Contact & Bio Sheet",
+      currentMission: "Current Mission",
       active: "ACTIVE",
       emailLabel: "Email",
       phoneLabel: "Phone",
       locationLabel: "Location"
     },
     overview: {
-      eyebrow: "Career Highlights",
-      title: "Years of Dedication & Professional Craftsmanship.",
-      uptimeTitle: "Professional Experience",
-      uptimeDesc: "Continuously delivering high-value solutions and driving impactful projects.",
+      eyebrow: "Telemetry & Impact",
+      title: "Years of Craftsmanship & Impact.",
+      uptimeTitle: "Live Career Uptime",
+      uptimeDesc: "Continuously architecting, executing, and delivering high-value production systems.",
       units: ["Years", "Months", "Days", "Hours", "Minutes", "Seconds"],
       finopsBadge: "Featured Milestone",
       savedUnit: "",
@@ -75,27 +75,27 @@ export const UI_TEXT = {
       finopsCta: "Click to inspect milestones"
     },
     experience: {
-      eyebrow: "Work Experience",
-      title: "Career milestones & achievements. Click any role to explore.",
+      eyebrow: "Progressive Career Disclosure",
+      title: "Latest mission first. Click any tile to dive deep.",
       showCompact: "Show Compact View",
       expandAll: "Expand All",
       careerRoles: "Roles",
       latestBadge: "● LATEST EXPERIENCE",
-      openSpec: "View Details",
-      deliverables: "highlights",
+      openSpec: "Open Full Spec",
+      deliverables: "deliverables",
       inspectHighlights: "Inspect highlights",
-      earlierHeading: "Earlier Professional Experience",
+      earlierHeading: "Earlier Professional Experience & Career Roles",
       inspectRole: "Inspect Role",
-      dossierBadge: "Resume / CV",
+      dossierBadge: "Complete Dossier",
       dossierTitle: "Download Printable Curriculum Vitae",
-      dossierDesc: "Prefer a traditional offline document? Download the official PDF resume directly.",
+      dossierDesc: "Prefer a traditional offline document? Grab the official PDF resume directly from the vault.",
       dossierCta: "Download PDF Now",
       otherFormats: "Or choose language:"
     },
     education: {
       eyebrow: "Academic Background & Honors",
-      title: "Degrees & Certifications.",
-      verifyDegCta: "Click to verify GPA, thesis & official PDFs",
+      title: "Degrees & Credentials.",
+      verifyDegCta: "Inspect Details & Official Documents",
       scholarshipLabel: "HONOR / SCHOLARSHIP",
       inspectCert: "Inspect Curriculum & Certificate",
       degreePdf: "Degree PDF",
@@ -103,21 +103,21 @@ export const UI_TEXT = {
       certificate: "Certificate"
     },
     skills: {
-      eyebrow: "Technical & Professional Stack",
-      title: "Skills & Core Proficiencies.",
+      eyebrow: "Multidisciplinary Stack",
+      title: "Interactive Skill Matrix.",
       nativeFluency: "Native / Bilingual Fluency",
       workingFluency: "Professional Working Fluency",
       ecosystem: "Ecosystem"
     },
     projects: {
-      eyebrow: "Featured Work",
-      title: "Projects & Publications.",
+      eyebrow: "Portfolio & Research",
+      title: "Labs, Projects & Publications.",
       inspectOn: "Inspect on",
       viewProject: "View Project",
       details: "Project Details"
     },
     interests: {
-      eyebrow: "Personal Interests",
+      eyebrow: "Beyond the Terminal",
       title: "Passions & Perspectives."
     },
     modal: {
@@ -139,7 +139,7 @@ export const UI_TEXT = {
       credentials: "Titoli",
       arsenal: "Competenze",
       projects: "Progetti",
-      lifestyle: "Interessi",
+      lifestyle: "Passioni",
       resumeBtn: "CV in PDF",
       downloadCurrentTitle: "Scarica CV",
       resumeOptions: "Scegli lingua del CV",
@@ -154,17 +154,17 @@ export const UI_TEXT = {
       titleLine2: "Progettate con precisione.",
       exploreBtn: "Esplora Carriera",
       contactBtn: "Contatti & Bio",
-      currentMission: "Ruolo Attuale",
+      currentMission: "Missione Attuale",
       active: "ATTIVO",
       emailLabel: "Email",
       phoneLabel: "Telefono",
       locationLabel: "Posizione"
     },
     overview: {
-      eyebrow: "Panoramica Professionale",
-      title: "Anni di dedizione e competenza professionale.",
-      uptimeTitle: "Esperienza Professionale",
-      uptimeDesc: "Realizzazione continua di soluzioni ad alto valore e progetti di impatto.",
+      eyebrow: "Telemetria & Risultati",
+      title: "Anni di eccellenza e dedizione professionale.",
+      uptimeTitle: "Tempo Attivo di Carriera",
+      uptimeDesc: "Progettazione e realizzazione continua di sistemi di produzione ad alto valore.",
       units: ["Anni", "Mesi", "Giorni", "Ore", "Minuti", "Secondi"],
       finopsBadge: "Traguardo in Evidenza",
       savedUnit: "",
@@ -172,27 +172,27 @@ export const UI_TEXT = {
       finopsCta: "Clicca per esplorare i traguardi"
     },
     experience: {
-      eyebrow: "Esperienza Lavorativa",
-      title: "Tappe di carriera e risultati. Clicca su un ruolo per approfondire.",
+      eyebrow: "Percorso Professionale Progressivo",
+      title: "L'ultima missione in primo piano. Clicca per approfondire.",
       showCompact: "Mostra Vista Compatta",
       expandAll: "Espandi Tutti i",
       careerRoles: "Ruoli",
       latestBadge: "● ESPERIENZA ATTUALE",
-      openSpec: "Vedi Dettagli",
-      deliverables: "punti salienti",
+      openSpec: "Apri Specifiche",
+      deliverables: "risultati chiave",
       inspectHighlights: "Esplora dettagli",
-      earlierHeading: "Esperienze Precedenti",
+      earlierHeading: "Esperienze Precedenti & Ruoli Professionali",
       inspectRole: "Dettagli Ruolo",
-      dossierBadge: "Curriculum Vitae",
+      dossierBadge: "Dossier Completo",
       dossierTitle: "Scarica il Curriculum Vitae Stampabile in PDF",
-      dossierDesc: "Preferisci un documento tradizionale? Scarica direttamente il CV ufficiale in PDF.",
+      dossierDesc: "Preferisci il documento tradizionale? Scarica il CV ufficiale in formato PDF.",
       dossierCta: "Scarica PDF Ora",
       otherFormats: "Oppure scegli la lingua:"
     },
     education: {
       eyebrow: "Percorso Accademico & Borse di Studio",
       title: "Titoli Accademici e Certificazioni.",
-      verifyDegCta: "Clicca per verificare voto, tesi e PDF ufficiali",
+      verifyDegCta: "Dettagli e documenti ufficiali",
       scholarshipLabel: "BORSA DI STUDIO / RICONOSCIMENTO",
       inspectCert: "Esplora Programma e Certificato",
       degreePdf: "PDF Laurea",
@@ -200,21 +200,21 @@ export const UI_TEXT = {
       certificate: "Certificato"
     },
     skills: {
-      eyebrow: "Competenze Tecniche & Professionali",
-      title: "Competenze e Conoscenze Chiave.",
+      eyebrow: "Stack Multidisciplinare",
+      title: "Matrice Interattiva delle Competenze.",
       nativeFluency: "Madrelingua / Bilingue",
       workingFluency: "Competenza Professionale",
       ecosystem: "Ecosistema"
     },
     projects: {
-      eyebrow: "Lavori in Evidenza",
-      title: "Progetti e Pubblicazioni.",
+      eyebrow: "Portfolio & Ricerca",
+      title: "Progetti, Repository & Pubblicazioni.",
       inspectOn: "Apri su",
       viewProject: "Apri Progetto",
       details: "Dettagli Progetto"
     },
     interests: {
-      eyebrow: "Interessi Personali",
+      eyebrow: "Oltre il Terminale",
       title: "Passioni e Prospettive."
     },
     modal: {
@@ -251,17 +251,17 @@ export const UI_TEXT = {
       titleLine2: "Diseñadas con precisión.",
       exploreBtn: "Explorar Experiencia",
       contactBtn: "Contacto y Biografía",
-      currentMission: "Puesto Actual",
+      currentMission: "Misión Actual",
       active: "ACTIVO",
       emailLabel: "Correo",
       phoneLabel: "Teléfono",
       locationLabel: "Ubicación"
     },
     overview: {
-      eyebrow: "Resumen Profesional",
-      title: "Años de dedicación y excelencia profesional.",
-      uptimeTitle: "Experiencia Profesional",
-      uptimeDesc: "Desarrollando continuamente soluciones de alto valor y proyectos de impacto.",
+      eyebrow: "Telemetría e Impacto",
+      title: "Años de excelencia y dedicación profesional.",
+      uptimeTitle: "Tiempo Activo en Carrera",
+      uptimeDesc: "Diseñando y ejecutando continuamente sistemas de producción de alto impacto.",
       units: ["Años", "Meses", "Días", "Horas", "Minutos", "Segundos"],
       finopsBadge: "Logro Destacado",
       savedUnit: "",
@@ -269,27 +269,27 @@ export const UI_TEXT = {
       finopsCta: "Haz clic para inspeccionar los hitos"
     },
     experience: {
-      eyebrow: "Experiencia Laboral",
-      title: "Hitos profesionales y logros. Haz clic en un rol para profundizar.",
+      eyebrow: "Trayectoria Profesional Progresiva",
+      title: "La misión más reciente primero. Haz clic para profundizar.",
       showCompact: "Vista Compacta",
       expandAll: "Ver todos los",
       careerRoles: "Roles",
       latestBadge: "● EXPERIENCIA ACTUAL",
-      openSpec: "Ver Detalles",
-      deliverables: "puntos clave",
+      openSpec: "Abrir Especificaciones",
+      deliverables: "logros clave",
       inspectHighlights: "Inspeccionar detalles",
-      earlierHeading: "Experiencias Anteriores",
+      earlierHeading: "Experiencia Previa y Roles Profesionales",
       inspectRole: "Ver Detalles",
-      dossierBadge: "Curriculum Vitae",
+      dossierBadge: "Dossier Completo",
       dossierTitle: "Descargar Curriculum Vitae Imprimible en PDF",
-      dossierDesc: "¿Prefieres un documento tradicional? Descarga directamente el CV oficial en PDF.",
+      dossierDesc: "¿Prefieres un documento tradicional? Descarga el CV oficial en PDF.",
       dossierCta: "Descargar PDF Ahora",
       otherFormats: "O elige el idioma:"
     },
     education: {
       eyebrow: "Formación Académica y Becas",
       title: "Títulos y Certificaciones.",
-      verifyDegCta: "Haz clic para verificar promedio, tesis y PDFs oficiales",
+      verifyDegCta: "Ver detalles y documentos oficiales",
       scholarshipLabel: "RECONOCIMIENTO / BECA",
       inspectCert: "Ver Programa y Certificado",
       degreePdf: "PDF del Título",
@@ -297,21 +297,21 @@ export const UI_TEXT = {
       certificate: "Certificado"
     },
     skills: {
-      eyebrow: "Competencias Técnicas y Profesionales",
-      title: "Habilidades y Competencias Clave.",
+      eyebrow: "Stack Multidisciplinario",
+      title: "Matrice Interactiva de Habilidades.",
       nativeFluency: "Fluidez Nativa / Bilingüe",
       workingFluency: "Fluidez Profesional",
       ecosystem: "Ecosistema"
     },
     projects: {
-      eyebrow: "Trabajos Destacados",
+      eyebrow: "Portafolio e Investigación",
       title: "Proyectos y Publicaciones.",
       inspectOn: "Ver en",
       viewProject: "Ver Proyecto",
       details: "Detalles del Proyecto"
     },
     interests: {
-      eyebrow: "Intereses Personales",
+      eyebrow: "Más allá del Terminal",
       title: "Pasiones y Perspectivas."
     },
     modal: {

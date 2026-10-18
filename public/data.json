@@ -1,390 +1,651 @@
 {
   "personal": {
-    "firstName": "Mohamad Usama",
-    "lastName": "KUNNATHUR",
-    "pageTitle": "Mohamad Usama KUNNATHUR",
-    "title": "DevOps & Cloud Architect",
-    "heroTitleLine1": "Cloud Infrastructure.",
-    "heroTitleLine2": "Engineered like art.",
-    "location": "Bari 10124",
-    "phone": "(+39) 393 102 4267",
-    "email": "mohamadusama242@gmail.com",
-    "bio": "I am a DevOps and Cloud Engineer, harnessing over six years of expertise in crafting, automating, and nurturing Cloud infrastructure and environments. As a quick learner and team player, I bring a blend of skills and a keen interest in AI, backed by a background in Management and Engineering, granting me a distinctive outlook within the team.",
+    "firstName": "Awais",
+    "lastName": "Soomro",
+    "pageTitle": "Awais Soomro",
+    "title": "Program Manager",
+    "heroTitleLine1": "Renewable Energy.",
+    "heroTitleLine2": "Engineering meets Execution.",
+    "location": "Pakistan · Remote",
+    "phone": "+92 335 2880233",
+    "email": "ars.soomro18@gmail.com",
+    "bio": "Program management professional with 8+ years of experience across utility-scale solar, renewable energy, EPC and construction delivery, electrical engineering, ELV and security infrastructure, power transmission, steel manufacturing, customer success, and international project coordination. Currently serving as Program Manager, Grid Integration Engineering, supporting Nexamp's renewable-energy delivery environment through TekMinds International. Combines an Electrical & Electronics Engineering background with practical project execution across planning, scope & SOW definition, EPC coordination, cost & P&L tracking, change orders, purchase orders, contractor bid management, schedule & milestone control, reporting, documentation, risk escalation, closeout, and stakeholder alignment.",
     "profileImage": "assets/img/profile.jpg",
     "favicon": "assets/img/favicon.ico",
     "resumeDownloads": [
       {
         "lang": "en",
-        "label": "English",
-        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps.pdf"
+        "label": "Download Resume PDF",
+        "url": "assets/Resume_Awais_Soomro.pdf"
       },
       {
-        "lang": "it",
-        "label": "Italiano",
-        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Italian.pdf"
-      },
-      {
-        "lang": "es",
-        "label": "Español",
-        "url": "assets/Resume_MohamadUsamaKUNNATHUR_DevOps_Spanish.pdf"
+        "lang": "li",
+        "label": "LinkedIn Profile",
+        "url": "https://www.linkedin.com/in/awais-soomro/"
       }
     ],
     "socialLinks": [
       {
         "platform": "LinkedIn",
-        "url": "https://www.linkedin.com/in/usama242/",
+        "url": "https://www.linkedin.com/in/awais-soomro/",
         "icon": "fab fa-linkedin-in"
       },
       {
-        "platform": "GitHub",
-        "url": "https://github.com/usama242/",
-        "icon": "fab fa-github"
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/@PMOrbit-engr",
+        "icon": "fab fa-youtube"
       },
       {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/mohamadusama242/",
-        "icon": "fab fa-facebook-f"
+        "platform": "Email",
+        "url": "mailto:ars.soomro18@gmail.com",
+        "icon": "fas fa-envelope"
       }
     ]
   },
   "languages": [
-    { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" },
-    { "code": "it", "label": "IT", "name": "Italiano", "flag": "🇮🇹" },
-    { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
+    {
+      "code": "en",
+      "label": "EN",
+      "name": "English",
+      "flag": "🇬🇧"
+    }
   ],
   "overview": {
-    "eyebrow": "Career Highlights",
-    "title": "Six+ years of cloud craftsmanship."
+    "eyebrow": "Portfolio Telemetry & Program Controls",
+    "title": "8+ years of engineering and renewable infrastructure delivery."
   },
   "highlightCard": {
     "enabled": true,
-    "badge": "FinOps & High Availability",
-    "value": "$10k",
-    "unit": "/mo saved",
-    "description": "Proven record of cloud cost optimization, zero-downtime Kubernetes migrations, and enterprise observability across Italy’s top payment & identity providers.",
-    "cta": "Click to inspect enterprise milestones"
+    "badge": "U.S. Renewable Delivery",
+    "value": "Utility-Scale",
+    "unit": "Solar & Storage",
+    "description": "Managing US-based PV solar interconnection projects from utility application through PTO. Overseeing pre-NTP coordination, EPC alignment, Procore budget/P&L controls, risk mitigation, and director-assigned project closeouts across concurrent portfolios.",
+    "cta": "Click to inspect program milestones"
   },
   "experienceCounter": {
     "enabled": true,
-    "title": "Total Experience as a DevOps Engineer",
-    "startDate": "2020-05-01T00:00:00",
-    "description": "Continuously orchestrating AWS, Azure, Kubernetes, and Terraform pipelines since May 2020."
+    "title": "Total Experience in Program & Engineering Delivery",
+    "startDate": "2018-08-01T00:00:00",
+    "description": "Coordinating utility-scale solar portfolios, grid interconnection, EPC contracts, high-voltage transmission, and ELV infrastructure since August 2018."
   },
   "experiences": [
     {
-      "role": "DevOps Engineer",
-      "company": "LTIMindtree",
-      "companyUrl": "https://www.ltimindtree.com/",
-      "period": "Oct 2025 - Present",
+      "role": "Program Manager, Grid Integration Engineering",
+      "company": "Nexamp (via TekMinds International)",
+      "companyUrl": "https://www.nexamp.com/",
+      "period": "October 2026 – Present",
+      "badge": "● CURRENT MISSION",
+      "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=85",
       "tags": [
-        "NEXI Blockchain",
-        "Linux VMs",
-        "Kubernetes",
-        "Playwright",
-        "Selenium",
-        "Postman"
+        "Grid Integration",
+        "Utility-Scale Solar",
+        "Interconnection (App to PTO)",
+        "Pre-NTP Coordination",
+        "EPC Management",
+        "Program Controls",
+        "Energy Storage"
       ],
       "highlights": [
-        "Working on a blockchain-based application for NEXI",
-        "Involves automation of deployment to linux VMs as well as monitoring",
-        "Also test-automation using suites like postman, selenium, and playwright.",
-        "Infrastructure planning and modernizing legacy applications (containers, kubernetes)."
+        "Manage and coordinate grid integration engineering program activities supporting renewable-energy and utility-scale solar project delivery.",
+        "Manage a portfolio of US-based PV solar interconnection projects, overseeing project coordination and pre-NTP activities from utility application through PTO.",
+        "Bridge engineering, project management, construction, deployment, documentation, and commercial workstreams to maintain alignment across distributed project teams.",
+        "Coordinate across multiple projects, stakeholders, and US teams to track schedules, budgets, risks, and dependencies while ensuring timely project execution.",
+        "Support utility applications, permitting, site readiness, testing, and closeout activities, while standardizing reporting, dashboards, and processes to improve program visibility.",
+        "Apply deep experience in SOW definition, EPC coordination, cost and P&L tracking, change orders, purchase orders, contractor coordination, risk escalation, and documentation control.",
+        "Contribute to team training and best practices across solar, interconnection, and energy storage initiatives."
       ]
     },
     {
-      "role": "DevOps Engineer",
-      "company": "Sense Reply",
-      "companyUrl": "https://www.reply.com/sense-reply/en/",
-      "period": "Nov 2024 - Oct 2025",
+      "role": "Assistant Project Manager",
+      "company": "Nexamp (via TekMinds International)",
+      "companyUrl": "https://www.nexamp.com/",
+      "period": "July 2025 – September 2026",
+      "badge": "Nexamp Deployment",
+      "tags": [
+        "Procore",
+        "Primavera P6",
+        "P&L Tracking",
+        "Contractor Bidding",
+        "SOW & EPC Agreements",
+        "Project Closeout",
+        "Workflow Automation"
+      ],
       "highlights": [
-        "Administering and upgrading Site Controller virtual machines through Ansible automation and Linux-based systems.",
-        "Designing and provisioning infrastructure using Terraform, integrated with CI/CD pipelines via Jenkins.",
-        "Modernizing legacy applications by migrating from Ubuntu Xenial to Ubuntu Focal.",
-        "Overseeing and monitoring Site Controllers utilizing Sensu and Graphite."
+        "Supported the execution of multiple U.S. utility-scale solar and renewable-energy project portfolios across planning, documentation, reporting, deployment, construction coordination, and closeout.",
+        "Tracked project milestones from pre-NTP through construction progress, completion, and final closeout, coordinating schedules, critical documentation, and stakeholder follow-ups.",
+        "Owned and supported profit-and-loss, budget, cost, change-order, and purchase-order tracking in Procore, aligning approved commercial values with budget reporting.",
+        "Supported contractor bid evaluation, procurement coordination, SOW definition, and EPC agreements across construction and deployment workstreams.",
+        "Prepared monthly construction and project reports, Primavera P6 updates, status reporting, and management-ready progress information.",
+        "Coordinated a director-assigned project closeout, assembling the full client documentation package across construction, technical, permitting, commissioning, and handover records.",
+        "Led and mentored Assistant Project Managers through onboarding, training, documentation, and contributed to PM handbook and procedure development.",
+        "Created and maintained monthly reporting trackers, utility-level SOW tracking, project closeout workflows, and Excel/SharePoint reporting automation used across the deployment organization."
       ]
     },
     {
-      "role": "DevOps Engineer",
-      "company": "Infocert",
-      "companyUrl": "https://www.infocert.it/",
-      "period": "Oct 2023 - Nov 2024",
+      "role": "Assistant Manager Technical",
+      "company": "Pathfinder Group Pakistan",
+      "companyUrl": "https://pathfinder.com.pk/",
+      "period": "November 2024 – July 2025",
+      "badge": "Security Infrastructure",
+      "tags": [
+        "Infrastructure Operations",
+        "CCTV & Alarm Systems",
+        "Odoo ERP",
+        "WhatsApp API",
+        "Vendor Management",
+        "Four Regional Offices"
+      ],
       "highlights": [
-        "Working on Identity products such as SPID, Gosign, etc.",
-        "Orchestrating containerization for legacy application modernization and deployment efficiency.",
-        "Migrating on-premises applications to cloud platforms",
-        "Administering databases and overseeing observability measures"
+        "Led security-infrastructure projects across four regional offices, coordinating planning, deployment, execution, quality, and issue resolution.",
+        "Oversaw CCTV, alarm-system, and monitoring-solution installations while maintaining system reliability and service-delivery standards.",
+        "Coordinated internal teams, vendors, and stakeholders to achieve timely delivery and resolve technical and operational issues.",
+        "Implemented Odoo ERP and WhatsApp API workflows to streamline alarm-notification processes and improve operational efficiency.",
+        "Reported project status, operating performance, and actionable insights to the General Manager to support group-level coordination."
       ]
     },
     {
-      "role": "DevOps Engineer",
-      "company": "Idea 75",
-      "companyUrl": "https://www.idea75.it/",
-      "period": "Oct 2022 - Oct 2023",
+      "role": "Project Engineer",
+      "company": "Apus Technologies",
+      "companyUrl": "https://apustechnologies.com/",
+      "period": "May 2022 – November 2024",
+      "badge": "ELV & Solar Delivery",
+      "tags": [
+        "ELV Infrastructure",
+        "Small-Scale Solar",
+        "BMS",
+        "CCTV & Fire Alarm",
+        "AutoCAD & BOQs",
+        "Site Commissioning"
+      ],
       "highlights": [
-        "Co-ordinating with a group of developers spanning different projects.",
-        "Facilitate deployment automation and CI/CD. Monitoring and observability.",
-        "Reduce bottlenecks (Build times, latency) and optimize costs (Rescaling resources)",
-        "Ensure zero downtime and high availability (Load balancing & autoscaling resources)"
+        "Led end-to-end delivery of ELV infrastructure projects and small-scale solar works while maintaining scope, schedule, quality, and client requirements.",
+        "Delivered solutions across ICT, CCTV, fire alarm, audio visual, Wi-Fi, and building-management systems (BMS).",
+        "Prepared technical drawings, specifications, bills of quantity (BOQs), design reports, and supporting documentation for client review.",
+        "Coordinated site installation, testing, commissioning, subcontractors, vendors, and cross-functional project teams.",
+        "Built and maintained business relationships across new accounts, driving solution delivery and organizational growth."
       ]
     },
     {
-      "role": "Cloud Developer",
-      "company": "Reply",
-      "companyUrl": "https://www.reply.com/",
-      "period": "May 2020 - Oct 2022",
+      "role": "Customer Success Specialist, Turkish",
+      "company": "FOURSOURCE",
+      "companyUrl": "https://www.foursource.com/",
+      "period": "November 2020 – November 2022",
+      "badge": "Global Programs",
+      "tags": [
+        "Customer Success",
+        "Turkish Market",
+        "B2B Onboarding",
+        "ISPO Textrends Awards",
+        "Distributed Teams",
+        "CRM Systems"
+      ],
       "highlights": [
-        "Worked on lambda functions usually in Python. The deployment is serverless in AWS.",
-        "Managed IoT devices of the project Enel-X and also involved in troubleshooting",
-        "Oversaw the fix deployment and management of the pipeline. Which involves automating deployment.",
-        "Recommended redimensioning of resources saving about $10k / month"
+        "Onboarded and supported more than 500 Turkish B2B companies through multilingual customer-success and platform-support activities.",
+        "Increased user adoption by 150% while strengthening client relationships and supporting retention.",
+        "Coordinated with headquarters and distributed teams in Germany, Turkey, and Pakistan to maintain clear stakeholder communication.",
+        "Planned and managed the full lifecycle of the international ISPO Textrends Awards projects, including stakeholder coordination, KPI tracking, participant engagement, execution, and closeout."
       ]
     },
     {
-      "role": "Project Manager Intern",
-      "company": "Associazione Erminio Bullio",
-      "companyUrl": "https://www.linkedin.com/company/associazionebullio/",
-      "period": "July 2019 - Sep 2019",
-      "highlights": [
-        "Primarily involved on Project Lifecycle Management of a construction project.",
-        "Worked on developing custom modules in Odoo PLM software. The modules were written in Python."
-      ]
-    },
-    {
-      "role": "Business Development Manager",
-      "company": "Cansa Tarim Makinalari",
-      "companyUrl": "https://www.cansatarim.com.tr/en/",
-      "period": "Aug 2016 - Aug 2017",
-      "highlights": [
-        "The main responsibilities were identifying new business opportunities.",
-        "Also marketing and communicating with international clients."
-      ]
-    },
-    {
-      "role": "English Teacher",
-      "company": "Oxford English Academy",
+      "role": "Network Security Engineer",
+      "company": "AMSTECH Technologies International Pvt. Ltd.",
       "companyUrl": null,
-      "period": "October 2013 - July 2016",
+      "period": "August 2018 – November 2020",
+      "badge": "Infrastructure Security",
+      "tags": [
+        "Network Security",
+        "LAN / WLAN",
+        "Server Architecture",
+        "Threat Resilience",
+        "Standard Operating Procedures"
+      ],
       "highlights": [
-        "Worked as a part-time English teacher for students of different levels.",
-        "Worked under pressure and have acquired efficient time management capabilities.",
-        "I believe If you can manage a bunch of teenagers, you can manage anyone."
+        "Maintained LAN, WLAN, server architecture, and related enterprise network infrastructure.",
+        "Analyzed and implemented security protocols to improve resilience against threats, failures, and operational malfunctions.",
+        "Implemented preventative virus-detection measures and supported information-security controls.",
+        "Supervised the installation of new software and hardware, maintaining standard operating procedures for network security."
       ]
     },
     {
-      "role": "Public Relations Intern",
-      "company": "University of Turkish Aeronautical Association",
-      "companyUrl": "https://www.thk.edu.tr",
-      "period": "November 2013 - June 2014",
+      "role": "Junior Engineer",
+      "company": "Agha Steel Industries",
+      "companyUrl": "https://aghasteel.com/",
+      "period": "August 2018 – November 2018",
+      "badge": "Industrial Modernization",
+      "tags": [
+        "Steel Rolling Mill",
+        "PREET Machinery",
+        "Danieli Group",
+        "Direct Rolling & Bundling",
+        "Turkish Engineering Liaison"
+      ],
       "highlights": [
-        "Worked in promoting and marketing the university.",
-        "Managed the calls and answered the questions of prospective students."
+        "Supported planning and execution of a Chinese rolling-mill upgrade using PREET machinery with senior management and Turkish engineering teams.",
+        "Coordinated technical and administrative communication between the Turkish engineering team and Agha Steel Industries management.",
+        "Supported scope and design development for the Direct Rolling and Bundling system for Danieli Group.",
+        "Helped align technical requirements, stakeholder expectations, revamp objectives, and project execution needs."
+      ]
+    },
+    {
+      "role": "Project Engineer",
+      "company": "ASEM Grup Enerji",
+      "companyUrl": null,
+      "period": "June 2017 – June 2018",
+      "badge": "Power Transmission",
+      "tags": [
+        "154 kV Transmission Line",
+        "15.9 km Overhead Line",
+        "Grid Commissioning",
+        "50-Member Team",
+        "High-Voltage Substation"
+      ],
+      "highlights": [
+        "Led execution and commissioning of a 15.9 km, 154 kV overhead transmission-line project in Turkey.",
+        "Managed scheduling, resource allocation, site coordination, and delivery activities for a 50-member cross-functional team.",
+        "Reported progress, issues, and execution status directly to senior stakeholders.",
+        "Supported joint-venture development with global firms to expand project capabilities."
+      ]
+    },
+    {
+      "role": "Intern – PowerHouse & Maintenance Departments",
+      "company": "Karachi Shipyard & Engineering Works Limited",
+      "companyUrl": "https://karachishipyard.com.pk/",
+      "period": "August 2015 – September 2015",
+      "badge": "Power Generation",
+      "tags": [
+        "Powerhouse Maintenance",
+        "Fleet Tanker PNS Moawin",
+        "STM Turkey",
+        "Marine Engineering"
+      ],
+      "highlights": [
+        "Completed practical exposure in the Powerhouse and Maintenance departments.",
+        "Supported learning related to the fleet tanker PNS Moawin in collaboration with STM, Turkey."
+      ]
+    },
+    {
+      "role": "Summer Intern – Manufacturing & Maintenance",
+      "company": "MITAS Group",
+      "companyUrl": "https://www.mitasgroup.com/",
+      "period": "June 2014 – July 2014",
+      "badge": "Manufacturing & Standards",
+      "tags": [
+        "Manufacturing Units",
+        "Electrical Panels",
+        "Integrated Circuits",
+        "DIN / ISO / ASTM Standards"
+      ],
+      "highlights": [
+        "Supported maintenance and handling activities for NEDSHOEF nuts-and-bolts manufacturing units.",
+        "Developed practical knowledge of integrated circuits, electrical panels, and international engineering standards including DIN, ISO, BS, ASTM, and TSE."
+      ]
+    },
+    {
+      "role": "International Sales Representative",
+      "company": "Aksan Kardan Ltd.",
+      "companyUrl": "https://aksankardan.com/",
+      "period": "March 2014 – May 2014",
+      "badge": "International Trade",
+      "tags": [
+        "Export Operations",
+        "Client Negotiation",
+        "International Business"
+      ],
+      "highlights": [
+        "Supported the export department and international sales activities in Bursa, Turkey.",
+        "Identified prospective customers, collaborated with clients, and supported customer negotiation and relationship development."
       ]
     }
   ],
   "education": [
     {
-      "institution": "Udacity",
-      "institutionUrl": "https://www.udacity.com",
-      "program": "Foundations of Ethical Hacking",
-      "programUrl": "https://www.udacity.com/course/ethical-hacker-nanodegree--nd350",
-      "period": "Dec 2024 - Feb 2025",
-      "scholarship": {
-        "text": "Won the scholarship offered by Bertelsmann amongst many applicants.",
-        "credentialText": "Certificate",
-        "credentialUrl": "https://www.udacity.com/certificate/e/0a3ff0e4-b7ba-11ef-bd16-a30affcc1afd"
-      },
-      "highlights": [
-        "Performing vulnerability scans and managing prioritization and response",
-        "Conducting system audits, researching vulnerabilities, and writing reports",
-        "Exploring social engineering tactics, phishing simulations, and malware deployment"
-      ]
-    },
-    {
-      "institution": "Udacity",
-      "institutionUrl": "https://www.udacity.com",
-      "program": "DevOps Engineer",
-      "programUrl": "https://www.udacity.com/course/cloud-devops-using-microsoft-azure-nanodegree--nd082",
-      "period": "July 2022 - Nov 2022",
-      "scholarship": {
-        "text": "Won the scholarship offered by Bosch amongst many applicants.",
-        "credentialText": "Certificate",
-        "credentialUrl": "https://www.udacity.com/certificate/e/0c49641e-0692-11ed-85b7-2b04fbc37882"
-      },
-      "highlights": [
-        "Focus on Infrastructure deployment using Terraform and Packer",
-        "Agile development, functional and performance testing",
-        "Cloud-native app development using Docker and Kubernetes"
-      ]
-    },
-    {
-      "institution": "Udacity",
-      "institutionUrl": "https://www.udacity.com",
-      "program": "Front-End Web development",
-      "programUrl": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011",
-      "period": "Jan 2020 - March 2020",
-      "scholarship": {
-        "text": "Won the scholarship offered by Google amongst many applicants.",
-        "credentialText": "Certificate",
-        "credentialUrl": "https://www.udacity.com/certificate/e/91c55920-9a8a-11ea-9b6c-fb92acf7e0e2"
-      },
-      "highlights": [
-        "Focus on CSS, JavaScript, APIs, Build tools & Express. In backend the focus on node.js.",
-        "Also front-end libraries such as React. Best practices of coding and website optimization."
-      ]
-    },
-    {
-      "institution": "Politecnico di Torino",
-      "institutionUrl": "https://www.polito.it",
-      "program": "Masters in Engineering & Management",
-      "programUrl": null,
-      "period": "September 2017 - March 2020",
-      "gpa": {
-        "text": "GPA: 100/110",
-        "url": "https://sid.polito.it/TinyUrl-1.0/verifypdf/pdf.html?url=KKHjsyk5uLw"
-      },
-      "highlights": [
-        "Concentration in Project Management, Production & Quality engineering",
-        "Also focus in Economics, Financial Engineering, Strategy & Innovation Management",
-        "Thesis on Applying Artificial Intelligence techniques in Project Management"
-      ]
-    },
-    {
-      "institution": "University of Turkish Aeronautical Association",
+      "institution": "Turkish Aeronautical Association University",
       "institutionUrl": "https://www.thk.edu.tr",
-      "program": "Bachelors in Aeronautical Engineering",
+      "program": "Bachelor of Science – Electrical and Electronics Engineering",
+      "period": "2012 – 2017",
+      "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
       "programUrl": "assets/Degree_Bachelor.pdf",
       "programDownload": true,
-      "period": "September 2012 - June 2016",
+      "badge": "100% Success Scholarship",
       "gpa": {
-        "text": "GPA: 3.08/4.0",
-        "url": "assets/Diploma_Supplement_Bachelor.pdf",
-        "download": true
+        "text": "100% Success Scholarship",
+        "url": "assets/Degree_Bachelor.pdf"
       },
       "highlights": [
-        "Concentration in Aerodynamics, FEM & CAD",
-        "Academic internship on solving Navier-stokes equation using Python",
-        "Academic internship on analysis of Francis Turbine using Ansys Fluent"
+        "Core engineering curriculum in electric circuits, circuit theory, logic design, programming, electromagnetism, and electronic circuits.",
+        "Advanced specialization in automatic control systems, digital communications, power electronics, radar systems, electric machines, and microwaves.",
+        "Awarded 100% Success Scholarship by Turkish Aeronautical Association University in August 2012."
+      ]
+    },
+    {
+      "institution": "Project Management Institute (PMI)",
+      "institutionUrl": "https://www.pmi.org",
+      "program": "Project Management Professional (PMP)®",
+      "period": "Active Credential",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+      "programUrl": "assets/PMP_Certificate.pdf",
+      "programDownload": true,
+      "gpa": {
+        "text": "PMP® Certified",
+        "url": "assets/PMP_Certificate.pdf"
+      },
+      "highlights": [
+        "Globally recognized gold standard in program and project leadership, predictive & agile lifecycles, and risk governance.",
+        "Crucial credential for Program Manager roles driving scope, budgets, schedules, stakeholder governance, and cross-functional alignment.",
+        "Rigorous alignment with PMBOK standards across utility-scale renewable energy and complex engineering projects."
+      ]
+    },
+    {
+      "institution": "LinkedIn Academy / Procore Technologies",
+      "institutionUrl": "https://www.linkedin.com/in/awais-soomro/details/education/edit/forms/1180073430/",
+      "program": "Construction Management Professional Certificate",
+      "period": "2025",
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+      "gpa": {
+        "text": "Passed Final Exam (Endorsed by Procore)",
+        "url": "https://www.linkedin.com/in/awais-soomro/details/education/edit/forms/1180073430/"
+      },
+      "highlights": [
+        "Earned professional certificate endorsed by Procore Technologies, the leading provider of cloud-based construction software.",
+        "Key learning areas: Construction Project Management, Construction Safety, Construction Drawings, and digital project execution.",
+        "Mastered foundations, best practices, and industry techniques for career development in construction management."
+      ]
+    },
+    {
+      "institution": "Udacity",
+      "institutionUrl": "https://www.udacity.com",
+      "program": "AWS Business Intelligence Engineer Nanodegree",
+      "period": "2025",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "AWS BI NANODEGREE",
+        "text": "Full Scholarship Awardee – Completed intensive 6-month curriculum in just 1 month.",
+        "credentialText": "Udacity Verified",
+        "credentialUrl": "https://www.udacity.com"
+      },
+      "highlights": [
+        "Awarded full competitive scholarship for AWS Business Intelligence Engineer Nanodegree.",
+        "Mastered cloud data warehousing, ETL pipelines, business intelligence architectures, and dashboard analytics on AWS.",
+        "Accelerated completion: completed the intensive 6-month curriculum in just 1 month."
+      ]
+    },
+    {
+      "institution": "OSHA / U.S. Department of Labor",
+      "institutionUrl": null,
+      "program": "OSHA 30-Hour Construction Outreach Training",
+      "period": "Completed August 2026",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "SAFETY COMPLIANCE",
+        "text": "OSHA 30-Hour Construction Outreach Training completed August 2026.",
+        "credentialText": "OSHA 30",
+        "credentialUrl": null
+      },
+      "highlights": [
+        "Comprehensive 30-hour training on construction health hazards, electrical safety, site inspections, and regulatory hazard prevention.",
+        "Ensuring on-site compliance, contractor safety enforcement, and risk mitigation across utility-scale solar construction sites."
+      ]
+    },
+    {
+      "institution": "Procore Technologies",
+      "institutionUrl": "https://www.procore.com",
+      "program": "Procore Certified: Project Manager – Core Tools",
+      "period": "2025",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "PROCORE CERTIFIED",
+        "text": "Certified in Procore Core Tools and Construction Management workflows.",
+        "credentialText": "Procore Verified",
+        "credentialUrl": "https://www.procore.com"
+      },
+      "highlights": [
+        "Certified in Procore project controls, budget management, change orders, purchase orders, submittals, RFIs, and drawing registers.",
+        "Streamlining digital collaboration between EPC contractors, project managers, and field deployment teams."
+      ]
+    },
+    {
+      "institution": "HeatSpring",
+      "institutionUrl": "https://www.heatspring.com",
+      "program": "Introduction to Solar PV Design, Installation & Code",
+      "period": "Professional Development",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "SOLAR PV DESIGN",
+        "text": "Solar PV design principles, National Electrical Code (NEC), inverter matching, and grid interconnection.",
+        "credentialText": "HeatSpring Credential",
+        "credentialUrl": "https://www.heatspring.com"
+      },
+      "highlights": [
+        "Covers photovoltaic array electrical calculations, National Electrical Code (NEC) compliance, and safe utility interconnection standards."
+      ]
+    },
+    {
+      "institution": "The Council for Six Sigma Certification (CSSC)",
+      "institutionUrl": null,
+      "program": "Lean Six Sigma White Belt Certification",
+      "period": "March 2025",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "LEAN SIX SIGMA",
+        "text": "Credential ID: djQwMTUzNC0yOTg. Process efficiency, waste elimination, DMAIC, and workflow optimization.",
+        "credentialText": "CSSC Verified",
+        "credentialUrl": null
+      },
+      "highlights": [
+        "Applied to standardize reporting workflows, eliminate documentation bottlenecks, and optimize cross-functional project handoffs."
+      ]
+    },
+    {
+      "institution": "Hikvision",
+      "institutionUrl": null,
+      "program": "Certified General Security Associate (CGSA)",
+      "period": "September 2024",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "HIKVISION CGSA",
+        "text": "Credential ID: CGSA-092024-0092-09-1177. Advanced video surveillance architecture, IP cameras, and physical security design.",
+        "credentialText": "Hikvision Certified",
+        "credentialUrl": null
+      },
+      "highlights": [
+        "Enterprise video management systems, IP camera network design, access control, and centralized security infrastructure."
+      ]
+    },
+    {
+      "institution": "Project Management Institute (PMI)",
+      "institutionUrl": "https://www.pmi.org",
+      "program": "Generative AI for Project Managers",
+      "period": "March 2025",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "AI IN PM",
+        "text": "Overview & Practical Application of Generative AI for Project Managers issued by PMI.",
+        "credentialText": "PMI AI Credential",
+        "credentialUrl": "https://www.pmi.org"
+      },
+      "highlights": [
+        "Utilizing generative AI to accelerate portfolio reporting, risk modeling, schedule optimization, and executive status briefs."
+      ]
+    },
+    {
+      "institution": "Institute of Business Administration (IBA), Karachi",
+      "institutionUrl": null,
+      "program": "Information Security Certificate of Cybersecurity",
+      "period": "2022",
+      "type": "scholarship",
+      "scholarship": {
+        "badge": "IBA SCHOLARSHIP",
+        "text": "Won full IBA Karachi University Scholarship for Cyber Security Certification.",
+        "credentialText": "IBA Scholarship",
+        "credentialUrl": null
+      },
+      "highlights": [
+        "Vulnerability assessment, enterprise network defenses, data integrity, and compliance with cybersecurity protocols."
+      ]
+    },
+    {
+      "institution": "Forage / CBRE & Siemens Mobility",
+      "institutionUrl": null,
+      "program": "Project Management Simulations (CBRE & Siemens Mobility)",
+      "period": "April 2025",
+      "type": "certificate",
+      "scholarship": {
+        "badge": "SIMULATION CREDENTIALS",
+        "text": "Credential IDs: Qv3qE3ApuhPjFAuvJ (CBRE) & g9vDKkB7momoqHNzg (Siemens Mobility).",
+        "credentialText": "Forage Verified",
+        "credentialUrl": null
+      },
+      "highlights": [
+        "Completed industry simulations on infrastructure project management, stakeholder communications, and scope execution."
       ]
     }
   ],
   "skills": [
     {
-      "category": "Developer",
-      "items": [
-        {
-          "icon": "fab fa-aws",
-          "text": "API Gateway, Cloudwatch, Lambda, EC2, VPC, S3, SQS, SNS, etc"
-        },
-        {
-          "icon": "fab fa-microsoft",
-          "text": "Azure vm, active-directory, policy, AZ CLI, etc"
-        },
-        {
-          "icon": "fas fa-code-compare",
-          "text": "Bamboo, Gitlab, Cloudformation, Terraform, etc"
-        },
-        {
-          "icon": "fab fa-docker",
-          "text": "Git, Docker, Kubernetes, Packer, etc"
-        },
-        {
-          "icon": "fas fa-circle-nodes",
-          "text": "Kuberentes tools like Helm, Kustomize, ArgoCD, Openshift, K9s, etc"
-        },
-        {
-          "icon": "fas fa-laptop-medical",
-          "text": "Monitoring tools like Grafana, Prometheus, Loki, Kibana, Sensu, etc"
-        },
-        {
-          "icon": "fas fa-spell-check",
-          "text": "API testing (Postman), Functional UI testing (Selenium), Performance testing (Jmeter), etc"
-        },
-        {
-          "icon": "fab fa-linux",
-          "text": "Bash scripting, Powershell, Nginx, Remote SSH, etc"
-        },
-        {
-          "icon": "fas fa-server",
-          "text": "Configuration management tools like Ansible, Chef, Puppet, etc"
-        },
-        {
-          "icon": "fab fa-python",
-          "text": "Django, Flask, SQLAlchemy, etc"
-        },
-        {
-          "icon": "fab fa-html5",
-          "text": "HTML, CSS, Bootstrap, Babel, SASS, LESS etc"
-        },
-        {
-          "icon": "fab fa-js-square",
-          "text": "React, Redux, Node.js, Express.js, Typescript, etc"
-        },
-        {
-          "icon": "fas fa-database",
-          "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch etc"
-        }
-      ]
-    },
-    {
-      "category": "Engineering",
-      "items": [
-        {
-          "icon": "fas fa-compass-drafting",
-          "text": "CAD (Solidworks, Catia, AutoCAD, etc.)"
-        },
-        {
-          "icon": "fas fa-water",
-          "text": "CFD (Ansys Fluent, Autodesk CFD, etc.)"
-        },
-        {
-          "icon": "fas fa-hammer",
-          "text": "FEA (Abaqus, Nastran, Patran, etc.)"
-        },
-        {
-          "icon": "fas fa-code",
-          "text": "Matlab & Simulink"
-        }
-      ]
-    },
-    {
-      "category": "Management",
+      "category": "Project & Program Controls",
       "items": [
         {
           "icon": "fas fa-diagram-project",
-          "text": "PM methodologies (Scrum, Agile, Kanban, etc.)"
+          "text": "Scope, SOW & EPC Coordination"
         },
         {
-          "icon": "fab fa-jira",
-          "text": "PM tools (MS Project, Jira, Odoo, etc.)"
+          "icon": "fas fa-chart-gantt",
+          "text": "Primavera P6 Milestone & Schedule Control"
         },
         {
-          "icon": "fas fa-briefcase",
-          "text": "Business analytics tools (SAP, Oracle, SAS, Tableu, etc.)"
+          "icon": "fas fa-file-invoice-dollar",
+          "text": "Cost, Budget & P&L Tracking (Procore)"
         },
         {
-          "icon": "fas fa-chart-line",
-          "text": "Marketing tools (SEO, Google Analytics, Hubspot, etc.)"
+          "icon": "fas fa-bolt",
+          "text": "Grid Interconnection (Application through PTO)"
+        },
+        {
+          "icon": "fas fa-handshake",
+          "text": "Contractor Bid Management & Procurement"
+        },
+        {
+          "icon": "fas fa-receipt",
+          "text": "Change Orders & Purchase Order Administration"
+        },
+        {
+          "icon": "fas fa-triangle-exclamation",
+          "text": "Risk Escalation, Issues & Dependency Tracking"
+        },
+        {
+          "icon": "fas fa-box-archive",
+          "text": "Project Closeout & Full Dossier Handover"
+        },
+        {
+          "icon": "fas fa-layer-group",
+          "text": "Agile, Waterfall, Scrum & Kanban Methodologies"
         }
       ]
     },
     {
-      "category": "Miscellaneous",
+      "category": "Renewable & Electrical",
       "items": [
         {
-          "icon": "fas fa-bullhorn",
-          "text": "Public Speaking (Toastmasters)"
+          "icon": "fas fa-solar-panel",
+          "text": "Utility-Scale Solar PV Delivery"
         },
         {
-          "icon": "fas fa-people-group",
-          "text": "Flexible, Easily Adaptable & Team Player"
+          "icon": "fas fa-tower-broadcast",
+          "text": "154 kV Overhead Transmission Line Commissioning"
         },
         {
-          "icon": "fas fa-clock",
-          "text": "Time management & Working under pressure"
+          "icon": "fas fa-plug-circle-bolt",
+          "text": "Substation, High/Medium Voltage Infrastructure"
         },
         {
-          "icon": "fas fa-map-location",
-          "text": "Available to relocate"
+          "icon": "fas fa-shield-halved",
+          "text": "OSHA 30 Construction & Electrical Safety"
+        },
+        {
+          "icon": "fas fa-book-bookmark",
+          "text": "Solar PV Design, Installation & NEC Code"
+        },
+        {
+          "icon": "fas fa-battery-charging",
+          "text": "Energy Storage (BESS) & Site Readiness"
+        },
+        {
+          "icon": "fas fa-microchip",
+          "text": "Integrated Circuits & Electrical Panels"
+        },
+        {
+          "icon": "fas fa-industry",
+          "text": "PowerHouse Operations & Maintenance"
+        }
+      ]
+    },
+    {
+      "category": "Infrastructure & ELV",
+      "items": [
+        {
+          "icon": "fas fa-building",
+          "text": "Building Management Systems (BMS)"
+        },
+        {
+          "icon": "fas fa-video",
+          "text": "CCTV Surveillance (Hikvision CGSA)"
+        },
+        {
+          "icon": "fas fa-bell",
+          "text": "Fire Alarm & Life Safety Infrastructure"
+        },
+        {
+          "icon": "fas fa-network-wired",
+          "text": "ICT, Audio Visual & Wi-Fi Networks"
+        },
+        {
+          "icon": "fas fa-robot",
+          "text": "Odoo ERP & WhatsApp API Workflows"
+        },
+        {
+          "icon": "fas fa-lock",
+          "text": "Network & Information Security (IBA Certified)"
+        },
+        {
+          "icon": "fas fa-gears",
+          "text": "Industrial Rolling Mill Systems (PREET & Danieli)"
+        }
+      ]
+    },
+    {
+      "category": "Platforms & Tools",
+      "items": [
+        {
+          "icon": "fas fa-laptop-code",
+          "text": "Procore Construction Management (Core Tools Certified)"
+        },
+        {
+          "icon": "fas fa-calendar-check",
+          "text": "Primavera P6 Professional"
+        },
+        {
+          "icon": "fas fa-file-excel",
+          "text": "Advanced Excel Portfolio & SOW Trackers"
+        },
+        {
+          "icon": "fas fa-share-nodes",
+          "text": "SharePoint Automation & PM Handbooks"
+        },
+        {
+          "icon": "fas fa-compass-drafting",
+          "text": "AutoCAD, Technical Drawings & BOQ Specifications"
+        },
+        {
+          "icon": "fab fa-salesforce",
+          "text": "Salesforce CRM & Sigma"
+        },
+        {
+          "icon": "fab fa-jira",
+          "text": "Monday.com & Jira Project Workflows"
+        },
+        {
+          "icon": "fab fa-aws",
+          "text": "AWS Cloud Analytics (Udacity BI Nanodegree)"
         }
       ]
     },
@@ -393,147 +654,192 @@
       "items": [
         {
           "icon": "fas fa-battery-full",
-          "text": "English"
+          "text": "English (Full Professional Proficiency)",
+          "proficiency": 100
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "Urdu"
+          "text": "Urdu (Native / Bilingual Proficiency)",
+          "proficiency": 100
         },
         {
           "icon": "fas fa-battery-full",
-          "text": "Hindi"
-        },
-                {
-          "icon": "fas fa-battery-full",
-          "text": "Tamil"
+          "text": "Sindhi (Native / Bilingual Proficiency)",
+          "proficiency": 100
         },
         {
           "icon": "fas fa-battery-three-quarters",
-          "text": "Turkish"
+          "text": "Turkish (Professional Working Proficiency)",
+          "proficiency": 85
         },
         {
-          "icon": "fas fa-battery-three-quarters",
-          "text": "Italian"
+          "icon": "fas fa-battery-half",
+          "text": "Spanish (Elementary Proficiency)",
+          "proficiency": 40
         }
       ]
     }
   ],
   "projects": [
     {
-      "category": "Developer Github",
+      "category": "Renewable & Grid Delivery",
       "items": [
         {
-          "icon": "fab fa-microsoft",
-          "text": "Deploying a scalable IaaS web server in Azure using Terraform",
-          "url": "https://github.com/usama242/Terraform-packer-project"
+          "icon": "fas fa-solar-panel",
+          "text": "Utility-Scale Solar and Renewable-Energy Delivery (U.S. Portfolios)",
+          "url": "https://www.nexamp.com/",
+          "platform": "Nexamp / TekMinds"
         },
         {
-          "icon": "fab fa-microsoft",
-          "text": "Building a CI/CD pipeline using Azure pipelines & GitHub Actions",
-          "url": "https://github.com/usama242/CICD-pipeline-azure"
+          "icon": "fas fa-network-wired",
+          "text": "Grid Integration Engineering Program Management (Utility to PTO)",
+          "url": "https://www.nexamp.com/",
+          "platform": "Nexamp Portfolio"
         },
         {
-          "icon": "fab fa-microsoft",
-          "text": "Ensuring quality releases with API, functional & perf testing",
-          "url": "https://github.com/usama242/Ensuring_Quality_Releases"
+          "icon": "fas fa-tower-broadcast",
+          "text": "154 kV Overhead Transmission Line (15.9 km Execution & Commissioning)",
+          "url": null,
+          "platform": "ASEM Grup Enerji"
         },
         {
-          "icon": "fab fa-microsoft",
-          "text": "Automated Docker Image Creation, VM Provisioning, and Kubernetes Deployment",
-          "url": "https://github.com/usama242/techtrends"
-        },
-        {
-          "icon": "fab fa-microsoft",
-          "text": "Best coding practices and unit test",
-          "url": "https://github.com/usama242/Predict_Customer_Churn"
-        },
-        {
-          "icon": "fas fa-plane",
-          "text": "Online travel app using multiple APIs",
-          "url": "https://github.com/usama242/Project-5"
-        },
-        {
-          "icon": "fas fa-cloud",
-          "text": "An asynchronous Weather Journal app using OpenWeatherMap API",
-          "url": "https://github.com/usama242/Project-3"
-        },
-        {
-          "icon": "fas fa-cart-shopping",
-          "text": "Evaluate a news article with Natural Language Processing",
-          "url": "https://github.com/usama242/Project-4"
-        },
-        {
-          "icon": "fas fa-blog",
-          "text": "Multi-page Blog website with HTML and pure CSS",
-          "url": "https://github.com/usama242/Project-1"
+          "icon": "fas fa-chart-line",
+          "text": "Utility-Level SOW & Project Reporting Automation (Excel & SharePoint)",
+          "url": null,
+          "platform": "Workflow Automation"
         }
       ]
     },
     {
-      "category": "Engineering Publications",
+      "category": "Infrastructure & Industry",
       "items": [
         {
-          "icon": "fas fa-microchip",
-          "text": "Applying Artificial Intelligence techniques in Project Management",
-          "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management"
-        },
-        {
-          "icon": "fas fa-plane",
-          "text": "Design of a UAV with Variable-Span Morphing Wing",
-          "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing"
-        },
-        {
-          "icon": "fas fa-square",
-          "text": "States of Stress and Strain in a Semi-Infinite Plate",
+          "icon": "fas fa-shield-halved",
+          "text": "Solar, ELV & Security Systems Delivery (ICT, CCTV, Fire Alarm & BMS)",
           "url": null,
-          "type": "Aerospace & Mechanics Research"
+          "platform": "Apus Technologies"
         },
         {
-          "icon": "fas fa-plane",
-          "text": "Analysis of a Catapult-Launched Delta-Wing Glider",
-          "url": null,
-          "type": "Aerospace & Mechanics Research"
+          "icon": "fas fa-building",
+          "text": "Multi-Office Security Infrastructure & Odoo ERP / WhatsApp API Automation",
+          "url": "https://pathfinder.com.pk/",
+          "platform": "Pathfinder Group"
         },
         {
-          "icon": "fas fa-bullseye",
-          "text": "Conceptual Design of a Surface-to-Air Missile",
-          "url": null,
-          "type": "Aerospace & Mechanics Research"
+          "icon": "fas fa-industry",
+          "text": "Rolling-Mill Modernization & Direct Rolling and Bundling System",
+          "url": "https://aghasteel.com/",
+          "platform": "Agha Steel / Danieli"
         },
         {
-          "icon": "fas fa-square",
-          "text": "Plane Stress Analysis of a Rectangular Plate Subjected to a Concentrated Load",
+          "icon": "fas fa-globe",
+          "text": "ISPO Textrends Awards Global Project Lifecycle Management",
+          "url": "https://www.foursource.com/",
+          "platform": "FOURSOURCE"
+        },
+        {
+          "icon": "fas fa-award",
+          "text": "INTEL National Science Fair – Provincial Mathematics Project Winner",
           "url": null,
-          "type": "Aerospace & Mechanics Research"
+          "platform": "Intel Science Fair"
+        }
+      ]
+    },
+    {
+      "category": "Teaching & PM Orbit",
+      "items": [
+        {
+          "icon": "fab fa-youtube",
+          "text": "PM Orbit: Project Management & Engineering Channel Trailer",
+          "youtubeId": "EtXtxrgjV6U",
+          "url": "https://youtu.be/EtXtxrgjV6U",
+          "channelUrl": "https://www.youtube.com/@PMOrbit-engr",
+          "platform": "YouTube",
+          "colSpan": "md:col-span-2",
+          "badge": "YOUTUBE CHANNEL TRAILER",
+          "description": "Educational video introducing PM Orbit, covering modern project management methodologies, engineering project controls, scheduling, and utility-scale renewable delivery."
+        },
+        {
+          "icon": "fab fa-youtube",
+          "text": "PM Orbit: Educational YouTube Channel (@PMOrbit-engr)",
+          "url": "https://www.youtube.com/@PMOrbit-engr",
+          "platform": "YouTube",
+          "colSpan": "md:col-span-1",
+          "badge": "LEARNING PLATFORM",
+          "description": "Structured video tutorials for engineers and project managers focusing on PMP concepts, Primavera P6 scheduling, SOW definition, and EPC contracts."
+        },
+        {
+          "icon": "fas fa-chalkboard-user",
+          "text": "Assistant PM Mentorship & PM Handbook Development",
+          "url": null,
+          "platform": "Mentorship",
+          "colSpan": "md:col-span-3",
+          "badge": "TEAM ENABLEMENT",
+          "description": "Led onboarding, mentoring, and training for Assistant Project Managers; built standardized Excel and SharePoint reporting trackers and authored deployment procedures."
         }
       ]
     }
   ],
   "interests": [
     {
-      "icon": "fas fa-camera-retro",
-      "title": "Photo Enthusiast",
-      "description": "Capturing souls with a click, one portrait at a time."
+      "icon": "fas fa-solar-panel",
+      "title": "Clean Energy Transition",
+      "description": "Passionate about accelerating utility-scale solar deployment, battery storage integration, and modernizing grid interconnections.",
+      "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80"
     },
     {
-      "icon": "fas fa-route",
+      "icon": "fas fa-earth-americas",
+      "title": "Cross-Border Synergy",
+      "description": "Uniting distributed and cross-functional teams across the US, Pakistan, Turkey, and Germany with seamless collaboration.",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-chart-pie",
+      "title": "Systems & Automation",
+      "description": "Architecting automated trackers, SharePoint systems, and dashboards that turn chaotic complexity into transparent clarity.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fab fa-youtube",
+      "title": "PM Orbit & Mentorship",
+      "description": "Creator of the PM Orbit YouTube educational channel, mentoring engineers and APMs in modern project management and grid infrastructure controls.",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-brain",
+      "title": "Quantitative Precision",
+      "description": "Provincial Intel Science Fair Mathematics Winner, applying mathematical rigor and first-principles reasoning to engineering challenges.",
+      "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-handshake-angle",
+      "title": "International Business Development",
+      "description": "Thriving at the intersection of cultures and markets — building cross-border partnerships, navigating global trade landscapes, and unlocking new growth opportunities across continents.",
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-book-open",
+      "title": "Books Lover",
+      "description": "An avid reader who finds clarity and perspective in great books — from engineering management and leadership to history, strategy, and personal growth.",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-compass",
       "title": "Cultural Explorer",
-      "description": "Jet-setting through flavors and traditions, passport in hand."
-    },
-    {
-      "icon": "fas fa-pizza-slice",
-      "title": "Culinary Adventurer",
-      "description": "Stirring magic in the kitchen, experimenting with global cuisines."
-    },
-    {
-      "icon": "fas fa-chess-knight",
-      "title": "Galactic Chessmaster",
-      "description": "Checkmate echoes across the universe, victory in constellations."
+      "description": "Deeply curious about the world — immersed in Turkish culture for 5 years, exploring traditions, languages, and perspectives that enrich both life and leadership.",
+      "image": "https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=900&q=80"
     },
     {
       "icon": "fas fa-film",
-      "title": "Cinephile Starship",
-      "description": "Discussing movies under starry skies with fellow cosmic travelers."
+      "title": "Cinephile",
+      "description": "A dedicated cinephile drawn to intelligent storytelling, world cinema, and films that blend narrative depth with cinematic artistry.",
+      "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "fas fa-utensils",
+      "title": "Culinary Adventurer",
+      "description": "Exploring global cuisines with the same curiosity applied to engineering — from Pakistani street food and Turkish mezze to every new flavor that tells a culture's story.",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
     }
   ]
 }

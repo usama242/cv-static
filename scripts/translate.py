@@ -73,11 +73,12 @@ def build_translated_json(source_data: dict, lang: str):
     if personal.get("bio"):
         personal["bio"] = translate_text(personal["bio"], lang)
 
-    # Localize resume download labels while preserving exact array structure and order
+    # Reorder resumeDownloads so the target language is first if present
     if isinstance(personal.get("resumeDownloads"), list):
-        for d in personal["resumeDownloads"]:
-            if d.get("label"):
-                d["label"] = translate_text(d["label"], lang)
+        downloads = personal["resumeDownloads"]
+        match = [d for d in downloads if d.get("lang") == lang]
+        others = [d for d in downloads if d.get("lang") != lang]
+        personal["resumeDownloads"] = match + others
 
     # 2. Overview & Highlight Card
     overview = data.get("overview", {})
@@ -145,8 +146,6 @@ def build_translated_json(source_data: dict, lang: str):
         translated_texts = translate_list(texts, lang)
         for item, new_txt in zip(proj.get("items", []), translated_texts):
             item["text"] = new_txt
-            if item.get("type"):
-                item["type"] = translate_text(item["type"], lang)
         time.sleep(0.05)
 
     # 8. Interests

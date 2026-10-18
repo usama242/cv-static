@@ -109,18 +109,19 @@ export default function Hero({ personal, latestExp, ui, lang, experienceDeck, op
                   <img
                     src={personal.profileImage || "assets/img/profile.jpg"}
                     alt={personal.pageTitle || `${personal.firstName} ${personal.lastName}`}
-                    className="w-full h-80 object-cover object-top group-hover:scale-105 transition duration-700"
+                    className="w-full h-80 object-cover object-[center_20%] group-hover:scale-105 transition duration-700"
                   />
-                  <div className="p-4 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-t border-white/10 flex items-center justify-between">
-                    <div>
-                      <p className="text-xs text-sky-400 font-semibold uppercase tracking-wider">{ui.hero.currentMission}</p>
-                      <p className="text-sm font-bold text-white">
-                        {latestExp?.company ? `${latestExp.company} • ${latestExp.role}` : heroBadge}
-                      </p>
+                  <div className="p-4 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-t border-white/10">
+                    <p className="text-[10px] text-sky-400 font-semibold uppercase tracking-wider">{ui.hero.currentMission}</p>
+                    <p className="text-xs font-bold text-white mt-0.5 leading-snug">
+                      {latestExp?.company || heroBadge}
+                    </p>
+                    <div className="flex items-center justify-between mt-1.5">
+                      <p className="text-[11px] text-slate-300 leading-tight">{latestExp?.role}</p>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 shrink-0 ml-2">
+                        {ui.hero.active}
+                      </span>
                     </div>
-                    <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-                      {ui.hero.active}
-                    </span>
                   </div>
                 </div>
               </div>

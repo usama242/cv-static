@@ -30,7 +30,7 @@ export default function Overview({ data, ui, clock, experienceDeck, openModalDec
             />
             <div className="relative z-10">
               <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-800 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-400/30">
-                <i className="fas fa-briefcase" /> {uptimeTitle}
+                <i className="fas fa-satellite-dish animate-pulse" /> {uptimeTitle}
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold mt-4 text-slate-900 dark:text-white">{uptimeTitle}</h3>
               {uptimeDesc && <p className="text-slate-600 dark:text-slate-300 text-sm mt-1">{uptimeDesc}</p>}
