@@ -423,6 +423,16 @@
       "category": "Sviluppatore Github",
       "items": [
         {
+          "icon": "fas fa-dharmachakra",
+          "text": "Consegna continua GitOps con Argo CD",
+          "url": "https://github.com/usama242/argocd"
+        },
+        {
+          "icon": "fas fa-server",
+          "text": "Configurazione e automazione di server con Ansible",
+          "url": "https://github.com/usama242/ansible-fleet"
+        },
+        {
           "icon": "fab fa-microsoft",
           "text": "Distribuzione di un server Web IaaS scalabile in Azure utilizzando Terraform",
           "url": "https://github.com/usama242/Terraform-packer-project"
