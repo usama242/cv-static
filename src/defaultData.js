@@ -311,6 +311,7 @@ export const DEFAULT_DATA = {
     {
       "category": "Developer Github",
       "items": [
+        { "icon": "fas fa-globe", "text": "This current website", "description": "The website you are viewing now. Explore its source code on GitHub.", "url": "https://github.com/usama242/cv-static" },
         { "icon": "fab fa-microsoft", "text": "Deploying a scalable IaaS web server in Azure using Terraform", "url": "https://github.com/usama242/Terraform-packer-project" },
         { "icon": "fab fa-microsoft", "text": "Building a CI/CD pipeline using Azure pipelines & GitHub Actions", "url": "https://github.com/usama242/CICD-pipeline-azure" },
         { "icon": "fab fa-microsoft", "text": "Ensuring quality releases with API, functional & perf testing", "url": "https://github.com/usama242/Ensuring_Quality_Releases" },

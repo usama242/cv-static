@@ -473,6 +473,12 @@
       "category": "Sviluppatore Github",
       "items": [
         {
+          "text": "Questo sito web",
+          "description": "Il sito che stai visitando ora. Scopri il codice sorgente su GitHub.",
+          "url": "https://github.com/usama242/cv-static",
+          "icon": "fas fa-globe"
+        },
+        {
           "icon": "fas fa-dharmachakra",
           "text": "Consegna continua GitOps con Argo CD",
           "url": "https://github.com/usama242/argocd"

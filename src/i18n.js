@@ -96,7 +96,7 @@ export const UI_TEXT = {
       eyebrow: "Academic Background & Honors",
       title: "Degrees & Certifications.",
       verifyDegCta: "Click to verify GPA, thesis & official PDFs",
-      scholarshipLabel: "HONOR / SCHOLARSHIP",
+      scholarshipLabel: "Honor",
       inspectCert: "Inspect Curriculum & Certificate",
       degreePdf: "Degree PDF",
       program: "Program",
@@ -104,7 +104,7 @@ export const UI_TEXT = {
     },
     skills: {
       eyebrow: "Technical & Professional Stack",
-      title: "Skills & Core Proficiencies.",
+      title: "Skills",
       nativeFluency: "Native / Bilingual Fluency",
       workingFluency: "Professional Working Fluency",
       ecosystem: "Ecosystem"
@@ -193,7 +193,7 @@ export const UI_TEXT = {
       eyebrow: "Percorso Accademico & Borse di Studio",
       title: "Titoli Accademici e Certificazioni.",
       verifyDegCta: "Clicca per verificare voto, tesi e PDF ufficiali",
-      scholarshipLabel: "BORSA DI STUDIO / RICONOSCIMENTO",
+      scholarshipLabel: "Onore",
       inspectCert: "Esplora Programma e Certificato",
       degreePdf: "PDF Laurea",
       program: "Corso di Laurea",
@@ -201,7 +201,7 @@ export const UI_TEXT = {
     },
     skills: {
       eyebrow: "Competenze Tecniche & Professionali",
-      title: "Competenze e Conoscenze Chiave.",
+      title: "Competenze",
       nativeFluency: "Madrelingua / Bilingue",
       workingFluency: "Competenza Professionale",
       ecosystem: "Ecosistema"
@@ -290,7 +290,7 @@ export const UI_TEXT = {
       eyebrow: "Formación Académica y Becas",
       title: "Títulos y Certificaciones.",
       verifyDegCta: "Haz clic para verificar promedio, tesis y PDFs oficiales",
-      scholarshipLabel: "RECONOCIMIENTO / BECA",
+      scholarshipLabel: "Honor",
       inspectCert: "Ver Programa y Certificado",
       degreePdf: "PDF del Título",
       program: "Programa de Estudios",
@@ -298,7 +298,7 @@ export const UI_TEXT = {
     },
     skills: {
       eyebrow: "Competencias Técnicas y Profesionales",
-      title: "Habilidades y Competencias Clave.",
+      title: "Habilidades",
       nativeFluency: "Fluidez Nativa / Bilingüe",
       workingFluency: "Fluidez Profesional",
       ecosystem: "Ecosistema"

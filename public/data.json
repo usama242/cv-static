@@ -473,6 +473,12 @@
       "category": "Developer Github",
       "items": [
         {
+          "text": "This current website",
+          "description": "The website you are viewing now. Explore its source code on GitHub.",
+          "url": "https://github.com/usama242/cv-static",
+          "icon": "fas fa-globe"
+        },
+        {
           "icon": "fas fa-dharmachakra",
           "text": "GitOps continuous delivery with Argo CD",
           "url": "https://github.com/usama242/argocd"

@@ -473,6 +473,12 @@
       "category": "Desarrollador Github",
       "items": [
         {
+          "text": "Este sitio web",
+          "description": "El sitio que estás visitando ahora. Explora su código fuente en GitHub.",
+          "url": "https://github.com/usama242/cv-static",
+          "icon": "fas fa-globe"
+        },
+        {
           "icon": "fas fa-dharmachakra",
           "text": "Entrega continua GitOps con Argo CD",
           "url": "https://github.com/usama242/argocd"
