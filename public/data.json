@@ -48,9 +48,24 @@
     ]
   },
   "languages": [
-    { "code": "en", "label": "EN", "name": "English", "flag": "🇬🇧" },
-    { "code": "it", "label": "IT", "name": "Italiano", "flag": "🇮🇹" },
-    { "code": "es", "label": "ES", "name": "Español", "flag": "🇪🇸" }
+    {
+      "code": "en",
+      "label": "EN",
+      "name": "English",
+      "flag": "🇬🇧"
+    },
+    {
+      "code": "it",
+      "label": "IT",
+      "name": "Italiano",
+      "flag": "🇮🇹"
+    },
+    {
+      "code": "es",
+      "label": "ES",
+      "name": "Español",
+      "flag": "🇪🇸"
+    }
   ],
   "overview": {
     "eyebrow": "Career Highlights",
@@ -273,97 +288,108 @@
       "items": [
         {
           "icon": "fab fa-aws",
-          "text": "API Gateway, Cloudwatch, Lambda, EC2, VPC, S3, SQS, SNS, etc"
-        },
-        {
-          "icon": "fab fa-microsoft",
-          "text": "Azure vm, active-directory, policy, AZ CLI, etc"
+          "text": "AWS: API Gateway, CloudWatch, Lambda, EC2, VPC, S3; Azure: Virtual Machines, Active Directory, Azure Policy, Azure CLI",
+          "category": "Cloud services"
         },
         {
           "icon": "fas fa-code-compare",
-          "text": "Bamboo, Gitlab, Cloudformation, Terraform, etc"
+          "text": "Bamboo, GitLab CI, CloudFormation, Terraform",
+          "category": "Infrastructure as code & CI/CD"
         },
         {
           "icon": "fab fa-docker",
-          "text": "Git, Docker, Kubernetes, Packer, etc"
+          "text": "Git, Docker, Kubernetes, Packer",
+          "category": "Containers"
         },
         {
           "icon": "fas fa-circle-nodes",
-          "text": "Kuberentes tools like Helm, Kustomize, ArgoCD, Openshift, K9s, etc"
+          "text": "Helm, Kustomize, Argo CD, OpenShift, K9s",
+          "category": "Kubernetes ecosystem"
         },
         {
           "icon": "fas fa-laptop-medical",
-          "text": "Monitoring tools like Grafana, Prometheus, Loki, Kibana, Sensu, etc"
+          "text": "Grafana, Prometheus, Loki, Kibana, Sensu",
+          "category": "Observability"
         },
         {
           "icon": "fas fa-spell-check",
-          "text": "API testing (Postman), Functional UI testing (Selenium), Performance testing (Jmeter), etc"
+          "text": "Postman, Selenium, JMeter",
+          "category": "Software testing"
         },
         {
           "icon": "fab fa-linux",
-          "text": "Bash scripting, Powershell, Nginx, Remote SSH, etc"
+          "text": "Bash, PowerShell, Nginx, SSH",
+          "category": "Linux & scripting"
         },
         {
           "icon": "fas fa-server",
-          "text": "Configuration management tools like Ansible, Chef, Puppet, etc"
+          "text": "Ansible, Chef, Puppet",
+          "category": "Configuration management"
         },
         {
           "icon": "fab fa-python",
-          "text": "Django, Flask, SQLAlchemy, etc"
+          "text": "Django, Flask, SQLAlchemy",
+          "category": "Python backend"
         },
         {
           "icon": "fab fa-html5",
-          "text": "HTML, CSS, Bootstrap, Babel, SASS, LESS etc"
+          "text": "HTML, CSS, Bootstrap, Babel, Sass, Less",
+          "category": "Web fundamentals"
         },
         {
           "icon": "fab fa-js-square",
-          "text": "React, Redux, Node.js, Express.js, Typescript, etc"
+          "text": "React, Redux, Node.js, Express.js, TypeScript",
+          "category": "JavaScript ecosystem"
         },
         {
           "icon": "fas fa-database",
-          "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch etc"
+          "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch",
+          "category": "Databases"
         }
       ]
     },
     {
-      "category": "Engineering",
+      "category": "Engineering & Management",
       "items": [
         {
           "icon": "fas fa-compass-drafting",
-          "text": "CAD (Solidworks, Catia, AutoCAD, etc.)"
+          "text": "CAD (Solidworks, Catia, AutoCAD, etc.)",
+          "category": "CAD & drafting"
         },
         {
           "icon": "fas fa-water",
-          "text": "CFD (Ansys Fluent, Autodesk CFD, etc.)"
+          "text": "CFD (Ansys Fluent, Autodesk CFD, etc.)",
+          "category": "Computational fluid dynamics"
         },
         {
           "icon": "fas fa-hammer",
-          "text": "FEA (Abaqus, Nastran, Patran, etc.)"
+          "text": "FEA (Abaqus, Nastran, Patran, etc.)",
+          "category": "Finite element analysis"
         },
         {
           "icon": "fas fa-code",
-          "text": "Matlab & Simulink"
-        }
-      ]
-    },
-    {
-      "category": "Management",
-      "items": [
+          "text": "Matlab & Simulink",
+          "category": "Numerical modeling"
+        },
         {
           "icon": "fas fa-diagram-project",
-          "text": "PM methodologies (Scrum, Agile, Kanban, etc.)"
+          "text": "Scrum, Agile, Kanban",
+          "category": "Project management methods"
         },
         {
           "icon": "fab fa-jira",
-          "text": "PM tools (MS Project, Jira, Odoo, etc.)"
+          "text": "MS Project, Jira, Odoo",
+          "category": "Project management tools"
         },
         {
           "icon": "fas fa-briefcase",
-          "text": "Business analytics tools (SAP, Oracle, SAS, Tableu, etc.)"
+          "text": "SAP, Oracle, SAS, Tableau",
+          "category": "Business intelligence"
         },
         {
           "icon": "fas fa-chart-line",
-          "text": "Marketing tools (SEO, Google Analytics, Hubspot, etc.)"
+          "text": "SEO, Google Analytics, HubSpot",
+          "category": "Digital marketing"
         }
       ]
     },
@@ -372,19 +398,43 @@
       "items": [
         {
           "icon": "fas fa-bullhorn",
-          "text": "Public Speaking (Toastmasters)"
+          "text": "Toastmasters",
+          "category": "Public speaking"
         },
         {
           "icon": "fas fa-people-group",
-          "text": "Flexible, Easily Adaptable & Team Player"
+          "text": "Flexible, adaptable, collaborative",
+          "category": "Teamwork"
         },
         {
           "icon": "fas fa-clock",
-          "text": "Time management & Working under pressure"
+          "text": "Time management, working under pressure",
+          "category": "Time management"
         },
         {
           "icon": "fas fa-map-location",
-          "text": "Available to relocate"
+          "text": "Open to relocation",
+          "category": "Mobility"
+        },
+        {
+          "icon": "fas fa-triangle-exclamation",
+          "category": "Incident response",
+          "text": "Troubleshooting, incident coordination, post-incident reviews"
+        },
+        {
+          "icon": "fas fa-shield-halved",
+          "category": "Security mindset",
+          "text": "Least privilege, secrets handling, secure defaults"
+        },
+        {
+          "icon": "fas fa-book-open",
+          "category": "Documentation",
+          "text": "Runbooks, clear handoffs, knowledge sharing"
+        },
+        {
+          "icon": "fas fa-arrows-rotate",
+          "category": "Continuous improvement",
+          "text": "Retrospectives, feedback loops, iterative improvement"
         }
       ]
     },
@@ -403,7 +453,7 @@
           "icon": "fas fa-battery-full",
           "text": "Hindi"
         },
-                {
+        {
           "icon": "fas fa-battery-full",
           "text": "Tamil"
         },
@@ -544,6 +594,12 @@
       "icon": "fas fa-film",
       "title": "Cinephile Starship",
       "description": "Discussing movies under starry skies with fellow cosmic travelers."
+    },
+    {
+      "icon": "fas fa-language",
+      "title": "Polyglot in the Making",
+      "description": "Chasing new worlds one word at a time—currently decoding the poetry of Spanish.",
+      "image": "assets/img/language-learning.png"
     }
   ]
 }

@@ -259,46 +259,40 @@ export const DEFAULT_DATA = {
     {
       "category": "Developer",
       "items": [
-        { "icon": "fab fa-aws", "text": "API Gateway, Cloudwatch, Lambda, EC2, VPC, S3, SQS, SNS, etc" },
-        { "icon": "fab fa-microsoft", "text": "Azure vm, active-directory, policy, AZ CLI, etc" },
-        { "icon": "fas fa-code-compare", "text": "Bamboo, Gitlab, Cloudformation, Terraform, etc" },
-        { "icon": "fab fa-docker", "text": "Git, Docker, Kubernetes, Packer, etc" },
-        { "icon": "fas fa-circle-nodes", "text": "Kuberentes tools like Helm, Kustomize, ArgoCD, Openshift, K9s, etc" },
-        { "icon": "fas fa-laptop-medical", "text": "Monitoring tools like Grafana, Prometheus, Loki, Kibana, Sensu, etc" },
-        { "icon": "fas fa-spell-check", "text": "API testing (Postman), Functional UI testing (Selenium), Performance testing (Jmeter), etc" },
-        { "icon": "fab fa-linux", "text": "Bash scripting, Powershell, Nginx, Remote SSH, etc" },
-        { "icon": "fas fa-server", "text": "Configuration management tools like Ansible, Chef, Puppet, etc" },
-        { "icon": "fab fa-python", "text": "Django, Flask, SQLAlchemy, etc" },
-        { "icon": "fab fa-html5", "text": "HTML, CSS, Bootstrap, Babel, SASS, LESS etc" },
-        { "icon": "fab fa-js-square", "text": "React, Redux, Node.js, Express.js, Typescript, etc" },
-        { "icon": "fas fa-database", "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch etc" }
+        { "icon": "fab fa-aws", "category": "Cloud services", "text": "AWS: API Gateway, CloudWatch, Lambda, EC2, VPC, S3; Azure: Virtual Machines, Active Directory, Azure Policy, Azure CLI" },
+        { "icon": "fas fa-code-compare", "category": "Infrastructure as code & CI/CD", "text": "Bamboo, GitLab CI, CloudFormation, Terraform" },
+        { "icon": "fab fa-docker", "category": "Containers", "text": "Git, Docker, Kubernetes, Packer" },
+        { "icon": "fas fa-circle-nodes", "category": "Kubernetes ecosystem", "text": "Helm, Kustomize, Argo CD, OpenShift, K9s" },
+        { "icon": "fas fa-laptop-medical", "category": "Observability", "text": "Grafana, Prometheus, Loki, Kibana, Sensu" },
+        { "icon": "fas fa-spell-check", "category": "Software testing", "text": "Postman, Selenium, JMeter" },
+        { "icon": "fab fa-linux", "category": "Linux & scripting", "text": "Bash, PowerShell, Nginx, SSH" },
+        { "icon": "fas fa-server", "category": "Configuration management", "text": "Ansible, Chef, Puppet" },
+        { "icon": "fab fa-python", "category": "Python backend", "text": "Django, Flask, SQLAlchemy" },
+        { "icon": "fab fa-html5", "category": "Web fundamentals", "text": "HTML, CSS, Bootstrap, Babel, Sass, Less" },
+        { "icon": "fab fa-js-square", "category": "JavaScript ecosystem", "text": "React, Redux, Node.js, Express.js, TypeScript" },
+        { "icon": "fas fa-database", "category": "Databases", "text": "MongoDB, MySQL, PostgreSQL, DynamoDB, Elasticsearch" }
       ]
     },
     {
-      "category": "Engineering",
+      "category": "Engineering & Management",
       "items": [
-        { "icon": "fas fa-compass-drafting", "text": "CAD (Solidworks, Catia, AutoCAD, etc.)" },
-        { "icon": "fas fa-water", "text": "CFD (Ansys Fluent, Autodesk CFD, etc.)" },
-        { "icon": "fas fa-hammer", "text": "FEA (Abaqus, Nastran, Patran, etc.)" },
-        { "icon": "fas fa-code", "text": "Matlab & Simulink" }
-      ]
-    },
-    {
-      "category": "Management",
-      "items": [
-        { "icon": "fas fa-diagram-project", "text": "PM methodologies (Scrum, Agile, Kanban, etc.)" },
-        { "icon": "fab fa-jira", "text": "PM tools (MS Project, Jira, Odoo, etc.)" },
-        { "icon": "fas fa-briefcase", "text": "Business analytics tools (SAP, Oracle, SAS, Tableu, etc.)" },
-        { "icon": "fas fa-chart-line", "text": "Marketing tools (SEO, Google Analytics, Hubspot, etc.)" }
+        { "icon": "fas fa-compass-drafting", "category": "CAD & drafting", "text": "SolidWorks, CATIA, AutoCAD" },
+        { "icon": "fas fa-water", "category": "Computational fluid dynamics", "text": "Ansys Fluent, Autodesk CFD" },
+        { "icon": "fas fa-hammer", "category": "Finite element analysis", "text": "Abaqus, Nastran, Patran" },
+        { "icon": "fas fa-code", "category": "Numerical modeling", "text": "MATLAB, Simulink" },
+        { "icon": "fas fa-diagram-project", "category": "Project management methods", "text": "Scrum, Agile, Kanban" },
+        { "icon": "fab fa-jira", "category": "Project management tools", "text": "MS Project, Jira, Odoo" },
+        { "icon": "fas fa-briefcase", "category": "Business intelligence", "text": "SAP, Oracle, SAS, Tableau" },
+        { "icon": "fas fa-chart-line", "category": "Digital marketing", "text": "SEO, Google Analytics, HubSpot" }
       ]
     },
     {
       "category": "Miscellaneous",
       "items": [
-        { "icon": "fas fa-bullhorn", "text": "Public Speaking (Toastmasters)" },
-        { "icon": "fas fa-people-group", "text": "Flexible, Easily Adaptable & Team Player" },
-        { "icon": "fas fa-clock", "text": "Time management & Working under pressure" },
-        { "icon": "fas fa-map-location", "text": "Available to relocate" }
+        { "icon": "fas fa-bullhorn", "category": "Public speaking", "text": "Toastmasters" },
+        { "icon": "fas fa-people-group", "category": "Teamwork", "text": "Flexible, adaptable, collaborative" },
+        { "icon": "fas fa-clock", "category": "Time management", "text": "Time management, working under pressure" },
+        { "icon": "fas fa-map-location", "category": "Mobility", "text": "Open to relocation" }
       ]
     },
     {
@@ -307,6 +301,7 @@ export const DEFAULT_DATA = {
         { "icon": "fas fa-battery-full", "text": "English" },
         { "icon": "fas fa-battery-full", "text": "Urdu" },
         { "icon": "fas fa-battery-full", "text": "Hindi" },
+        { "icon": "fas fa-battery-full", "text": "Tamil" },
         { "icon": "fas fa-battery-three-quarters", "text": "Turkish" },
         { "icon": "fas fa-battery-three-quarters", "text": "Italian" }
       ]
@@ -344,6 +339,7 @@ export const DEFAULT_DATA = {
     { "icon": "fas fa-route", "title": "Cultural Explorer", "description": "Jet-setting through flavors and traditions, passport in hand." },
     { "icon": "fas fa-pizza-slice", "title": "Culinary Adventurer", "description": "Stirring magic in the kitchen, experimenting with global cuisines." },
     { "icon": "fas fa-chess-knight", "title": "Galactic Chessmaster", "description": "Checkmate echoes across the universe, victory in constellations." },
-    { "icon": "fas fa-film", "title": "Cinephile Starship", "description": "Discussing movies under starry skies with fellow cosmic travelers." }
+    { "icon": "fas fa-film", "title": "Cinephile Starship", "description": "Discussing movies under starry skies with fellow cosmic travelers." },
+    { "icon": "fas fa-language", "title": "Polyglot in the Making", "description": "Chasing new worlds one word at a time—currently decoding the poetry of Spanish.", "image": "assets/img/language-learning.png" }
   ]
 };

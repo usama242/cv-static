@@ -64,7 +64,9 @@ export default function Skills({ skills = [], ui, lang, activeSkillIdx, setActiv
                   <i className={item.icon || "fas fa-check"} />
                 </div>
                 <div className="flex-1">
-                  <p className="text-base font-bold text-slate-900 dark:text-white leading-snug">{item.text}</p>
+                  <p className="text-base font-bold text-slate-900 dark:text-white leading-snug">
+                    {isLang ? item.text : item.category || currentSkillGroup.category}
+                  </p>
                   {isLang ? (
                     <div className="mt-3">
                       <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
@@ -79,7 +81,7 @@ export default function Skills({ skills = [], ui, lang, activeSkillIdx, setActiv
                     </div>
                   ) : (
                     <span className="text-xs text-slate-600 dark:text-slate-400 mt-1 inline-block font-medium">
-                      {item.category || currentSkillGroup.category} {ui.skills.ecosystem}
+                      {item.text}
                     </span>
                   )}
                 </div>
