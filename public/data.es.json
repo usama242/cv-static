@@ -516,22 +516,27 @@
         {
           "icon": "fas fa-plane",
           "text": "Aplicación de viajes en línea que utiliza múltiples API",
-          "url": "https://github.com/usama242/Project-5"
+          "url": "https://github.com/usama242/travel-app"
+        },
+        {
+          "icon": "fas fa-list",
+          "text": "Página JavaScript con navegación dinámica por secciones",
+          "url": "https://github.com/usama242/dynamic-section-navigation"
         },
         {
           "icon": "fas fa-cloud",
           "text": "Una aplicación asíncrona Weather Journal que utiliza la API OpenWeatherMap",
-          "url": "https://github.com/usama242/Project-3"
+          "url": "https://github.com/usama242/weather-journal"
         },
         {
           "icon": "fas fa-cart-shopping",
           "text": "Evaluar un artículo de noticias con procesamiento del lenguaje natural.",
-          "url": "https://github.com/usama242/Project-4"
+          "url": "https://github.com/usama242/news-article-nlp"
         },
         {
           "icon": "fas fa-blog",
           "text": "Sitio web de blog multipágina con HTML y CSS puro",
-          "url": "https://github.com/usama242/Project-1"
+          "url": "https://github.com/usama242/blog-website"
         }
       ]
     },

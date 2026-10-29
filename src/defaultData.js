@@ -317,10 +317,11 @@ export const DEFAULT_DATA = {
         { "icon": "fab fa-microsoft", "text": "Ensuring quality releases with API, functional & perf testing", "url": "https://github.com/usama242/Ensuring_Quality_Releases" },
         { "icon": "fab fa-microsoft", "text": "Automated Docker Image Creation, VM Provisioning, and Kubernetes Deployment", "url": "https://github.com/usama242/techtrends" },
         { "icon": "fab fa-microsoft", "text": "Best coding practices and unit test", "url": "https://github.com/usama242/Predict_Customer_Churn" },
-        { "icon": "fas fa-plane", "text": "Online travel app using multiple APIs", "url": "https://github.com/usama242/Project-5" },
-        { "icon": "fas fa-cloud", "text": "An asynchronous Weather Journal app using OpenWeatherMap API", "url": "https://github.com/usama242/Project-3" },
-        { "icon": "fas fa-cart-shopping", "text": "Evaluate a news article with Natural Language Processing", "url": "https://github.com/usama242/Project-4" },
-        { "icon": "fas fa-blog", "text": "Multi-page Blog website with HTML and pure CSS", "url": "https://github.com/usama242/Project-1" }
+        { "icon": "fas fa-plane", "text": "Online travel app using multiple APIs", "url": "https://github.com/usama242/travel-app" },
+        { "icon": "fas fa-list", "text": "Dynamic section navigation page in JavaScript", "url": "https://github.com/usama242/dynamic-section-navigation" },
+        { "icon": "fas fa-cloud", "text": "An asynchronous Weather Journal app using OpenWeatherMap API", "url": "https://github.com/usama242/weather-journal" },
+        { "icon": "fas fa-cart-shopping", "text": "Evaluate a news article with Natural Language Processing", "url": "https://github.com/usama242/news-article-nlp" },
+        { "icon": "fas fa-blog", "text": "Multi-page Blog website with HTML and pure CSS", "url": "https://github.com/usama242/blog-website" }
       ]
     },
     {
