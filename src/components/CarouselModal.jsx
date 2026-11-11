@@ -167,7 +167,7 @@ export default function CarouselModal({
                                         &larr; {modalUi.previous}
                                     </span>
                                     <span className="absolute bottom-3 left-5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/25 text-sky-800 dark:bg-sky-500/30 dark:text-sky-200 border border-sky-400/40">
-                                        {prevCard.badge} • {prevCard.period}
+                                        {[prevCard.badge, prevCard.period].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(" • ")}
                                     </span>
                                 </div>
                                 <div className="p-7 space-y-4 overflow-hidden">
@@ -223,7 +223,7 @@ export default function CarouselModal({
                                             </div>
 
                                             <span className="absolute bottom-4 left-6 sm:left-7 px-3.5 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-900 dark:bg-sky-500/30 dark:text-sky-200 border border-sky-400/40 backdrop-blur-md pointer-events-none">
-                                                {activeCard.badge} • {activeCard.period}
+                                                {[activeCard.badge, activeCard.period].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(" • ")}
                                             </span>
                                         </div>
                                     )}
@@ -311,7 +311,7 @@ export default function CarouselModal({
                                         {modalUi.next} &rarr;
                                     </span>
                                     <span className="absolute bottom-3 left-5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/25 text-sky-800 dark:bg-sky-500/30 dark:text-sky-200 border border-sky-400/40">
-                                        {nextCard.badge} • {nextCard.period}
+                                        {[nextCard.badge, nextCard.period].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(" • ")}
                                     </span>
                                 </div>
                                 <div className="p-7 space-y-4 overflow-hidden">

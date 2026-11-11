@@ -114,7 +114,9 @@ export const UI_TEXT = {
       title: "Projects & Publications.",
       inspectOn: "Inspect on",
       viewProject: "View Project",
-      details: "Project Details"
+      details: "Project Details",
+      viewDetails: "View Details",
+      technologies: "Technologies"
     },
     interests: {
       eyebrow: "Personal Interests",
@@ -211,7 +213,9 @@ export const UI_TEXT = {
       title: "Progetti e Pubblicazioni.",
       inspectOn: "Apri su",
       viewProject: "Apri Progetto",
-      details: "Dettagli Progetto"
+      details: "Dettagli Progetto",
+      viewDetails: "Vedi Dettagli",
+      technologies: "Tecnologie"
     },
     interests: {
       eyebrow: "Interessi Personali",
@@ -308,7 +312,9 @@ export const UI_TEXT = {
       title: "Proyectos y Publicaciones.",
       inspectOn: "Ver en",
       viewProject: "Ver Proyecto",
-      details: "Detalles del Proyecto"
+      details: "Detalles del Proyecto",
+      viewDetails: "Ver Detalles",
+      technologies: "Tecnologías"
     },
     interests: {
       eyebrow: "Intereses Personales",

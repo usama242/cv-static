@@ -309,33 +309,407 @@ export const DEFAULT_DATA = {
   ],
   "projects": [
     {
-      "category": "Developer Github",
-      "items": [
-        { "icon": "fas fa-globe", "text": "This current website", "description": "The website you are viewing now. Explore its source code on GitHub.", "url": "https://github.com/usama242/cv-static" },
-        { "icon": "fab fa-microsoft", "text": "Deploying a scalable IaaS web server in Azure using Terraform", "url": "https://github.com/usama242/Terraform-packer-project" },
-        { "icon": "fab fa-microsoft", "text": "Building a CI/CD pipeline using Azure pipelines & GitHub Actions", "url": "https://github.com/usama242/CICD-pipeline-azure" },
-        { "icon": "fab fa-microsoft", "text": "Ensuring quality releases with API, functional & perf testing", "url": "https://github.com/usama242/Ensuring_Quality_Releases" },
-        { "icon": "fab fa-microsoft", "text": "Automated Docker Image Creation, VM Provisioning, and Kubernetes Deployment", "url": "https://github.com/usama242/techtrends" },
-        { "icon": "fab fa-microsoft", "text": "Best coding practices and unit test", "url": "https://github.com/usama242/Predict_Customer_Churn" },
-        { "icon": "fas fa-plane", "text": "Online travel app using multiple APIs", "url": "https://github.com/usama242/travel-app" },
-        { "icon": "fas fa-list", "text": "Dynamic section navigation page in JavaScript", "url": "https://github.com/usama242/dynamic-section-navigation" },
-        { "icon": "fas fa-cloud", "text": "An asynchronous Weather Journal app using OpenWeatherMap API", "url": "https://github.com/usama242/weather-journal" },
-        { "icon": "fas fa-cart-shopping", "text": "Evaluate a news article with Natural Language Processing", "url": "https://github.com/usama242/news-article-nlp" },
-        { "icon": "fas fa-blog", "text": "Multi-page Blog website with HTML and pure CSS", "url": "https://github.com/usama242/blog-website" }
-      ]
+        "category": "Developer Github",
+        "items": [
+            {
+                "text": "This current website",
+                "badge": "Portfolio & Web",
+                "description": "The personal portfolio and interactive CV web application you are viewing now. Built with React, Vite, and Tailwind CSS.",
+                "tags": [
+                    "React",
+                    "Vite",
+                    "Tailwind CSS",
+                    "Framer Motion",
+                    "i18n"
+                ],
+                "highlights": [
+                    "Engineered a high-performance personal portfolio featuring dynamic JSON-driven localization in English, Italian, and Spanish.",
+                    "Implemented interactive 3D modal decks, light/dark theme switching, live experience uptime counters, and smooth Framer Motion animations.",
+                    "Technologies used: React 18, Vite, Tailwind CSS, Framer Motion, and FontAwesome icons."
+                ],
+                "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/cv-static",
+                "icon": "fas fa-globe"
+            },
+            {
+                "text": "GitOps continuous delivery with Argo CD",
+                "badge": "GitOps & K8s",
+                "description": "Multi-cluster Kubernetes GitOps continuous delivery demonstration with Argo CD, Helm, and HAProxy load balancing.",
+                "tags": [
+                    "Argo CD",
+                    "Kubernetes",
+                    "Helm",
+                    "Kind",
+                    "HAProxy",
+                    "Ingress Nginx"
+                ],
+                "highlights": [
+                    "Demonstrates declarative multi-cluster GitOps using Argo CD ApplicationSets to synchronize microservices across clusters.",
+                    "Configured local multi-cluster topology using Kind, automated Helm chart releases, and Ingress-Nginx controllers.",
+                    "Integrated an HAProxy load balancer distributing client traffic across clusters using round-robin health checks.",
+                    "Technologies used: Argo CD, Kubernetes, Helm, Kind, HAProxy, Ingress-Nginx, and GitOps workflows."
+                ],
+                "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/argocd",
+                "icon": "fas fa-dharmachakra"
+            },
+            {
+                "text": "Fleet configuration and automation with Ansible",
+                "badge": "Automation & Linux",
+                "description": "Automated configuration, compliance auditing, and rolling patch management for a multi-node Linux server fleet.",
+                "tags": [
+                    "Ansible",
+                    "Ubuntu",
+                    "Debian",
+                    "Vagrant",
+                    "Nginx",
+                    "Bash"
+                ],
+                "highlights": [
+                    "Automated base configuration, SSH hardening, sysctl kernel optimizations, and Nginx health monitoring across Ubuntu/Debian nodes.",
+                    "Built automated audit playbooks producing timestamped compliance reports and pending package update statuses.",
+                    "Implemented rolling zero-downtime patching playbooks with interactive confirmation, reboot handling, and verification checks.",
+                    "Technologies used: Ansible, Vagrant, Ubuntu, Debian, Nginx, Systemd, and Bash scripting."
+                ],
+                "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/ansible-fleet",
+                "icon": "fas fa-server"
+            },
+            {
+                "text": "Deploying a scalable IaaS web server in Azure using Terraform",
+                "badge": "Cloud IaC",
+                "description": "Scalable and secure IaaS web server infrastructure deployed on Microsoft Azure using HashiCorp Packer and Terraform.",
+                "tags": [
+                    "Terraform",
+                    "Packer",
+                    "Microsoft Azure",
+                    "IaC",
+                    "Azure Policy"
+                ],
+                "highlights": [
+                    "Created custom hardened Linux VM images using HashiCorp Packer and Azure CLI credentials.",
+                    "Provisioned high-availability virtual machine scale sets, virtual networks, and load balancers using modular Terraform templates.",
+                    "Enforced enterprise cloud governance by implementing Azure Policies and Network Security Groups to restrict unauthorized inbound traffic.",
+                    "Technologies used: Terraform, Packer, Microsoft Azure, Azure CLI, Bash, and Linux."
+                ],
+                "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/Terraform-packer-project",
+                "icon": "fab fa-microsoft"
+            },
+            {
+                "text": "Building a CI/CD pipeline using Azure pipelines & GitHub Actions",
+                "badge": "CI/CD & DevOps",
+                "description": "Automated CI/CD delivery pipeline deploying a containerized Flask ML prediction web service to Azure App Services.",
+                "tags": [
+                    "Azure Pipelines",
+                    "GitHub Actions",
+                    "Python",
+                    "Flask",
+                    "Azure App Service"
+                ],
+                "highlights": [
+                    "Built continuous integration and testing workflows in GitHub Actions with Makefile automation and linting.",
+                    "Architected an Azure DevOps pipeline to automatically build and deploy a Flask machine learning application to Azure App Service.",
+                    "Configured cloud monitoring, live prediction API testing endpoints, and end-to-end deployment verification.",
+                    "Technologies used: Azure Pipelines, GitHub Actions, Python 3.7, Flask, Azure CLI, and Scikit-Learn."
+                ],
+                "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/CICD-pipeline-azure",
+                "icon": "fab fa-microsoft"
+            },
+            {
+                "text": "Ensuring quality releases with API, functional & perf testing",
+                "badge": "Testing & QA",
+                "description": "Enterprise CI/CD quality gate pipeline integrating infrastructure provisioning with automated functional, API, and load tests.",
+                "tags": [
+                    "Terraform",
+                    "Selenium",
+                    "Postman",
+                    "Apache JMeter",
+                    "Azure"
+                ],
+                "highlights": [
+                    "Provisioned cloud infrastructure on Microsoft Azure using Terraform and self-hosted build agents.",
+                    "Integrated automated API integration testing suites with Postman/Newman and browser functional testing using Selenium.",
+                    "Executed automated stress and performance testing using Apache JMeter to establish latency baselines and prevent regressions.",
+                    "Technologies used: Terraform, Azure App Service, Selenium WebDriver, Postman, Apache JMeter, and Python."
+                ],
+                "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/Ensuring_Quality_Releases",
+                "icon": "fab fa-microsoft"
+            },
+            {
+                "text": "Automated Docker Image Creation, VM Provisioning, and Kubernetes Deployment",
+                "badge": "Containers & K8s",
+                "description": "Cloud-native web application pipeline with Docker containerization, GitHub Actions CI, and Kubernetes deployment.",
+                "tags": [
+                    "Docker",
+                    "Kubernetes",
+                    "k3s",
+                    "GitHub Actions",
+                    "Vagrant",
+                    "Flask"
+                ],
+                "highlights": [
+                    "Containerized a Flask microservice with Docker and configured continuous image delivery to Docker Hub via GitHub Actions.",
+                    "Provisioned a local multi-node development environment using Vagrant and deployed lightweight Kubernetes (k3s).",
+                    "Authored declarative Kubernetes manifests (Namespace, Deployment, Service) for high-availability pod scheduling.",
+                    "Technologies used: Docker, Kubernetes, k3s, GitHub Actions, Vagrant, Python, and Flask."
+                ],
+                "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/techtrends",
+                "icon": "fab fa-microsoft"
+            },
+            {
+                "text": "Best coding practices and unit test",
+                "badge": "ML & Clean Code",
+                "description": "Production-grade customer churn prediction library adhering to PEP8 standards, clean architecture, and comprehensive testing.",
+                "tags": [
+                    "Python",
+                    "Scikit-Learn",
+                    "Pylint",
+                    "Pytest",
+                    "Pandas"
+                ],
+                "highlights": [
+                    "Refactored legacy machine learning code into modular, production-ready Python libraries with extensive docstrings.",
+                    "Achieved high code quality scores (> 9.0/10) validated with Pylint and automated formatting with autopep8.",
+                    "Implemented unit testing and logging mechanisms with Pytest to guarantee model reproducibility and runtime safety.",
+                    "Technologies used: Python, Scikit-Learn, Pandas, Pytest, Pylint, and Matplotlib."
+                ],
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/Predict_Customer_Churn",
+                "icon": "fab fa-microsoft"
+            },
+            {
+                "text": "Online travel app using multiple APIs",
+                "badge": "Full-Stack Web",
+                "description": "Asynchronous travel planner dashboard that aggregates real-time weather forecasts, destination imagery, and attractions.",
+                "tags": [
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "Webpack",
+                    "REST APIs"
+                ],
+                "highlights": [
+                    "Built an asynchronous Node/Express backend communicating with Geonames, Weatherbit, Pixabay, and Google Places APIs.",
+                    "Dynamically generates city forecasts, countdown days, destination photography, and local attractions based on user input.",
+                    "Configured production Webpack build chains with Sass compilation, service workers, and responsive styling.",
+                    "Technologies used: JavaScript (ES6+), Node.js, Express, Webpack, Babel, and external REST APIs."
+                ],
+                "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/travel-app",
+                "icon": "fas fa-plane"
+            },
+            {
+                "text": "Dynamic section navigation page in JavaScript",
+                "badge": "Frontend",
+                "description": "Interactive single-page web UI featuring an auto-generated navigation menu, smooth scrolling, and viewport tracking.",
+                "tags": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "DOM",
+                    "Intersection Observer"
+                ],
+                "highlights": [
+                    "Dynamically parses document sections to construct responsive navigation links on the fly using vanilla DOM methods.",
+                    "Integrated smooth scroll behavior and active viewport detection powered by the Intersection Observer API.",
+                    "Optimized layout for high rendering performance without third-party frameworks or bulky libraries.",
+                    "Technologies used: Vanilla JavaScript (ES6+), HTML5, CSS3, and modern Web APIs."
+                ],
+                "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/dynamic-section-navigation",
+                "icon": "fas fa-list"
+            },
+            {
+                "text": "An asynchronous Weather Journal app using OpenWeatherMap API",
+                "badge": "Web & APIs",
+                "description": "Asynchronous web application tracking local atmospheric conditions, dates, and user journal reflections in real time.",
+                "tags": [
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "OpenWeatherMap API",
+                    "Materialize"
+                ],
+                "highlights": [
+                    "Developed an Express server managing asynchronous GET and POST endpoints to store and retrieve journal entries.",
+                    "Fetched real-time meteorological conditions from the OpenWeatherMap API using modern async/await fetch calls.",
+                    "Updated the dynamic user interface seamlessly with clean Materialize CSS responsive components.",
+                    "Technologies used: JavaScript (ES6+), Node.js, Express.js, OpenWeatherMap API, and Materialize CSS."
+                ],
+                "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/weather-journal",
+                "icon": "fas fa-cloud"
+            },
+            {
+                "text": "Evaluate a news article with Natural Language Processing",
+                "badge": "NLP & Web",
+                "description": "Web app that analyzes sentiment, subjectivity, and polarity of news article URLs using Natural Language Processing.",
+                "tags": [
+                    "JavaScript",
+                    "Node.js",
+                    "Express",
+                    "Webpack",
+                    "NLP API",
+                    "Jest"
+                ],
+                "highlights": [
+                    "Connected an Express backend with Aylien Natural Language Processing API to evaluate user-submitted article URLs.",
+                    "Extracted sentiment polarity, confidence scores, and subjectivity analysis presented in an interactive card interface.",
+                    "Set up Webpack build pipeline, Babel transpilation for backwards compatibility, and automated Jest test suites.",
+                    "Technologies used: JavaScript (ES6+), Node.js, Express, Webpack, Babel, Jest, and Aylien NLP API."
+                ],
+                "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/news-article-nlp",
+                "icon": "fas fa-cart-shopping"
+            },
+            {
+                "text": "Multi-page Blog website with HTML and pure CSS",
+                "badge": "Semantic Web",
+                "description": "Clean, minimalist multi-page static blog crafted exclusively with semantic HTML5 and responsive pure CSS3.",
+                "tags": [
+                    "HTML5",
+                    "CSS3",
+                    "Responsive Design",
+                    "Flexbox",
+                    "CSS Grid"
+                ],
+                "highlights": [
+                    "Designed and styled a lightweight multi-page blog layout without any client-side JavaScript dependencies.",
+                    "Engineered responsive grid and flexbox card systems with accessible contrast and modern typography.",
+                    "Focused on cross-browser compatibility, rapid page loading speeds, and optimal Core Web Vitals performance.",
+                    "Technologies used: Semantic HTML5, CSS3, Flexbox, CSS Grid, and Media Queries."
+                ],
+                "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://github.com/usama242/blog-website",
+                "icon": "fas fa-blog"
+            }
+        ]
     },
     {
-      "category": "Engineering Publications",
-      "items": [
-        { "icon": "fas fa-microchip", "text": "Applying Artificial Intelligence techniques in Project Management", "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management" },
-        { "icon": "fas fa-plane", "text": "Design of a UAV with Variable-Span Morphing Wing", "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing" },
-        { "icon": "fas fa-square", "text": "States of Stress and Strain in a Semi-Infinite Plate", "url": null, "type": "Aerospace & Mechanics Research" },
-        { "icon": "fas fa-plane", "text": "Analysis of a Catapult-Launched Delta-Wing Glider", "url": null, "type": "Aerospace & Mechanics Research" },
-        { "icon": "fas fa-bullseye", "text": "Conceptual Design of a Surface-to-Air Missile", "url": null, "type": "Aerospace & Mechanics Research" },
-        { "icon": "fas fa-square", "text": "Plane Stress Analysis of a Rectangular Plate Subjected to a Concentrated Load", "url": null, "type": "Aerospace & Mechanics Research" }
-      ]
+        "category": "Engineering Publications",
+        "items": [
+            {
+                "text": "Applying Artificial Intelligence techniques in Project Management",
+                "badge": "AI & Management",
+                "description": "Master's thesis examining machine learning and artificial intelligence methods applied to project scheduling and risk forecasting.",
+                "tags": [
+                    "Artificial Intelligence",
+                    "Project Management",
+                    "Predictive Analytics",
+                    "Machine Learning"
+                ],
+                "highlights": [
+                    "Investigated modern machine learning models for risk identification, duration forecasting, and resource leveling.",
+                    "Analyzed decision-making frameworks combining operational research with neural network heuristics.",
+                    "Published research presented at Politecnico di Torino."
+                ],
+                "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management",
+                "icon": "fas fa-microchip"
+            },
+            {
+                "text": "Design of a UAV with Variable-Span Morphing Wing",
+                "badge": "Aerospace & UAV",
+                "description": "Aerodynamic research and CAD/FEM design of an unmanned aerial vehicle featuring an adaptive variable-span wing.",
+                "tags": [
+                    "Aerodynamics",
+                    "UAV Design",
+                    "Morphing Wings",
+                    "CAD",
+                    "CFD"
+                ],
+                "highlights": [
+                    "Explored mechanical actuation systems and aerodynamic efficiency of variable-span morphing wing concepts.",
+                    "Performed CFD aerodynamic analyses across varied flight regimes to optimize lift-to-drag ratios.",
+                    "Published on ResearchGate detailing structural integrity and mission flexibility."
+                ],
+                "image": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1200&q=80",
+                "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing",
+                "icon": "fas fa-plane"
+            },
+            {
+                "text": "States of Stress and Strain in a Semi-Infinite Plate",
+                "badge": "Elasticity & Mechanics",
+                "description": "Mathematical and numerical stress-strain distribution analysis in semi-infinite elastic plates under mechanical boundaries.",
+                "tags": [
+                    "Continuum Mechanics",
+                    "Stress Analysis",
+                    "Theory of Elasticity",
+                    "MATLAB"
+                ],
+                "highlights": [
+                    "Derived analytical solutions for stress tensors in semi-infinite elastic domains using Airy stress functions.",
+                    "Validated boundary conditions and localized deformation gradients using numerical modeling."
+                ],
+                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+                "url": null,
+                "type": "Aerospace & Mechanics Research",
+                "icon": "fas fa-square"
+            },
+            {
+                "text": "Analysis of a Catapult-Launched Delta-Wing Glider",
+                "badge": "Aerodynamics",
+                "description": "Launch dynamics, trim stability, and glide performance analysis of a catapult-assisted delta-wing glider.",
+                "tags": [
+                    "Delta-Wing Glider",
+                    "Flight Dynamics",
+                    "Aerodynamic Trim",
+                    "Catapult Launch"
+                ],
+                "highlights": [
+                    "Modeled trajectory kinematics and pitch-yaw stability derivatives during high-g catapult launch phases.",
+                    "Evaluated vortex lift generation and stall characteristics of low-aspect-ratio delta-wing geometries."
+                ],
+                "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+                "url": null,
+                "type": "Aerospace & Mechanics Research",
+                "icon": "fas fa-plane"
+            },
+            {
+                "text": "Conceptual Design of a Surface-to-Air Missile",
+                "badge": "Missile Systems",
+                "description": "Comprehensive aerospace systems design study including propulsion sizing, aerodynamic control, and guidance trajectories.",
+                "tags": [
+                    "Aerospace Engineering",
+                    "Guidance & Control",
+                    "Propulsion Sizing",
+                    "Trajectory Modeling"
+                ],
+                "highlights": [
+                    "Conducted multi-disciplinary conceptual sizing for solid-propellant propulsion, fin aerodynamics, and mass fractions.",
+                    "Modeled proportional navigation guidance laws and intercept envelope simulations against airborne targets."
+                ],
+                "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80",
+                "url": null,
+                "type": "Aerospace & Mechanics Research",
+                "icon": "fas fa-bullseye"
+            },
+            {
+                "text": "Plane Stress Analysis of a Rectangular Plate Subjected to a Concentrated Load",
+                "badge": "FEA & Structural",
+                "description": "Finite element and theoretical plane stress evaluation of isotropic rectangular plates bearing localized point loads.",
+                "tags": [
+                    "Finite Element Analysis",
+                    "Plane Stress",
+                    "Structural Mechanics",
+                    "Concentrated Loads"
+                ],
+                "highlights": [
+                    "Compared theoretical Navier solutions with 2D finite element simulations for localized high-stress concentrations.",
+                    "Analyzed principal stress distributions, deflection curves, and von Mises yield thresholds."
+                ],
+                "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+                "url": null,
+                "type": "Aerospace & Mechanics Research",
+                "icon": "fas fa-square"
+            }
+        ]
     }
-  ],
+],
   "interests": [
     { "icon": "fas fa-camera-retro", "title": "Photo Enthusiast", "description": "Capturing souls with a click, one portrait at a time." },
     { "icon": "fas fa-route", "title": "Cultural Explorer", "description": "Jet-setting through flavors and traditions, passport in hand." },

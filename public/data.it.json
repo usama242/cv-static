@@ -474,69 +474,279 @@
       "items": [
         {
           "text": "Questo sito web",
-          "description": "Il sito che stai visitando ora. Scopri il codice sorgente su GitHub.",
+          "badge": "Portfolio & Web",
+          "description": "L'applicazione web portfolio e CV interattivo che stai visualizzando ora. Sviluppata con React, Vite e Tailwind CSS.",
+          "tags": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "i18n"
+          ],
+          "highlights": [
+            "Sviluppato un portfolio personale ad alte prestazioni con localizzazione dinamica basata su JSON in inglese, italiano e spagnolo.",
+            "Implementate schede modali 3D interattive, passaggio tra tema chiaro/scuro, contatore live dell'esperienza e animazioni fluide con Framer Motion.",
+            "Tecnologie utilizzate: React 18, Vite, Tailwind CSS, Framer Motion e icone FontAwesome."
+          ],
+          "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
           "url": "https://github.com/usama242/cv-static",
           "icon": "fas fa-globe"
         },
         {
-          "icon": "fas fa-dharmachakra",
           "text": "Consegna continua GitOps con Argo CD",
-          "url": "https://github.com/usama242/argocd"
+          "badge": "GitOps & K8s",
+          "description": "Dimostrazione completa di continuous delivery GitOps multi-cluster su Kubernetes con Argo CD, Helm e bilanciamento HAProxy.",
+          "tags": [
+            "Argo CD",
+            "Kubernetes",
+            "Helm",
+            "Kind",
+            "HAProxy",
+            "Ingress Nginx"
+          ],
+          "highlights": [
+            "Dimostrazione di GitOps dichiarativo multi-cluster mediante Argo CD ApplicationSets per sincronizzare microservizi tra cluster.",
+            "Configurata una topologia locale multi-cluster con Kind, rilasci automatici con Helm chart e controller Ingress-Nginx.",
+            "Integrato un bilanciatore di carico HAProxy che distribuisce il traffico con controlli di salute round-robin.",
+            "Tecnologie utilizzate: Argo CD, Kubernetes, Helm, Kind, HAProxy, Ingress-Nginx e flussi GitOps."
+          ],
+          "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/argocd",
+          "icon": "fas fa-dharmachakra"
         },
         {
-          "icon": "fas fa-server",
           "text": "Configurazione e automazione di server con Ansible",
-          "url": "https://github.com/usama242/ansible-fleet"
+          "badge": "Automazione & Linux",
+          "description": "Automazione di configurazione, conformità e aggiornamenti progressivi per un parco server Linux multi-nodo.",
+          "tags": [
+            "Ansible",
+            "Ubuntu",
+            "Debian",
+            "Vagrant",
+            "Nginx",
+            "Bash"
+          ],
+          "highlights": [
+            "Automatizzata configurazione base, hardening SSH, ottimizzazione sysctl e monitoraggio endpoint di salute Nginx su nodi Ubuntu/Debian.",
+            "Creati playbook di audit automatizzati per verifiche di conformità e stato degli aggiornamenti con report temporizzati.",
+            "Implementati playbook di aggiornamento progressivo senza interruzioni con conferme interattive e riavvii gestiti.",
+            "Tecnologie utilizzate: Ansible, Vagrant, Ubuntu, Debian, Nginx, Systemd e script Bash."
+          ],
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/ansible-fleet",
+          "icon": "fas fa-server"
         },
         {
-          "icon": "fab fa-microsoft",
           "text": "Distribuzione di un server Web IaaS scalabile in Azure utilizzando Terraform",
-          "url": "https://github.com/usama242/Terraform-packer-project"
+          "badge": "Cloud IaC",
+          "description": "Infrastruttura web IaaS scalabile e protetta distribuita su Microsoft Azure con HashiCorp Packer e Terraform.",
+          "tags": [
+            "Terraform",
+            "Packer",
+            "Microsoft Azure",
+            "IaC",
+            "Azure Policy"
+          ],
+          "highlights": [
+            "Creazione di immagini personalizzate Linux protette tramite HashiCorp Packer e credenziali Azure CLI.",
+            "Provisioning di VM scale set ad alta disponibilità, reti virtuali e bilanciatori di carico con template modulari Terraform.",
+            "Applicazione di policy cloud aziendali con Azure Policy e Network Security Group per bloccare accessi non autorizzati.",
+            "Tecnologie utilizzate: Terraform, Packer, Microsoft Azure, Azure CLI, Bash e Linux."
+          ],
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/Terraform-packer-project",
+          "icon": "fab fa-microsoft"
         },
         {
-          "icon": "fab fa-microsoft",
           "text": "Creazione di una pipeline CI/CD utilizzando pipeline di Azure e azioni GitHub",
-          "url": "https://github.com/usama242/CICD-pipeline-azure"
+          "badge": "CI/CD & DevOps",
+          "description": "Pipeline automatizzata di continuous delivery per distribuire un microservizio Flask di previsione ML su Azure App Services.",
+          "tags": [
+            "Azure Pipelines",
+            "GitHub Actions",
+            "Python",
+            "Flask",
+            "Azure App Service"
+          ],
+          "highlights": [
+            "Realizzati flussi di integrazione continua e test automatici su GitHub Actions con automazione Makefile e linting.",
+            "Progettata una pipeline Azure DevOps per compilare e distribuire automaticamente l'applicazione Flask su Azure App Service.",
+            "Configurato monitoraggio cloud, test degli endpoint API di previsione e verifica dei rilasci.",
+            "Tecnologie utilizzate: Azure Pipelines, GitHub Actions, Python 3.7, Flask, Azure CLI e Scikit-Learn."
+          ],
+          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/CICD-pipeline-azure",
+          "icon": "fab fa-microsoft"
         },
         {
-          "icon": "fab fa-microsoft",
           "text": "Garantire rilasci di qualità con test API, funzionali e delle prestazioni",
-          "url": "https://github.com/usama242/Ensuring_Quality_Releases"
+          "badge": "Testing & QA",
+          "description": "Pipeline di qualità aziendale su Azure con provisioning dell'infrastruttura e test automatici funzionali, API e di carico.",
+          "tags": [
+            "Terraform",
+            "Selenium",
+            "Postman",
+            "Apache JMeter",
+            "Azure"
+          ],
+          "highlights": [
+            "Provisioning di infrastruttura cloud su Microsoft Azure con Terraform e agenti di compilazione self-hosted.",
+            "Integrazione di test di integrazione API automatizzati con Postman/Newman e test funzionali del browser con Selenium.",
+            "Esecuzione di test di stress e carico con Apache JMeter per stabilire baseline di latenza e prevenire regressioni.",
+            "Tecnologie utilizzate: Terraform, Azure App Service, Selenium WebDriver, Postman, Apache JMeter e Python."
+          ],
+          "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/Ensuring_Quality_Releases",
+          "icon": "fab fa-microsoft"
         },
         {
-          "icon": "fab fa-microsoft",
           "text": "Creazione automatizzata di immagini Docker, provisioning di VM e distribuzione Kubernetes",
-          "url": "https://github.com/usama242/techtrends"
+          "badge": "Container & K8s",
+          "description": "Pipeline cloud-native per microservizi con containerizzazione Docker, CI con GitHub Actions e deployment su Kubernetes (k3s).",
+          "tags": [
+            "Docker",
+            "Kubernetes",
+            "k3s",
+            "GitHub Actions",
+            "Vagrant",
+            "Flask"
+          ],
+          "highlights": [
+            "Containerizzato un microservizio Flask con Docker e configurata la consegna continua delle immagini su Docker Hub tramite GitHub Actions.",
+            "Provisioning di un ambiente di sviluppo locale con Vagrant e deployment su cluster Kubernetes leggero (k3s).",
+            "Scrittura di manifest dichiarativi Kubernetes (Namespace, Deployment, Service) per orchestrazione ad alta affidabilità.",
+            "Tecnologie utilizzate: Docker, Kubernetes, k3s, GitHub Actions, Vagrant, Python e Flask."
+          ],
+          "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/techtrends",
+          "icon": "fab fa-microsoft"
         },
         {
-          "icon": "fab fa-microsoft",
           "text": "Migliori pratiche di codifica e test unitario",
-          "url": "https://github.com/usama242/Predict_Customer_Churn"
+          "badge": "ML & Clean Code",
+          "description": "Libreria di machine learning di livello produttivo per prevedere l'abbandono dei clienti, aderente agli standard PEP8 e testata con Pytest.",
+          "tags": [
+            "Python",
+            "Scikit-Learn",
+            "Pylint",
+            "Pytest",
+            "Pandas"
+          ],
+          "highlights": [
+            "Refactoring del codice legacy di machine learning in librerie Python modulari e pronte per la produzione con docstring dettagliate.",
+            "Raggiunto punteggio elevato di qualità del codice (> 9.0/10) convalidato tramite Pylint e formattazione autopep8.",
+            "Implementati test unitari e tracciamento log con Pytest per garantire riproducibilità e affidabilità del modello.",
+            "Tecnologie utilizzate: Python, Scikit-Learn, Pandas, Pytest, Pylint e Matplotlib."
+          ],
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/Predict_Customer_Churn",
+          "icon": "fab fa-microsoft"
         },
         {
-          "icon": "fas fa-plane",
           "text": "App di viaggi online che utilizza più API",
-          "url": "https://github.com/usama242/travel-app"
+          "badge": "Full-Stack Web",
+          "description": "Dashboard di pianificazione viaggi asincrona che aggrega previsioni meteo in tempo reale, immagini della destinazione e punti di interesse.",
+          "tags": [
+            "JavaScript",
+            "Node.js",
+            "Express",
+            "Webpack",
+            "REST APIs"
+          ],
+          "highlights": [
+            "Backend Node/Express asincrono integrato con le API di Geonames, Weatherbit, Pixabay e Google Places.",
+            "Generazione dinamica di previsioni meteorologiche, giorni mancanti, fotografie e attrazioni locali in base alla destinazione inserita.",
+            "Configurazione di build Webpack di produzione con compilazione Sass, service worker e layout reattivo.",
+            "Tecnologie utilizzate: JavaScript (ES6+), Node.js, Express, Webpack, Babel e API REST esterne."
+          ],
+          "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/travel-app",
+          "icon": "fas fa-plane"
         },
         {
-          "icon": "fas fa-list",
           "text": "Pagina JavaScript con navigazione dinamica tra sezioni",
-          "url": "https://github.com/usama242/dynamic-section-navigation"
+          "badge": "Frontend",
+          "description": "Interfaccia web interattiva con menu di navigazione auto-generato, scorrimento fluido e tracciamento della sezione attiva nel viewport.",
+          "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "DOM",
+            "Intersection Observer"
+          ],
+          "highlights": [
+            "Analisi dinamica delle sezioni del documento per generare istantaneamente collegamenti di navigazione reattivi tramite DOM nativo.",
+            "Integrazione di scorrimento fluido e rilevamento della sezione attiva nel viewport tramite Intersection Observer API.",
+            "Ottimizzazione del rendering ad alte prestazioni senza framework pesanti o librerie esterne.",
+            "Tecnologie utilizzate: JavaScript Vanilla (ES6+), HTML5, CSS3 e Web API moderne."
+          ],
+          "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/dynamic-section-navigation",
+          "icon": "fas fa-list"
         },
         {
-          "icon": "fas fa-cloud",
           "text": "Un'app asincrona Weather Journal che utilizza l'API OpenWeatherMap",
-          "url": "https://github.com/usama242/weather-journal"
+          "badge": "Web & APIs",
+          "description": "Applicazione web asincrona che registra in tempo reale condizioni atmosferiche locali, data e riflessioni personali del diario.",
+          "tags": [
+            "JavaScript",
+            "Node.js",
+            "Express",
+            "OpenWeatherMap API",
+            "Materialize"
+          ],
+          "highlights": [
+            "Sviluppato un server Express per gestire endpoint asincroni GET e POST per salvare e recuperare le voci del diario.",
+            "Acquisizione in tempo reale dei dati meteo tramite l'API OpenWeatherMap con chiamate asincrone async/await.",
+            "Aggiornamento dinamico dell'interfaccia utente con componenti reattivi in Materialize CSS.",
+            "Tecnologie utilizzate: JavaScript (ES6+), Node.js, Express.js, OpenWeatherMap API e Materialize CSS."
+          ],
+          "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/weather-journal",
+          "icon": "fas fa-cloud"
         },
         {
-          "icon": "fas fa-cart-shopping",
           "text": "Valuta un articolo di notizie con l'elaborazione del linguaggio naturale",
-          "url": "https://github.com/usama242/news-article-nlp"
+          "badge": "NLP & Web",
+          "description": "Applicazione web per analizzare sentimento, soggettività e polarità di articoli di notizie tramite Natural Language Processing.",
+          "tags": [
+            "JavaScript",
+            "Node.js",
+            "Express",
+            "Webpack",
+            "NLP API",
+            "Jest"
+          ],
+          "highlights": [
+            "Integrazione di un backend Express con l'API Aylien NLP per valutare URL di notizie inviate dall'utente.",
+            "Estrazione di indicatori di polarità del sentimento, punteggi di confidenza e analisi della soggettività.",
+            "Configurazione della pipeline di compilazione Webpack, transpiling Babel e suite di test automatizzati con Jest.",
+            "Tecnologie utilizzate: JavaScript (ES6+), Node.js, Express, Webpack, Babel, Jest e API Aylien NLP."
+          ],
+          "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/news-article-nlp",
+          "icon": "fas fa-cart-shopping"
         },
         {
-          "icon": "fas fa-blog",
           "text": "Sito Web blog multipagina con HTML e CSS puro",
-          "url": "https://github.com/usama242/blog-website"
+          "badge": "Semantic Web",
+          "description": "Blog statico multipagina pulito e minimalista sviluppato esclusivamente con HTML5 semantico e CSS3 puro reattivo.",
+          "tags": [
+            "HTML5",
+            "CSS3",
+            "Responsive Design",
+            "Flexbox",
+            "CSS Grid"
+          ],
+          "highlights": [
+            "Progettazione e impaginazione di un blog multipagina leggero senza dipendenze JavaScript lato client.",
+            "Struttura a schede con griglie CSS e flexbox, elevato contrasto accessibile e tipografia curata.",
+            "Ottimizzazione per compatibilità tra browser, caricamento istantaneo e massime prestazioni dei Core Web Vitals.",
+            "Tecnologie utilizzate: HTML5 semantico, CSS3, Flexbox, CSS Grid e Media Queries."
+          ],
+          "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://github.com/usama242/blog-website",
+          "icon": "fas fa-blog"
         }
       ]
     },
@@ -544,38 +754,119 @@
       "category": "Pubblicazioni di ingegneria",
       "items": [
         {
-          "icon": "fas fa-microchip",
           "text": "Applicazione delle tecniche di Intelligenza Artificiale al Project Management",
-          "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management"
+          "badge": "AI & Management",
+          "description": "Tesi magistrale incentrata su metodi di apprendimento automatico e intelligenza artificiale per la pianificazione e stima dei rischi di progetto.",
+          "tags": [
+            "Intelligenza Artificiale",
+            "Project Management",
+            "Analisi Predittiva",
+            "Machine Learning"
+          ],
+          "highlights": [
+            "Studio di modelli di apprendimento automatico per l'identificazione precoce dei rischi, stima delle durate e bilanciamento delle risorse.",
+            "Analisi di framework decisionali che integrano ricerca operativa ed euristiche basate su reti neurali.",
+            "Pubblicazione di ricerca presentata presso il Politecnico di Torino."
+          ],
+          "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://www.researchgate.net/publication/340460180_Applying_Artificial_Intelligence_techniques_in_Project_Management",
+          "icon": "fas fa-microchip"
         },
         {
-          "icon": "fas fa-plane",
           "text": "Progettazione di un UAV con ala Morphing a portata variabile",
-          "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing"
+          "badge": "Aerospazio & UAV",
+          "description": "Ricerca aerodinamica e progettazione CAD/FEM di un velivolo a pilotaggio remoto dotato di ala morphing ad apertura variabile.",
+          "tags": [
+            "Aerodinamica",
+            "Design UAV",
+            "Ali Morphing",
+            "CAD",
+            "CFD"
+          ],
+          "highlights": [
+            "Valutazione di sistemi di attuazione meccanica ed efficienza aerodinamica per configurazioni alari morphing a portata variabile.",
+            "Esecuzione di simulazioni fluidodinamiche computazionali (CFD) per ottimizzare l'efficienza aerodinamica (rapporto portanza/resistenza).",
+            "Pubblicazione su ResearchGate con dettaglio dell'integrità strutturale e della flessibilità di missione."
+          ],
+          "image": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1200&q=80",
+          "url": "https://www.researchgate.net/publication/304013506_Design_of_a_UAV_with_Variable-Span_Morphing_Wing",
+          "icon": "fas fa-plane"
         },
         {
-          "icon": "fas fa-square",
           "text": "Stati di sforzo e deformazione in una piastra semi-infinita",
+          "badge": "Elasticità & Meccanica",
+          "description": "Analisi matematica e numerica della distribuzione delle tensioni e delle deformazioni in piastre elastiche semi-infinite.",
+          "tags": [
+            "Meccanica del Continuo",
+            "Analisi delle Tensioni",
+            "Teoria dell'Elasticità",
+            "MATLAB"
+          ],
+          "highlights": [
+            "Derivazione di soluzioni analitiche per i tensori di sforzo in domini elastici semi-infiniti mediante funzioni di Airy.",
+            "Verifica computazionale delle condizioni al contorno e dei gradienti di deformazione localizzati."
+          ],
+          "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
           "url": null,
-          "type": "Ricerca Aerospaziale e Meccanica"
+          "type": "Ricerca Aerospaziale e Meccanica",
+          "icon": "fas fa-square"
         },
         {
-          "icon": "fas fa-plane",
           "text": "Analisi di un aliante con ala delta lanciato da catapulta",
+          "badge": "Aerodinamica",
+          "description": "Dinamica di lancio, stabilità d'assetto e prestazioni di planata di un aliante con ala a delta assistito da catapulta.",
+          "tags": [
+            "Aliante Ala Delta",
+            "Dinamica del Volo",
+            "Assetto Aerodinamico",
+            "Lancio a Catapulta"
+          ],
+          "highlights": [
+            "Modellazione cinematica della traiettoria e derivate di stabilità beccheggio-imbardata durante il lancio ad alta accelerazione.",
+            "Valutazione della generazione di portanza vorticosa e del comportamento allo stallo per geometrie alari a basso allungamento."
+          ],
+          "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
           "url": null,
-          "type": "Ricerca Aerospaziale e Meccanica"
+          "type": "Ricerca Aerospaziale e Meccanica",
+          "icon": "fas fa-plane"
         },
         {
-          "icon": "fas fa-bullseye",
           "text": "Progettazione concettuale di un missile terra-aria",
+          "badge": "Sistemi Missilistici",
+          "description": "Studio multidisciplinare di ingegneria dei sistemi aerospaziali comprendente propulsione, controllo aerodinamico e traiettorie di guida.",
+          "tags": [
+            "Ingegneria Aerospaziale",
+            "Guida e Controllo",
+            "Dimensionamento Propulsione",
+            "Modellazione Traiettorie"
+          ],
+          "highlights": [
+            "Dimensionamento concettuale per motore a propellente solido, aerodinamica delle alette e bilancio delle frazioni di massa.",
+            "Simulazione delle leggi di guida a navigazione proporzionale e inviluppo di intercettazione contro bersagli aerei."
+          ],
+          "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80",
           "url": null,
-          "type": "Ricerca Aerospaziale e Meccanica"
+          "type": "Ricerca Aerospaziale e Meccanica",
+          "icon": "fas fa-bullseye"
         },
         {
-          "icon": "fas fa-square",
           "text": "Analisi delle sollecitazioni piane di una piastra rettangolare sottoposta ad un carico concentrato",
+          "badge": "FEA & Strutture",
+          "description": "Valutazione teorica e agli elementi finiti dello stato di tensione piana in piastre rettangolari isotrope soggette a carichi concentrati.",
+          "tags": [
+            "Analisi Elementi Finiti",
+            "Tensione Piana",
+            "Meccanica Strutturale",
+            "Carichi Concentrati"
+          ],
+          "highlights": [
+            "Confronto tra soluzioni teoriche di Navier e simulazioni 2D agli elementi finiti per concentrazioni di sforzo locali.",
+            "Analisi delle distribuzioni di tensione principale, linee di inflessione e criteri di snervamento di von Mises."
+          ],
+          "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
           "url": null,
-          "type": "Ricerca Aerospaziale e Meccanica"
+          "type": "Ricerca Aerospaziale e Meccanica",
+          "icon": "fas fa-square"
         }
       ]
     }

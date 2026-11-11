@@ -122,3 +122,54 @@ export function buildEducationDeck(degrees, scholarships, ui) {
     };
   });
 }
+
+export function getPlatformLabel(item, defaultLabel = "Project") {
+  if (item?.platform) return item.platform;
+  if (!item?.url) return null;
+  try {
+    const host = new URL(item.url).hostname.toLowerCase();
+    if (host.includes("github.com")) return "GitHub";
+    if (host.includes("researchgate.net")) return "ResearchGate";
+    if (host.includes("gitlab.com")) return "GitLab";
+    if (host.includes("linkedin.com")) return "LinkedIn";
+    if (host.includes("behance.net")) return "Behance";
+    if (host.includes("dribbble.com")) return "Dribbble";
+    if (host.includes("medium.com")) return "Medium";
+    if (host.includes("youtube.com")) return "YouTube";
+    return host.replace(/^www\./, "");
+  } catch {
+    return defaultLabel;
+  }
+}
+
+export function buildProjectsDeck(items, ui) {
+  return (items || []).map((item, i) => {
+    const platform = getPlatformLabel(item, ui?.projects?.viewProject || "Project");
+    const techText = Array.isArray(item.tags) && item.tags.length > 0
+      ? item.tags.join(" • ")
+      : (item.technologies || item.badge || platform || "Project");
+
+    let highlights = [];
+    if (Array.isArray(item.highlights) && item.highlights.length > 0) {
+      highlights = item.highlights;
+    } else {
+      if (item.description) highlights.push(item.description);
+      if (Array.isArray(item.tags) && item.tags.length > 0) {
+        highlights.push(`${ui?.projects?.technologies || "Technologies"}: ${item.tags.join(", ")}`);
+      }
+    }
+
+    const defaultImg = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80";
+
+    return {
+      id: `proj-${i}`,
+      badge: item.badge || platform || "Project",
+      period: item.period || platform || "Portfolio",
+      title: item.text,
+      subtitle: techText,
+      img: item.image || defaultImg,
+      highlights,
+      links: item.url ? [{ label: `${ui?.projects?.inspectOn || "Inspect on"} ${platform}`, url: item.url }] : []
+    };
+  });
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { DEFAULT_DATA } from './defaultData';
 import { getUiText, getActiveResume, getAllResumes, LANGUAGE_NAMES, LANGUAGE_FLAGS } from './i18n';
-import { buildExperienceDeck, buildEducationDeck } from './constants/visuals';
+import { buildExperienceDeck, buildEducationDeck, buildProjectsDeck } from './constants/visuals';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -296,6 +296,10 @@ export default function App() {
       setModalDeck((prev) => (prev ? { ...prev, items: experienceDeck } : null));
     } else if (modalDeck.type === "education") {
       setModalDeck((prev) => (prev ? { ...prev, items: educationDeck } : null));
+    } else if (modalDeck.type === "project") {
+      const currentItems = projects[activeProjIdx]?.items || [];
+      const projectDeck = buildProjectsDeck(currentItems, ui);
+      setModalDeck((prev) => (prev ? { ...prev, items: projectDeck } : null));
     } else if (modalDeck.type === "bio") {
       const currentResume = getActiveResume(personal, lang);
       const allResumes = getAllResumes(personal, lang);
@@ -321,7 +325,7 @@ export default function App() {
       };
       setModalDeck((prev) => (prev ? { ...prev, items: [bioItem, ...experienceDeck] } : null));
     }
-  }, [experienceDeck, educationDeck, ui, personal, lang]);
+  }, [experienceDeck, educationDeck, ui, personal, lang, projects, activeProjIdx]);
 
   const stepModal = useCallback((dir) => {
     setDeckDirection(dir);
@@ -409,6 +413,7 @@ export default function App() {
         lang={lang}
         activeProjIdx={activeProjIdx}
         setActiveProjIdx={setActiveProjIdx}
+        openModalDeck={openModalDeck}
       />
 
       <Interests
